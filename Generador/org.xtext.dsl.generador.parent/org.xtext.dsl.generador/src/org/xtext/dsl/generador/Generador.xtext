@@ -1,0 +1,9 @@
+grammar org.xtext.dsl.generador.Generador with org.eclipse.xtext.common.Terminals
+
+generate generador "http://www.xtext.org/dsl/generador/Generador"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
