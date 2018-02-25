@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template id="1" autoinsert="true" context="org.xtext.dsl.parafarmacia.Parafarmacia.kw_Producto" deleted="false" description="Ayuda para añadir un nuevo producto" enabled="true" name="Producto">Producto PR${numero} "${nombre}" ${precio} descripcion "${descripcion}";&#13;
+</template></templates>

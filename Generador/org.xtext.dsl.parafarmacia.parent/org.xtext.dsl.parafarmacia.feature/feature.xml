@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.xtext.dsl.parafarmacia.feature"
+	label="Parafarmacia Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="org.xtext.dsl.parafarmacia"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="org.xtext.dsl.parafarmacia.ide"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="org.xtext.dsl.parafarmacia.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>

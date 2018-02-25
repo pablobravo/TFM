@@ -1,7 +1,9 @@
 package impl.tfm.persistence.pedido;
 
+import impl.tfm.persistence.conf.Conf;
+import impl.tfm.persistence.conf.util.Jdbc;
+
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Vector;
@@ -10,124 +12,101 @@ import com.tfm.model.Pedido;
 import com.tfm.persistence.PedidoDataService;
 
 public class PedidoDAO implements PedidoDataService{
-
+	
 	@Override
 	public Vector<Pedido> getPedidos() throws Exception {
-		Vector<Pedido> resultado = new Vector<Pedido>();
+		Vector<Pedido> pedidos = new Vector<Pedido>();
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		Connection con = null;
- 
+		
 		try {
-			String SQL_DRV = "org.hsqldb.jdbcDriver";
-			String SQL_URL = "jdbc:hsqldb:hsql://localhost/parafarmacia";
-
-			Class.forName(SQL_DRV);
-			con = DriverManager.getConnection(SQL_URL, "pbm", "pbm");
-
-			ps = con.prepareStatement("select * from pedido");
+			con = Jdbc.getConnection();
+			
+			ps = con.prepareStatement(Conf.get("SQL_PEDIDOS"));
 			rs = ps.executeQuery();
 
-			while (rs.next()) {
-				Pedido pedido = new Pedido();
-				pedido.setId(rs.getInt("id"));
-				pedido.setIdUsuario(rs.getInt("idusuario"));
-				pedido.setIdProducto(rs.getInt("idproducto"));
-				pedido.setUnidades(rs.getInt("unidades"));
-				pedido.setFecha(rs.getDate("fecha"));
-				pedido.setEstado(rs.getString("estado"));
-				resultado.add(pedido);
-			}
+			while (rs.next()){
+				Pedido t = new Pedido();
+				t.setId(rs.getInt("id"));
+				t.setIdUsuario(rs.getInt("idusuario"));
+				t.setIdProducto(rs.getInt("idproducto"));
+				t.setUnidades(rs.getInt("unidades"));
+				t.setFecha(rs.getDate("fecha"));
+				t.setEstado(rs.getString("estado"));
 
+				pedidos.add(t);
+			}
+			
+			con.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw (e);
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (Exception e) {
-			}
+			Jdbc.close(rs, ps, con);
 		}
-		return resultado;
+		
+		return pedidos;
 	}
-
-	@SuppressWarnings("resource")
 	@Override
 	public Pedido newPedido(Pedido pedido) throws Exception {
+
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		Connection con = null;
-
+		
 		try {
-			String SQL_DRV = "org.hsqldb.jdbcDriver";
-			String SQL_URL = "jdbc:hsqldb:hsql://localhost/parafarmacia";
-
-			Class.forName(SQL_DRV);
-			con = DriverManager.getConnection(SQL_URL, "pbm", "pbm");
-
-			ps = con.prepareStatement("select max(id) as maximo from pedido");
-			rs = ps.executeQuery();
-			Integer id=0;
-			while (rs.next()) {
-				 id = rs.getInt("maximo");
-			}
+			con = Jdbc.getConnection();
 			
-			pedido.setId(id);
-			ps = con.prepareStatement("insert into pedido values (?,?,?,?,?,?)");
-			ps.setInt(1, id+1);
-			ps.setInt(2,pedido.getIdUsuario());
-			ps.setInt(3,pedido.getIdProducto());
-			ps.setInt(4,pedido.getUnidades());
-			ps.setDate(5,pedido.getFecha());
-			ps.setString(6,pedido.getEstado());
+		
+			ps = con.prepareStatement(Conf.get("SQL_INSERT_PEDIDO"));
+		
+			ps.setInt(1,pedido.getIdUsuario());
+			ps.setInt(2,pedido.getIdProducto());
+			ps.setInt(3,pedido.getUnidades());
+			ps.setDate(4,pedido.getFecha());
+			ps.setString(5,pedido.getEstado());
 		
 			ps.executeUpdate();
 
+			con.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw (e);
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (Exception e) {
-			}
+			Jdbc.close(rs, ps, con);
 		}
 		return pedido;
 	}
-
 	@Override
 	public Pedido updatePedido(Pedido pedido) throws Exception {
 		PreparedStatement ps = null;
 		Connection con = null;
- 
+		
 		try {
-			String SQL_DRV = "org.hsqldb.jdbcDriver";
-			String SQL_URL = "jdbc:hsqldb:hsql://localhost/parafarmacia";
-
-			Class.forName(SQL_DRV);
-			con = DriverManager.getConnection(SQL_URL, "pbm", "pbm");
-
+			con = Jdbc.getConnection();
+			
+			ps = con.prepareStatement(Conf.get("SQL_UPDATE_PEDIDO"));
 	
-			ps = con.prepareStatement("UPDATE pedido set estado = ? where id=?");
-			ps.setString(1, pedido.getEstado());
-			ps.setInt(2, pedido.getId());
+			ps.setInt(1,pedido.getIdUsuario());
+			ps.setInt(2,pedido.getIdProducto());
+			ps.setInt(3,pedido.getUnidades());
+			ps.setDate(4,pedido.getFecha());
+			ps.setString(5,pedido.getEstado());
+			ps.setInt(6, pedido.getId());
 			ps.executeUpdate();
 
-
+			con.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw (e);
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (Exception e) {
-			}
+			Jdbc.close(ps, con);
 		}
 		return pedido;
 	}
-
 }

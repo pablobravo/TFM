@@ -2,8 +2,73 @@ grammar org.xtext.dsl.generador.Generador with org.eclipse.xtext.common.Terminal
 
 generate generador "http://www.xtext.org/dsl/generador/Generador"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+Parafarmacia:
+    'Parafarmacia' '{'
+		'<' 'Nombre' '='  titulo=STRING ':' fuente=STRING '>'
+		'<' 'Titular' '=' nombre=STRING ':' direccion=Direccion ':' cif=STRING ':' registro=Registro
+			':' correo=Correo ':' telefono=INT '>'
+		'<' 'Menu' '=' tipo=Tipo '>'
+		'<' 'Apariencia' '=' apariencia=Apariencia '>'
+		'<' 'Categorias' '=' categorias+=Categoria* '>'
+		'<' 'Productos' '=' numProductosPorFila=INT productos+=Producto* '>'
+		'<' 'Usuario' '=' nombreUsuario=STRING ':' email=Correo ':' password=STRING '>'
+	'}'
+;
+
+Apariencia:
+	'[' 'Color' '=' principal=Color ':' principalClaro=Color ':'  
+		secundario=Color ':' fondo=Color ':' fondoProductos=Color ':' precios=Color 
+		':' texto=Color ':' tituloColor=Color ']'
+		
+	'[' 'Texto' '=' normal=Medida ':' grande=Medida ':'  
+		titulo=Medida ':' menu=Medida ']'
+		
+	'[' 'Margen' '=' lateral=Medida ']'
+;  
+
+Producto:
+	'[' 'Producto' '=' nombreProducto=STRING ':' descripcion=STRING ':' precio=Precio ':' cantidad=INT ':' categoria=Categoria ']'
+;
+
+Precio:
+	INT '.' INT
+;
+
+Categoria:
+	'Cosmetica' | 'Higiene' | 'Salud' | 'Dietetica' | 'Bebes'
+;
+
+Tipo:
+	desplegable=Desplegable | permanente=Permanente
+;
+
+Desplegable:
+	'Desplegable' ':' color=Color
+;
+
+Permanente:
+	'Permanente' ':' color=Color ':' altura=Medida
+;
+
+        
+Color:
+	'#'(ID|INT)+
+;
+
+Medida:
+	(INT 'px') | (INT '%')
+;
+
+Correo:
+	ID '@' ID '.' ID
+;
+
+Registro:
+	'[' 'Registro' '=' tomo=INT	':' folio=INT ':'  seccion=INT ':' hoja=INT ']'
+;
+
+Direccion:
+	'[' 'Direccion' '=' calle=STRING	':' ciudad=STRING ':'  pais=STRING ']'
+;
+
+

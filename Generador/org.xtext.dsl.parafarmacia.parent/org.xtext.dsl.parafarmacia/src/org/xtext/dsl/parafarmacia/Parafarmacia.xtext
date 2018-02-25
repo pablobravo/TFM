@@ -1,0 +1,60 @@
+grammar org.xtext.dsl.parafarmacia.Parafarmacia with org.eclipse.xtext.common.Terminals
+
+generate parafarmacia "http://www.xtext.org/dsl/parafarmacia/Parafarmacia"
+
+Parafarmacia:
+    'Parafarmacia' '{'
+		'Titulo' '='  titulo=STRING';'
+		'Descripcion' '='  descripcion=STRING';'
+		apariencia=Apariencia
+		'Paginas' '{' paginas+=Pagina* '}'
+	'}'
+;
+
+Apariencia:
+	'Color' '{'
+		'FondoPrincipal' '=' colorFondo1=Color';'
+		'FondoSecundario' '=' colorFondo2=Color';'
+		'Texto' '=' colorTexto=Color';'
+	'}'
+	'Fuente' '{'
+		'Titulo' '{'
+			'SizeH1' '=' sizeFuenteH1=INT'px' ';'
+			'SizeH2' '=' sizeFuenteH2=INT'px' ';'
+		'}'
+		'Cuerpo' '{'
+			'Size' '=' sizeFuenteCuerpo=INT'px' ';'
+		'}'
+	'}'
+;  
+
+Pagina:
+	'Pagina' name=ID ';'
+	'Titulo' titulo=STRING ';'
+	'Cuerpo' '{'
+		 cuerpo=Cuerpo
+	'}'
+;
+
+Cuerpo:
+	(texto=STRING ';') | productos+=Producto*
+;
+
+Producto:
+	'Producto' name=ID nombre=STRING precio=Precio
+	('imagen' imagen=STRING)?
+	(conreceta?='con receta')?
+	('descripcion' descripcion=STRING)
+	';'
+;
+
+Precio:
+	INT '.' INT
+;
+        
+Color:
+	'#'(ID|INT)+
+;
+
+
+  
