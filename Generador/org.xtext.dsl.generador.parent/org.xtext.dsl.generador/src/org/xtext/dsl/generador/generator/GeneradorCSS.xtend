@@ -3,6 +3,9 @@ package org.xtext.dsl.generador.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.xtext.dsl.generador.generador.Parafarmacia
+import static java.nio.file.StandardCopyOption.*
+import java.nio.file.Files
+import java.io.File
 
 /**
  * Generates code from your model files on save.
@@ -13,6 +16,7 @@ class GeneradorCSS {
 
 	Resource resource;
 	IFileSystemAccess fsa;
+	final String path = "C:\\Users\\UO223531\\git\\parafarmacia\\";
 	
 	new (Resource resource, IFileSystemAccess fsa) {
 		this.resource = resource;
@@ -24,7 +28,9 @@ class GeneradorCSS {
 		for(i: resource.allContents.toIterable.filter(typeof(Parafarmacia))){
 			sb.append(i.compilarTexto);
 		}
+				
 		fsa.generateFile('css/style.css', sb.toString);
+		Files.copy(new File(path+'runtime-EclipseXtext\\my.parafarmacia\\src-gen\\css\\style.css').toPath(), new File(path+'Parafarmacia\\src\\main\\webapp\\resources\\css\\style.css').toPath(), REPLACE_EXISTING);
 	}
 	
 	def compilarTexto(Parafarmacia p) '''		
@@ -182,7 +188,58 @@ class GeneradorCSS {
 		  font-size: 0;
 		  animation: 30s slidy infinite; 
 		}
+		/* Menu movil */
 		
+		.toggle{
+		  background:var(--main-color);
+		  color:var(--color-text-nav);
+		  font-size:18px;
+		  line-height:40px;
+		  width:40px;
+		  height: 40px;
+		  text-align:center;
+		  cursor:pointer;
+		  position:absolute;
+		  top:20px;
+		  right:20px;
+		  z-index:999999;
+		  border-radius:10px;
+		}
+		.menumovilsecundaria{
+			padding-left:30px !IMPORTANT;
+		}
+		.menumovil{
+		  list-style:none;
+		  background:var(--nav-color) ;
+		  display:none;
+		  position:absolute;
+		  width: 100%;
+		  z-index:10000;
+		  margin: 0 auto;
+		  padding: 0;
+		}
+		.menumovil li{
+		  font-size:18px;
+		  line-height:3em;
+		  height:3em;
+		  padding-left:50px;
+		  border-bottom:1px solid rgba(255,255,255,0.3);
+		   transition: all 0.6s ease;
+		}
+		.menumovil li:last-child{
+		  border-bottom:5px solid rgba(0,255,255,0.3);
+		}
+		.menumovil li:hover {
+			background:rgba(0,0,0,0.5);
+		  
+		}
+		
+		.menumovil a{
+		  text-decoration:none;
+		  color:var(--color-text-nav);
+		  font-family:var(--familia-texto);
+		  
+		}
 		
 		/*Submenu*/
 		.nav {
@@ -254,7 +311,11 @@ class GeneradorCSS {
 			top: -15px;
 			border-left: 10px solid transparent;
 			border-right: 10px solid transparent;
-			border-bottom: 10px solid #333;
+			«IF p.tipo.permanente !== null»
+				border-bottom: 10px solid «p.tipo.permanente.color»; 
+			«ELSE»
+				border-bottom: 10px solid «p.tipo.desplegable.color»; 
+			«ENDIF»
 		}
 		
 		.nav li:hover .submenu:before {
@@ -264,7 +325,6 @@ class GeneradorCSS {
 		.submenu li {
 			white-space: nowrap;
 			padding: 1px;
-			height:50px;
 		}
 		
 		li.menusecundario {
@@ -283,7 +343,6 @@ class GeneradorCSS {
 			font-size: 90%;
 			margin: 3px;
 			padding:8px;
-			line-height:50px;
 			transition: background ease .3s;
 		}
 		
@@ -292,7 +351,7 @@ class GeneradorCSS {
 		}
 		
 		.menugeneral {
-			width: 220px;
+			width: 180px;
 			height: var(--altura-menu);
 		}
 		
@@ -314,7 +373,7 @@ class GeneradorCSS {
 			color: var(--color-text-nav);
 			font-size: var(--size-menu);
 			font-family: var(--familia-texto);
-			line-height: 26px;
+			line-height: 30px;
 			z-index: 100;
 		}
 		.menugeneralcarrito{
@@ -504,6 +563,9 @@ class GeneradorCSS {
 			-webkit-box-shadow: -2px 3px 15px 0 rgba(64, 135, 51, 0.4);
 			-moz-box-shadow: -2px 3px 15px 0 rgba(64, 135, 51, 0.4);
 			box-shadow: -2px 3px 15px 0 rgba(64, 135, 51, 0.4);
+		}
+		.agotado{
+			background: #FA5858;
 		}
 		.politicas{
 			width:100%;
@@ -1040,7 +1102,7 @@ class GeneradorCSS {
 			«ENDIF»
 			--background-color:«p.apariencia.fondo»;
 			--color-background-prductos: «p.apariencia.fondoProductos»;
-			--color-text-nav: «p.apariencia.texto»;
+			--color-text-nav: «p.apariencia.fondoProductos»;
 			--color-precios: «p.apariencia.precios»;
 			--color-text: «p.apariencia.texto»;
 			--color-titulo: «p.apariencia.tituloColor»;
@@ -1133,9 +1195,7 @@ class GeneradorCSS {
 			.infopedido div.todo{
 				width:50%;
 			}
-			.menumovil, .toggle{
-				display:none;
-			}
+			
 			.cart {
 				width: 60%;
 			}
@@ -1171,6 +1231,16 @@ class GeneradorCSS {
 				width:50%;
 			}
 			
+			«IF p.tipo.permanente !== null»
+				.menumovil, .toggle{
+					display:none;
+				}
+			«ELSE»
+				nav.menu{
+					display:none;
+				}
+			«ENDIF»
+			
 		}
 		
 		@media (min-width: 600px) and (max-width: 934px){
@@ -1187,7 +1257,7 @@ class GeneradorCSS {
 				«ENDIF»
 				--background-color:«p.apariencia.fondo»;
 				--color-background-prductos: «p.apariencia.fondoProductos»;
-				--color-text-nav: «p.apariencia.texto»;
+				--color-text-nav: «p.apariencia.fondoProductos»;
 				--color-precios: «p.apariencia.precios»;
 				--color-text: «p.apariencia.texto»;
 				--color-titulo: «p.apariencia.tituloColor»;
@@ -1327,56 +1397,7 @@ class GeneradorCSS {
 			nav.menu{
 				display:none;
 			}
-			.toggle{
-			  background:var(--main-color);
-			  color:var(--color-text-nav);
-			  font-size:18px;
-			  line-height:40px;
-			  width:40px;
-			  height: 40px;
-			  text-align:center;
-			  cursor:pointer;
-			  position:absolute;
-			  top:20px;
-			  right:20px;
-			  z-index:999999;
-			  border-radius:10px;
-			}
-			.menumovilsecundaria{
-				padding-left:30px !IMPORTANT;
-			}
-			.menumovil{
-			  list-style:none;
-			  background:var(--nav-color) ;
-			  display:none;
-			  position:absolute;
-			  width: 100%;
-			  z-index:10000;
-			  margin: 0 auto;
-			  padding: 0;
-			}
-			.menumovil li{
-			  font-size:18px;
-			  line-height:3em;
-			  height:3em;
-			  padding-left:50px;
-			  border-bottom:1px solid rgba(255,255,255,0.3);
-			   transition: all 0.8s ease;
-			}
-			.menumovil li:last-child{
-			  border-bottom:5px solid rgba(0,255,255,0.3);
-			}
-			.menumovil li:hover {
-			     box-shadow:inset 2000px 0px 0px rgba(0,0,0,0.5);
-			  
-			}
 			
-			.menumovil a{
-			  text-decoration:none;
-			  color:var(--color-text-nav);
-			  font-family:var(--familia-texto);
-			  
-			}
 			article.producto {
 				width: calc(48% - 50px);
 				padding: 20px 1%;
@@ -1412,7 +1433,7 @@ class GeneradorCSS {
 				«ENDIF»
 				--background-color:«p.apariencia.fondo»;
 				--color-background-prductos: «p.apariencia.fondoProductos»;
-				--color-text-nav: «p.apariencia.texto»;
+				--color-text-nav: «p.apariencia.fondoProductos»;
 				--color-precios: «p.apariencia.precios»;
 				--color-text: «p.apariencia.texto»;
 				--color-titulo: «p.apariencia.tituloColor»;
@@ -1582,55 +1603,7 @@ class GeneradorCSS {
 			nav.menu{
 				display:none;
 			}
-			.toggle{
-			  background:var(--main-color);
-			  color:var(--color-text-nav);
-			  font-size:18px;
-			  line-height:45px;
-			  width:45px;
-			  height: 45px;
-			  text-align:center;
-			  cursor:pointer;
-			  position:absolute;
-			  top:15px;
-			  right:15px;
-			  z-index:999999;
-			  border-radius:10px;
-			}
-			.menumovilsecundaria{
-				padding-left:30px !IMPORTANT;
-			}
-			.menumovil{
-			  list-style:none;
-			  background:var(--nav-color) ;
-			  display:none;
-			  position:absolute;
-			  width: 100%;
-			  z-index:10000;
-			  margin: 0 auto;
-			  padding: 0;
-			}
-			.menumovil li{
-			  font-size:18px;
-			  line-height:3em;
-			  height:3em;
-			  padding-left:50px;
-			  border-bottom:1px solid rgba(255,255,255,0.3);
-			  transition: all 0.8s ease;
-			}
-			.menumovil li:last-child{
-			  border-bottom:5px solid rgba(0,255,255,0.3);
-			}
-			.menumovil li:hover {
-			  box-shadow:inset 2000px 0px 0px rgba(0,0,0,0.5);
-			  
-			}
 			
-			.menumovil a{
-			  text-decoration:none;
-			  color:var(--color-text-nav);
-			  font-family:var(--familia-texto);	  
-			}
 			article.producto {
 				width: 100%;
 				padding: 20px 5px;

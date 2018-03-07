@@ -45,13 +45,26 @@
 						€
 					</p>
 					<div class="detalles">
+						<c:choose>
+							<c:when test="${producto.cantidad > 0}">
+								<a class="boton" href='detalles?idproducto=${producto.id}'><img
+									src="<c:url value='./resources/img/detalles.png'/>" alt='detalles'>Detalles</a>
+		
+								<a class="boton" href="addcarrito?idproducto=${producto.id}"><img
+									src='<c:url value='./resources/img/carrito.png'/>' alt='carrito'>
+									 Añadir</a>
+							</c:when>
+							<c:otherwise>
+								<a class="boton" href='detalles?idproducto=${producto.id}'><img
+									src="<c:url value='./resources/img/detalles.png'/>" alt='detalles'>Detalles</a>
+		
+								<a class="boton agotado" ><img
+									src='<c:url value='./resources/img/carrito.png'/>' alt='carrito'>
+									 Agotado</a>
+							</c:otherwise>
+						</c:choose>
 
-						<a class="boton" href='detalles?idproducto=${producto.id}'><img
-							src="<c:url value='./resources/img/detalles.png'/>" alt='detalles'>Detalles</a>
-
-						<a class="boton" href="addcarrito?idproducto=${producto.id}"><img
-							src='<c:url value='./resources/img/carrito.png'/>' alt='carrito'>
-							 Añadir</a>
+						
 					</div>
 				</article>
 			</c:forEach>

@@ -119,19 +119,19 @@ public class GeneradorSemanticSequencer extends AbstractDelegatingSemanticSequen
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GeneradorPackage.Literals.APARIENCIA__LATERAL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAparienciaAccess().getPrincipalColorParserRuleCall_3_0(), semanticObject.getPrincipal());
-		feeder.accept(grammarAccess.getAparienciaAccess().getPrincipalClaroColorParserRuleCall_5_0(), semanticObject.getPrincipalClaro());
-		feeder.accept(grammarAccess.getAparienciaAccess().getSecundarioColorParserRuleCall_7_0(), semanticObject.getSecundario());
-		feeder.accept(grammarAccess.getAparienciaAccess().getFondoColorParserRuleCall_9_0(), semanticObject.getFondo());
-		feeder.accept(grammarAccess.getAparienciaAccess().getFondoProductosColorParserRuleCall_11_0(), semanticObject.getFondoProductos());
-		feeder.accept(grammarAccess.getAparienciaAccess().getPreciosColorParserRuleCall_13_0(), semanticObject.getPrecios());
-		feeder.accept(grammarAccess.getAparienciaAccess().getTextoColorParserRuleCall_15_0(), semanticObject.getTexto());
-		feeder.accept(grammarAccess.getAparienciaAccess().getTituloColorColorParserRuleCall_17_0(), semanticObject.getTituloColor());
-		feeder.accept(grammarAccess.getAparienciaAccess().getNormalMedidaParserRuleCall_22_0(), semanticObject.getNormal());
-		feeder.accept(grammarAccess.getAparienciaAccess().getGrandeMedidaParserRuleCall_24_0(), semanticObject.getGrande());
-		feeder.accept(grammarAccess.getAparienciaAccess().getTituloMedidaParserRuleCall_26_0(), semanticObject.getTitulo());
-		feeder.accept(grammarAccess.getAparienciaAccess().getMenuMedidaParserRuleCall_28_0(), semanticObject.getMenu());
-		feeder.accept(grammarAccess.getAparienciaAccess().getLateralMedidaParserRuleCall_33_0(), semanticObject.getLateral());
+		feeder.accept(grammarAccess.getAparienciaAccess().getPrincipalColorParserRuleCall_5_0(), semanticObject.getPrincipal());
+		feeder.accept(grammarAccess.getAparienciaAccess().getPrincipalClaroColorParserRuleCall_9_0(), semanticObject.getPrincipalClaro());
+		feeder.accept(grammarAccess.getAparienciaAccess().getSecundarioColorParserRuleCall_13_0(), semanticObject.getSecundario());
+		feeder.accept(grammarAccess.getAparienciaAccess().getFondoColorParserRuleCall_17_0(), semanticObject.getFondo());
+		feeder.accept(grammarAccess.getAparienciaAccess().getFondoProductosColorParserRuleCall_21_0(), semanticObject.getFondoProductos());
+		feeder.accept(grammarAccess.getAparienciaAccess().getPreciosColorParserRuleCall_25_0(), semanticObject.getPrecios());
+		feeder.accept(grammarAccess.getAparienciaAccess().getTextoColorParserRuleCall_29_0(), semanticObject.getTexto());
+		feeder.accept(grammarAccess.getAparienciaAccess().getTituloColorColorParserRuleCall_33_0(), semanticObject.getTituloColor());
+		feeder.accept(grammarAccess.getAparienciaAccess().getNormalMedidaParserRuleCall_40_0(), semanticObject.getNormal());
+		feeder.accept(grammarAccess.getAparienciaAccess().getGrandeMedidaParserRuleCall_44_0(), semanticObject.getGrande());
+		feeder.accept(grammarAccess.getAparienciaAccess().getTituloMedidaParserRuleCall_48_0(), semanticObject.getTitulo());
+		feeder.accept(grammarAccess.getAparienciaAccess().getMenuMedidaParserRuleCall_52_0(), semanticObject.getMenu());
+		feeder.accept(grammarAccess.getAparienciaAccess().getLateralMedidaParserRuleCall_57_0(), semanticObject.getLateral());
 		feeder.finish();
 	}
 	

@@ -28,23 +28,6 @@ public interface IParafarmaciaWS {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<ws.parafarmacia.webservice.Producto>
-     * @throws Exception_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getProductos", targetNamespace = "http://parafarmacia.business.ws.impl/", className = "ws.parafarmacia.webservice.GetProductos")
-    @ResponseWrapper(localName = "getProductosResponse", targetNamespace = "http://parafarmacia.business.ws.impl/", className = "ws.parafarmacia.webservice.GetProductosResponse")
-    @Action(input = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/getProductosRequest", output = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/getProductosResponse", fault = {
-        @FaultAction(className = Exception_Exception.class, value = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/getProductos/Fault/Exception")
-    })
-    public List<Producto> getProductos()
-        throws Exception_Exception
-    ;
-
-    /**
-     * 
      * @param arg0
      * @return
      *     returns ws.parafarmacia.webservice.Producto
@@ -60,6 +43,23 @@ public interface IParafarmaciaWS {
     public Producto updateProducto(
         @WebParam(name = "arg0", targetNamespace = "")
         Producto arg0)
+        throws Exception_Exception
+    ;
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.parafarmacia.webservice.Producto>
+     * @throws Exception_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getProductos", targetNamespace = "http://parafarmacia.business.ws.impl/", className = "ws.parafarmacia.webservice.GetProductos")
+    @ResponseWrapper(localName = "getProductosResponse", targetNamespace = "http://parafarmacia.business.ws.impl/", className = "ws.parafarmacia.webservice.GetProductosResponse")
+    @Action(input = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/getProductosRequest", output = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/getProductosResponse", fault = {
+        @FaultAction(className = Exception_Exception.class, value = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/getProductos/Fault/Exception")
+    })
+    public List<Producto> getProductos()
         throws Exception_Exception
     ;
 
@@ -211,6 +211,20 @@ public interface IParafarmaciaWS {
     public Usuario newUsuario(
         @WebParam(name = "arg0", targetNamespace = "")
         Usuario arg0)
+        throws Exception_Exception
+    ;
+
+    /**
+     * 
+     * @throws Exception_Exception
+     */
+    @WebMethod
+    @RequestWrapper(localName = "removeAllProductos", targetNamespace = "http://parafarmacia.business.ws.impl/", className = "ws.parafarmacia.webservice.RemoveAllProductos")
+    @ResponseWrapper(localName = "removeAllProductosResponse", targetNamespace = "http://parafarmacia.business.ws.impl/", className = "ws.parafarmacia.webservice.RemoveAllProductosResponse")
+    @Action(input = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/removeAllProductosRequest", output = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/removeAllProductosResponse", fault = {
+        @FaultAction(className = Exception_Exception.class, value = "http://parafarmacia.business.ws.impl/IParafarmaciaWS/removeAllProductos/Fault/Exception")
+    })
+    public void removeAllProductos()
         throws Exception_Exception
     ;
 

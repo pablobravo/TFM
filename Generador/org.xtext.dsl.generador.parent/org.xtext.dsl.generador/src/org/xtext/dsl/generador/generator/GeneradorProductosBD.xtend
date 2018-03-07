@@ -38,6 +38,7 @@ class GeneradorProductosBD {
 		
 		servicio = new ParafarmaciaWSService();
 		parafarmacia = servicio.getParafarmaciaWSPort();
+		parafarmacia.removeAllProductos();
 		for(pr: p.productos){
 			producto = new Producto();
 			producto.setNombre(pr.nombreProducto);

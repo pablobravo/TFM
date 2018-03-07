@@ -32,6 +32,7 @@ public class ObjectFactory {
     private final static QName _RemoveProductoResponse_QNAME = new QName("http://parafarmacia.business.ws.impl/", "removeProductoResponse");
     private final static QName _GetUsuariosResponse_QNAME = new QName("http://parafarmacia.business.ws.impl/", "getUsuariosResponse");
     private final static QName _GetUsuarios_QNAME = new QName("http://parafarmacia.business.ws.impl/", "getUsuarios");
+    private final static QName _RemoveAllProductosResponse_QNAME = new QName("http://parafarmacia.business.ws.impl/", "removeAllProductosResponse");
     private final static QName _GetProductos_QNAME = new QName("http://parafarmacia.business.ws.impl/", "getProductos");
     private final static QName _RemoveProducto_QNAME = new QName("http://parafarmacia.business.ws.impl/", "removeProducto");
     private final static QName _NewProductoResponse_QNAME = new QName("http://parafarmacia.business.ws.impl/", "newProductoResponse");
@@ -40,6 +41,7 @@ public class ObjectFactory {
     private final static QName _UpdateProducto_QNAME = new QName("http://parafarmacia.business.ws.impl/", "updateProducto");
     private final static QName _Exception_QNAME = new QName("http://parafarmacia.business.ws.impl/", "Exception");
     private final static QName _NewPedidoResponse_QNAME = new QName("http://parafarmacia.business.ws.impl/", "newPedidoResponse");
+    private final static QName _RemoveAllProductos_QNAME = new QName("http://parafarmacia.business.ws.impl/", "removeAllProductos");
     private final static QName _UpdateUsuario_QNAME = new QName("http://parafarmacia.business.ws.impl/", "updateUsuario");
     private final static QName _NewUsuarioResponse_QNAME = new QName("http://parafarmacia.business.ws.impl/", "newUsuarioResponse");
     private final static QName _GetPedidos_QNAME = new QName("http://parafarmacia.business.ws.impl/", "getPedidos");
@@ -150,6 +152,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RemoveAllProductos }
+     * 
+     */
+    public RemoveAllProductos createRemoveAllProductos() {
+        return new RemoveAllProductos();
+    }
+
+    /**
      * Create an instance of {@link UpdateUsuario }
      * 
      */
@@ -203,6 +213,14 @@ public class ObjectFactory {
      */
     public GetUsuarios createGetUsuarios() {
         return new GetUsuarios();
+    }
+
+    /**
+     * Create an instance of {@link RemoveAllProductosResponse }
+     * 
+     */
+    public RemoveAllProductosResponse createRemoveAllProductosResponse() {
+        return new RemoveAllProductosResponse();
     }
 
     /**
@@ -326,6 +344,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RemoveAllProductosResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://parafarmacia.business.ws.impl/", name = "removeAllProductosResponse")
+    public JAXBElement<RemoveAllProductosResponse> createRemoveAllProductosResponse(RemoveAllProductosResponse value) {
+        return new JAXBElement<RemoveAllProductosResponse>(_RemoveAllProductosResponse_QNAME, RemoveAllProductosResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetProductos }{@code >}}
      * 
      */
@@ -395,6 +422,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://parafarmacia.business.ws.impl/", name = "newPedidoResponse")
     public JAXBElement<NewPedidoResponse> createNewPedidoResponse(NewPedidoResponse value) {
         return new JAXBElement<NewPedidoResponse>(_NewPedidoResponse_QNAME, NewPedidoResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RemoveAllProductos }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://parafarmacia.business.ws.impl/", name = "removeAllProductos")
+    public JAXBElement<RemoveAllProductos> createRemoveAllProductos(RemoveAllProductos value) {
+        return new JAXBElement<RemoveAllProductos>(_RemoveAllProductos_QNAME, RemoveAllProductos.class, null, value);
     }
 
     /**

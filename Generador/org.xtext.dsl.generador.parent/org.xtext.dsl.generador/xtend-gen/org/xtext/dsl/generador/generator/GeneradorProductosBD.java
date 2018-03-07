@@ -46,6 +46,7 @@ public class GeneradorProductosBD {
       ParafarmaciaWSService _parafarmaciaWSService = new ParafarmaciaWSService();
       this.servicio = _parafarmaciaWSService;
       this.parafarmacia = this.servicio.getParafarmaciaWSPort();
+      this.parafarmacia.removeAllProductos();
       EList<org.xtext.dsl.generador.generador.Producto> _productos = p.getProductos();
       for (final org.xtext.dsl.generador.generador.Producto pr : _productos) {
         {

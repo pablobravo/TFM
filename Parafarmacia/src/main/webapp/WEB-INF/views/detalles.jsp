@@ -57,9 +57,22 @@
 					<p class="descr">
 						<c:out value="${producto.descripcion}"></c:out>
 					</p>
-					<a class="boton" href="addcarrito?idproducto=${producto.id}"><img
-						src='<c:url value='./resources/img/carrito.png'/>' alt='carrito'>
-						 Añadir</a>
+					
+					<c:choose>
+						<c:when test="${producto.cantidad > 0}">
+					
+							<a class="boton" href="addcarrito?idproducto=${producto.id}"><img
+								src='<c:url value='./resources/img/carrito.png'/>' alt='carrito'>
+								 Añadir</a>
+						</c:when>
+						<c:otherwise>
+							
+							<a class="boton agotado" ><img
+								src='<c:url value='./resources/img/carrito.png'/>' alt='carrito'>
+								 Agotado</a>
+						</c:otherwise>
+					</c:choose>
+					
 				</div>
 
 			</div>

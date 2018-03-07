@@ -11,7 +11,7 @@
 		<meta name="HandheldFriendly" content="true" />
 		<meta content="Pablo Bravo Mediavilla" name="author" />
 		<link rel="shortcut icon" href="<c:url value="/resources/img/logo.ico"/>" />
-		<title>Parafarmacia Bravo</title>
+		<title>BravoFarma</title>
 		<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 	</head>
 	<body>
@@ -28,9 +28,11 @@
 						</figure>
 					</div>
 					
-					<div class="categoria"><a href="cosmetica">Cosmética<img src='<c:url value='./resources/categorias/categoria1.jpg'/>' alt='Cosmética'></a></div>
-					<div class="categoria"><a href="higiene">Higiene<img src='<c:url value='./resources/categorias/categoria2.jpg'/>' alt='Higiene'></a></div>
-					<div class="categoria"><a href="salud">Salud<img src='<c:url value='./resources/categorias/categoria3.jpg'/>' alt='Salud'></a></div>
+					<div class="categoria"><a href="salud"><spring:message code="salud" /><img src='<c:url value='./resources/categorias/categoria3.jpg'/>' alt='<spring:message code="salud" />'></a></div>
+					<div class="categoria"><a href="cosmetica"><spring:message code="cosmetica" /><img src='<c:url value='./resources/categorias/categoria1.jpg'/>' alt='<spring:message code="cosmetica" />'></a></div>
+					<div class="categoria"><a href="higiene"><spring:message code="higiene" /><img src='<c:url value='./resources/categorias/categoria2.jpg'/>' alt='<spring:message code="higiene" />'></a></div>
+					<div class="categoria"><a href="dietetica"><spring:message code="dietetica" /><img src='<c:url value='./resources/categorias/categoria5.jpg'/>' alt='<spring:message code="dietetica" />'></a></div>
+					<div class="categoria"><a href="bebes"><spring:message code="bebes" /><img src='<c:url value='./resources/categorias/categoria4.jpg'/>' alt='<spring:message code="bebes" />'></a></div>
 			</div>
 			
 			
@@ -40,4 +42,4 @@
 			document.getElementById("inicio").className += " active"; 
 		</script>
 	</body>
-</html>
+</html>		

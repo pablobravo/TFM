@@ -29,7 +29,7 @@
 	        </div>
 			<div class="politicas">
 				<p>El acceso, navegación y utilización del sitio Web
-					www.parafarmaciaonlinebravo.com implica la aceptación expresa y sin
+					implica la aceptación expresa y sin
 					reservas de todos los términos de las presentes condiciones de uso,
 					teniendo la misma validez y eficacia que cualquier contrato
 					celebrado por escrito y firmado.</p>
@@ -39,22 +39,14 @@
 					utilice ninguna página del sitio web.</p>
 				<h2>1. DATOS DE LA COMPAÑÍA.</h2>
 
-				<p>Titular: Parafarmacia Bravo</p>
-				<p>Domicilio social: Av. prueba, España</p>
+				<p>Titular: Pablo</p>
+				<p>Domicilio social: calle estación, Colloto, España</p>
 				<p>CIF: BXXXXXXXX</p>
-				<p>Registro Público: Inscrita en el Registro Mercantil de
-					Asturias</p>
-				<p>Puedes contactar con nosotros mediante correo electrónico o
-					telefónicamente en el 902 930 918, de Lunes a Viernes en horario de
-					8:00 horas a 20:00 horas.</p>
-
-				<p>El coste de la llamada telefónica es de 15 céntimos por
-					establecimiento de llamada y 7,2 cent./min. desde la red fija. Para
-					conocer la tarificación desde tu móvil, consulta con tu operador.</p>
+				
 				<h2>2. OBJETO Y ÁMBITO DE APLICACIÓN.</h2>
 				<p>Las presentes condiciones de uso regulan el acceso,
-					navegación y utilización de la Web www.parafarmaciabravoonline.com,
-					sin perjuicio que Parafarmacia Bravo se reserva el derecho a
+					navegación y utilización de la Web,
+					sin perjuicio que BravoFarma se reserva el derecho a
 					modificar la presentación, configuración y contenido de la Web, así
 					como las condiciones requeridas para su acceso y/o utilización. El
 					acceso y utilización de los contenidos de la Web tras la entrada en
@@ -67,7 +59,7 @@
 					de los usuarios. Estas condiciones particulares, podrán sustituir,
 					completar o en su caso modificar las presentes condiciones de uso
 					particulares.</p>
-				<p>Parafarmacia Bravo se reserva el derecho a modificar los
+				<p>BravoFarma se reserva el derecho a modificar los
 					términos y condiciones aquí estipuladas, total o parcialmente,
 					publicando cualquier cambio en la misma forma en que aparecen estas
 					condiciones de uso o a través de cualquier tipo de comunicación
@@ -80,9 +72,7 @@
 					que en todo caso, el usuario deberá aceptar expresamente en caso de
 					querer disfrutarlos.</p>
 				<p>En caso de que no cuentes con usuario y contraseña de acceso
-					a nuestra plataforma www.parafarmaciabravoonline.com, deberás
-					registrarte desde el siguiente link
-					www.parafarmaciabravoonline.com/mi-cuenta, donde deberás introducir
+					a nuestra plataforma, deberás
 					todos tus datos reales y veraces, dado que será la única forma que
 					tendremos de poder procesar los posibles pedidos que realices en el
 					futuro, así como gestionar correctamente nuestra relación
@@ -92,7 +82,7 @@
 					edad. No obstante, en caso de acceso a la Web y registro por parte
 					de un menor, se presumirá que el acceso se ha realizado con
 					autorización previa y expresa de sus padres, tutores o
-					representantes legales, sin perjuicio de que Parafarmacia Bravo se
+					representantes legales, sin perjuicio de que BravoFarma se
 					reserva el derecho de realizar cuantas verificaciones considere
 					oportunas.</p>
 				<p>El acceso y navegación de la Web no requieren registro, sin
@@ -101,7 +91,7 @@
 					y de nuestros productos, será necesario cumplimentar los
 					formularios web habilitados al efecto. El registro en la Web es,
 					salvo que se indique expresamente lo contrario, gratuito.</p>
-				<p>Bajo ningún concepto Parafarmacia Bravo se responsabilizará
+				<p>Bajo ningún concepto BravoFarma se responsabilizará
 					de la veracidad de los datos de registro facilitados por los
 					usuarios finales, por lo que cada uno de estos son los responsables
 					de las posibles consecuencias, errores y fallos que posteriormente
@@ -116,7 +106,7 @@
 					excluidas las personas jurídicas.</p>
 				<p>Bajo ningún concepto está permitida la cesión de la cuenta de
 					usuario registrado entre diferentes personas, quedando a
-					disposición de Parafarmacia Bravo la eliminación de la misma tan
+					disposición de BravoFarma la eliminación de la misma tan
 					pronto sea detectada tal circunstancia, sin perjuicio de que se
 					reserva las acciones legales que pudieran corresponder.</p>
 				<h2>3.2. BAJA COMO USUARIO REGISTRADO</h2>
@@ -126,15 +116,15 @@
 					usuario y el servicio concreto del que se desee dar de baja.</p>
 				<p>En cualquier caso, una vez efectuada la baja, el usuario
 					podrá solicitar un nuevo registro como cliente, quedando reservada
-					la facultad de Parafarmacia Bravo de no admitir dicho registro en
+					la facultad de BravoFarma de no admitir dicho registro en
 					los casos concretos especificados en la cláusula denominada "Usos
 					no autorizados" o en caso de conflicto o controversia suscitados
 					entre las partes, por resolver o finalizado con reconocimiento de
-					culpa o negligencia del cliente y/o perjuicio a Parafarmacia Bravo
+					culpa o negligencia del cliente y/o perjuicio a BravoFarma
 					, a sus colaboradores y asociados o a sus usuarios, clientes o
 					potenciales clientes.</p>
 				<h2>4. DERECHOS DE PROPIEDAD INTELECTUAL E INDUSTRIAL.</h2>
-				<p>Parafarmacia Bravo es titular o en su caso, cuenta las
+				<p>BravoFarma es titular o en su caso, cuenta las
 					licencias correspondientes sobre los derechos de explotación de
 					propiedad intelectual e industrial de la Web, así como de los
 					derechos de propiedad intelectual e industrial sobre la
@@ -142,13 +132,13 @@
 				<p>En ningún caso se entenderá que el acceso, navegación y
 					utilización de la Web por parte del usuario implica una renuncia,
 					transmisión, licencia o cesión total o parcial de dichos derechos
-					por parte de Parafarmacia Bravo. El usuario dispone de un derecho
+					por parte de BravoFarma. El usuario dispone de un derecho
 					de uso de los contenidos y/o servicios de la Web dentro de un
 					ámbito estrictamente doméstico.</p>
 				<p>Las referencias a marcas o nombres comerciales registrados, u
-					otros signos distintivos, ya sean titularidad de Parafarmacia Bravo
+					otros signos distintivos, ya sean titularidad de BravoFarma
 					o de terceras empresas, llevan implícitas la prohibición sobre su
-					uso sin el consentimiento de Parafarmacia Bravo o de sus legítimos
+					uso sin el consentimiento de BravoFarma o de sus legítimos
 					titulares. En ningún momento, salvo manifestación expresa en
 					contrario, el acceso, navegación o utilización de la Web y/o de sus
 					contenidos, confiere al usuario derecho alguno sobre signos
@@ -160,10 +150,10 @@
 					medio y bajo cualquier forma, la totalidad o parte de los
 					contenidos incluidos en la Web, para propósitos públicos o
 					comerciales, si no se cuenta con la autorización previa, expresa y
-					por escrito de Parafarmacia Bravo o, en su caso, del titular de los
+					por escrito de BravoFarma o, en su caso, del titular de los
 					derechos correspondientes.</p>
 				<p>El usuario reconoce asumir la responsabilidad, dejando
-					indemne a Parafarmacia Bravo por cualquier comunicación que
+					indemne a BravoFarma por cualquier comunicación que
 					suministre personalmente o a su nombre, alcanzando dicha
 					responsabilidad sin restricción alguna la exactitud, legalidad,
 					originalidad y titularidad de la misma.</p>
@@ -171,13 +161,13 @@
 				<h2>5.1 ENLACES A OTRAS PÁGINAS WEB</h2>
 				<p>En caso de que en la Web se mostraran enlaces a otras páginas
 					web mediante diferentes botones, links, banners o contenidos
-					embebidos, Parafarmacia Bravo informa que éstos se encuentran
+					embebidos, BravoFarma informa que éstos se encuentran
 					directamente gestionados por terceros, no teniendo Parafarmacia
 					Bravo ni medios humanos, ni técnicos para conocer de forma previa
 					y/o controlar y/o aprobar toda la información, contenidos,
 					productos o servicios facilitados por otros sitios web a los que se
 					puedan establecer enlaces desde la Web.</p>
-				<p>En consecuencia, Parafarmacia Bravo no podrá asumir ningún
+				<p>En consecuencia, BravoFarma no podrá asumir ningún
 					tipo de responsabilidad por cualquier aspecto relativo a la página
 					web a la que se pudiera establecer un enlace desde la Web, en
 					concreto, a título enunciativo y no limitativo, sobre su
@@ -194,10 +184,10 @@
 				<p>En cualquier caso, el establecimiento de cualquier tipo de
 					enlace desde la Web a otra página web ajena no implicará que exista
 					algún tipo de relación, colaboración o dependencia entre
-					Parafarmacia Bravo y el responsable de la página web ajena.</p>
+					BravoFarma y el responsable de la página web ajena.</p>
 				<h2>5.2 ENLACES AL CANAL DE LA WEB EN OTRAS PLATAFORMAS Y REDES
 					SOCIALES</h2>
-				<p>Parafarmacia Bravo pone a disposición de los usuarios, a
+				<p>BravoFarma pone a disposición de los usuarios, a
 					través de diferentes herramientas y aplicaciones, medios de enlace
 					que permiten a los usuarios acceder a los canales y páginas de la
 					Web y el Blog en diferentes plataformas y redes sociales
@@ -207,7 +197,7 @@
 					facilitar a los usuarios el acceso a dichos canales en las
 					diferentes plataformas y redes sociales.</p>
 				<p>El establecimiento de estas aplicaciones no implica la
-					existencia de relación alguna entre Parafarmacia Bravo y el
+					existencia de relación alguna entre BravoFarma y el
 					propietario, fabricante o distribuidor de la plataforma enlazada,
 					como tampoco la aceptación y aprobación por parte de Parafarmacia
 					Bravo de sus contenidos y/o servicios, siendo su propietario,
@@ -233,7 +223,7 @@
 					del origen de un mensaje;</p>
 				<p>Acceder sin autorización a cualquier sección de la Web, a
 					otros sistemas o redes conectadas a la Plataforma, a ningún
-					servidor de Parafarmacia Bravo ni a los servicios ofrecidos a
+					servidor de BravoFarma ni a los servicios ofrecidos a
 					través de la Web, por medio de pirateo o falsificación, extracción
 					de contraseñas o cualquier otro medio ilegítimo;</p>
 				<p>Quebrantar, o intentar quebrantar, las medidas de seguridad o
@@ -242,7 +232,7 @@
 					ofrecidos en la Web;</p>
 				<p>Llevar a cabo alguna acción que provoque una saturación
 					desproporcionada o innecesaria en la infraestructura de la Web o en
-					los sistemas o redes de Parafarmacia Bravo , así como en los
+					los sistemas o redes de BravoFarma , así como en los
 					sistemas y redes conectados a la Web;</p>
 				<p>Impedir el normal desarrollo de un evento, concurso,
 					promoción o cualquier otra actividad disponible a través de la Web
@@ -255,16 +245,16 @@
 					presentes Condiciones de uso.</p>
 				<p>El incumplimiento de cualquiera de las anteriores
 					obligaciones por el usuario, podrá llevar aparejada la adopción por
-					Parafarmacia Bravo de las medidas oportunas amparadas en Derecho y
+					BravoFarma de las medidas oportunas amparadas en Derecho y
 					en el ejercicio de sus derechos u obligaciones, pudiendo llegar a
 					la eliminación o bloqueo de la cuenta del usuario infractor, sin
 					que medie posibilidad de indemnización alguna por los daños y
 					perjuicios causados.</p>
 				<p>Del mismo modo, la Web cuenta con áreas a través de las que
 					los usuarios pueden participar, publicar contenidos propios y/o
-					compartir contenidos, propios o publicados por Parafarmacia Bravo .
-					Dichas áreas pueden ser propias de Parafarmacia Bravo y por tanto
-					dependientes y controladas por ésta, o ajenas a Parafarmacia Bravo
+					compartir contenidos, propios o publicados por BravoFarma .
+					Dichas áreas pueden ser propias de BravoFarma y por tanto
+					dependientes y controladas por ésta, o ajenas a BravoFarma
 					, tratándose de redes sociales independientes y ajenas a nuestra
 					organización, respecto a las que no podemos responsabilizarnos, ni
 					del correcto funcionamiento, ni las condiciones y políticas
@@ -274,9 +264,9 @@
 				<p>En todo caso, le informamos que cuando el usuario participe
 					en cualquiera de estas zonas, el resto de usuarios de la Web podrá
 					acceder y utilizar a todos los contenidos publicados por el
-					usuario. Parafarmacia Bravo no puede controlar qué uso realizarán
-					otras personas de tus contenidos y, por tanto, Parafarmacia Bravo
-					no se hace responsable de ello. Parafarmacia Bravo le recomienda
+					usuario. BravoFarma no puede controlar qué uso realizarán
+					otras personas de tus contenidos y, por tanto, BravoFarma
+					no se hace responsable de ello. BravoFarma le recomienda
 					que no publique datos de carácter personal o materiales protegidos
 					por derechos de propiedad intelectual e industrial o cualesquiera
 					otros derechos.</p>
@@ -289,11 +279,11 @@
 					especialmente, de los menores de edad.</p>
 
 				<h2>7. RESPONSABILIDADES Y GARANTÍAS</h2>
-				<p>Parafarmacia Bravo no puede garantizar la fiabilidad,
+				<p>BravoFarma no puede garantizar la fiabilidad,
 					utilidad o veracidad de absolutamente toda la información y/o de
 					los servicios de la Web, ni tampoco de la utilidad o veracidad de
 					la documentación puesta a disposición a través de la misma.</p>
-				<p>En consecuencia, Parafarmacia Bravo no garantiza ni se hace
+				<p>En consecuencia, BravoFarma no garantiza ni se hace
 					responsable de: (i) la continuidad de los contenidos de la Web;
 					(ii) la ausencia de errores en dichos contenidos; (iii) la ausencia
 					de virus y/o demás componentes dañinos en la Web o en el servidor
@@ -302,10 +292,10 @@
 					en la misma; (v) la falta de utilidad o rendimiento de los
 					contenidos de la Web; y (vi) los daños o perjuicios que cause, a sí
 					mismo o a un tercero, cualquier persona que infringiera las
-					condiciones, normas e instrucciones que Parafarmacia Bravo
+					condiciones, normas e instrucciones que BravoFarma
 					establece en la Web o a través de la vulneración de los sistemas de
 					seguridad de la Web.</p>
-				<p>No obstante, Parafarmacia Bravo declara que ha adoptado todas
+				<p>No obstante, BravoFarma declara que ha adoptado todas
 					las medidas necesarias, dentro de sus posibilidades y del estado de
 					la técnica, para garantizar el funcionamiento de la Web y reducir
 					al mínimo los errores del sistema, tanto desde el punto de vista
@@ -315,30 +305,30 @@
 					suponer una infracción de derechos de propiedad intelectual o
 					industrial, de la normativa aplicable en material de protección de
 					datos personales y/o cualquier otro derecho, deberá notificarlo
-					inmediatamente a Parafarmacia Bravo para que ésta pueda proceder a
+					inmediatamente a BravoFarma para que ésta pueda proceder a
 					la adopción de las medidas oportunas.</p>
-				<p>Parafarmacia Bravo no garantiza la licitud, fiabilidad y
+				<p>BravoFarma no garantiza la licitud, fiabilidad y
 					utilidad de los contenidos suministrados por terceros a través de
 					la Web.</p>
-				<p>Parafarmacia Bravo no tiene finalidad de promover y/o
+				<p>BravoFarma no tiene finalidad de promover y/o
 					publicitar la venta, el consumo y/o el uso de medicamentos,
 					preparados con fines medicinales y/o productos sanitarios, ni de
 					influir en la toma de decisión de los usuarios con respecto a un
 					determinado tratamiento, ni en la prospección comercial en favor de
 					ningún fabricante de medicamentos y/o productos sanitarios.</p>
-				<p>Parafarmacia Bravo no será responsable sobre la veracidad,
+				<p>BravoFarma no será responsable sobre la veracidad,
 					integridad o actualización de las informaciones publicadas en la
 					Web provenientes de fuentes ajenas al mismo (noticias externas,
 					informes de profesionales externos, etc.), así como tampoco de las
 					contenidas en otros portales web mediante enlace desde la Web.</p>
-				<p>Parafarmacia Bravo no asumirá responsabilidad en cuanto a
+				<p>BravoFarma no asumirá responsabilidad en cuanto a
 					hipotéticos perjuicios que pudieran originarse por el uso de las
 					citadas informaciones. En ningún caso, los mencionados contenidos,
 					opiniones, comentarios y/o enlaces serán considerados como
 					recomendación, patrocinio, promoción o publicidad por parte de
-					Parafarmacia Bravo sobre medicamentos y/o productos sanitarios, ni
+					BravoFarma sobre medicamentos y/o productos sanitarios, ni
 					de los laboratorios o fabricantes que los elaboran.</p>
-				<p>En todo caso, Parafarmacia Bravo se reserva el derecho a
+				<p>En todo caso, BravoFarma se reserva el derecho a
 					suspender, modificar, restringir o interrumpir, temporal o
 					permanentemente, el acceso, navegación, uso, alojamiento y/o
 					descarga del contenido y/o uso de servicios de la Web, con o sin
@@ -379,7 +369,7 @@
 					física indicada en el apartado "Identificación", comprometiéndonos
 					a buscar en todo momento una solución amistosa del conflicto.</p>
 				<p>Última actualización: 2 de enero de 2018</p>
-				<p>2018 Parafarmacia Bravo, S.L. Todos los derechos reservados</p>
+				<p>2018 BravoFarma, S.L. Todos los derechos reservados</p>
 
 			</div>
 		</div>

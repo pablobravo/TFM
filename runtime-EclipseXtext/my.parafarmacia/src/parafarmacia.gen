@@ -1,21 +1,25 @@
 Parafarmacia {
 	< Nombre = "BravoFarma" : "Arial" >
-	< Titular = "Pablo" : [Direccion = "calle estación" : "Colloto" : "España"] : 
+	< Titular = "Pablo" : [Direccion = "calle estaciÃ³n" : "Colloto" : "EspaÃ±a"] : 
 		"345632" : [Registro = 19 : 2 : 5 : 28] : pablo@gmail.com : 665666944 
 	>
-	< Menu = Permanente : #34534m : 70px >
+	< Menu = Permanente : #9A7D0A : 80px >
 	< Apariencia = 
-		[Color = #234523 : #234523 : #234523 : #234523 : #234523 : #234523 : #234523 : #234523]
-		[Texto = 10px : 20px : 22px : 18px]
-		[Margen = 10px]
+		[Color = principal.#229954 : principalClaro.#9A7D0A : secundario.#F5B041 : fondo.#F2F3F4 : fondoProductos.#fff : precios.#D35400 : texto.#1C2833 : titulo.#145A32]
+		[Texto = normal.18px : grande.22px : titulo.26px : menu.22px]
+		[Margen = 10%]
 	>
-	< Categorias = Salud Cosmetica Higiene >
+	< Categorias = Salud Cosmetica Higiene Dietetica Bebes >
 	< Productos = 3
 		[Producto = "Producto de prueba primero" : "Esto es la primera descripcion" : 13.5 : 100 : Cosmetica]
 		[Producto = "Producto de prueba segundo" : "Esto es la segunda descripcion" : 10.5 : 106 : Higiene]
 	>
-	< Usuario = "pablo" : pablo@gmail.com : "pablo" >  
-}     
-       
- 
-      
+	< Usuario = "pablo" : pablo@gmail.com : "pablo" >   
+}          
+         
+   
+    
+  
+          
+  
+         

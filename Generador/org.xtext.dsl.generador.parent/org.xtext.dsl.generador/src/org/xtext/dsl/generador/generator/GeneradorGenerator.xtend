@@ -19,7 +19,10 @@ class GeneradorGenerator extends AbstractGenerator {
 		var generatorCSS = new GeneradorCSS(resource, fsa)
 		generatorCSS.compilar;
 
-		var generatorProductosBD = new GeneradorProductosBD(resource, fsa)
-		generatorProductosBD.compilar;
+		//var generatorProductosBD = new GeneradorProductosBD(resource, fsa)
+		//generatorProductosBD.compilar;
+		
+		var generadorJSP = new GeneradorJSP(resource, fsa)
+		generadorJSP.compilar;
 	}
 }

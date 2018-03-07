@@ -336,64 +336,91 @@ public class GeneradorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftSquareBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cColorKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cPrincipalAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPrincipalColorParserRuleCall_3_0 = (RuleCall)cPrincipalAssignment_3.eContents().get(0);
-		private final Keyword cColonKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cPrincipalClaroAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cPrincipalClaroColorParserRuleCall_5_0 = (RuleCall)cPrincipalClaroAssignment_5.eContents().get(0);
+		private final Keyword cPrincipalKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cFullStopKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cPrincipalAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cPrincipalColorParserRuleCall_5_0 = (RuleCall)cPrincipalAssignment_5.eContents().get(0);
 		private final Keyword cColonKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cSecundarioAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cSecundarioColorParserRuleCall_7_0 = (RuleCall)cSecundarioAssignment_7.eContents().get(0);
-		private final Keyword cColonKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cFondoAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cFondoColorParserRuleCall_9_0 = (RuleCall)cFondoAssignment_9.eContents().get(0);
+		private final Keyword cPrincipalClaroKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cFullStopKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cPrincipalClaroAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cPrincipalClaroColorParserRuleCall_9_0 = (RuleCall)cPrincipalClaroAssignment_9.eContents().get(0);
 		private final Keyword cColonKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cFondoProductosAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cFondoProductosColorParserRuleCall_11_0 = (RuleCall)cFondoProductosAssignment_11.eContents().get(0);
-		private final Keyword cColonKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Assignment cPreciosAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cPreciosColorParserRuleCall_13_0 = (RuleCall)cPreciosAssignment_13.eContents().get(0);
+		private final Keyword cSecundarioKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cFullStopKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Assignment cSecundarioAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cSecundarioColorParserRuleCall_13_0 = (RuleCall)cSecundarioAssignment_13.eContents().get(0);
 		private final Keyword cColonKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Assignment cTextoAssignment_15 = (Assignment)cGroup.eContents().get(15);
-		private final RuleCall cTextoColorParserRuleCall_15_0 = (RuleCall)cTextoAssignment_15.eContents().get(0);
-		private final Keyword cColonKeyword_16 = (Keyword)cGroup.eContents().get(16);
-		private final Assignment cTituloColorAssignment_17 = (Assignment)cGroup.eContents().get(17);
-		private final RuleCall cTituloColorColorParserRuleCall_17_0 = (RuleCall)cTituloColorAssignment_17.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_18 = (Keyword)cGroup.eContents().get(18);
-		private final Keyword cLeftSquareBracketKeyword_19 = (Keyword)cGroup.eContents().get(19);
-		private final Keyword cTextoKeyword_20 = (Keyword)cGroup.eContents().get(20);
-		private final Keyword cEqualsSignKeyword_21 = (Keyword)cGroup.eContents().get(21);
-		private final Assignment cNormalAssignment_22 = (Assignment)cGroup.eContents().get(22);
-		private final RuleCall cNormalMedidaParserRuleCall_22_0 = (RuleCall)cNormalAssignment_22.eContents().get(0);
-		private final Keyword cColonKeyword_23 = (Keyword)cGroup.eContents().get(23);
-		private final Assignment cGrandeAssignment_24 = (Assignment)cGroup.eContents().get(24);
-		private final RuleCall cGrandeMedidaParserRuleCall_24_0 = (RuleCall)cGrandeAssignment_24.eContents().get(0);
-		private final Keyword cColonKeyword_25 = (Keyword)cGroup.eContents().get(25);
-		private final Assignment cTituloAssignment_26 = (Assignment)cGroup.eContents().get(26);
-		private final RuleCall cTituloMedidaParserRuleCall_26_0 = (RuleCall)cTituloAssignment_26.eContents().get(0);
-		private final Keyword cColonKeyword_27 = (Keyword)cGroup.eContents().get(27);
-		private final Assignment cMenuAssignment_28 = (Assignment)cGroup.eContents().get(28);
-		private final RuleCall cMenuMedidaParserRuleCall_28_0 = (RuleCall)cMenuAssignment_28.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_29 = (Keyword)cGroup.eContents().get(29);
-		private final Keyword cLeftSquareBracketKeyword_30 = (Keyword)cGroup.eContents().get(30);
-		private final Keyword cMargenKeyword_31 = (Keyword)cGroup.eContents().get(31);
-		private final Keyword cEqualsSignKeyword_32 = (Keyword)cGroup.eContents().get(32);
-		private final Assignment cLateralAssignment_33 = (Assignment)cGroup.eContents().get(33);
-		private final RuleCall cLateralMedidaParserRuleCall_33_0 = (RuleCall)cLateralAssignment_33.eContents().get(0);
+		private final Keyword cFondoKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cFullStopKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Assignment cFondoAssignment_17 = (Assignment)cGroup.eContents().get(17);
+		private final RuleCall cFondoColorParserRuleCall_17_0 = (RuleCall)cFondoAssignment_17.eContents().get(0);
+		private final Keyword cColonKeyword_18 = (Keyword)cGroup.eContents().get(18);
+		private final Keyword cFondoProductosKeyword_19 = (Keyword)cGroup.eContents().get(19);
+		private final Keyword cFullStopKeyword_20 = (Keyword)cGroup.eContents().get(20);
+		private final Assignment cFondoProductosAssignment_21 = (Assignment)cGroup.eContents().get(21);
+		private final RuleCall cFondoProductosColorParserRuleCall_21_0 = (RuleCall)cFondoProductosAssignment_21.eContents().get(0);
+		private final Keyword cColonKeyword_22 = (Keyword)cGroup.eContents().get(22);
+		private final Keyword cPreciosKeyword_23 = (Keyword)cGroup.eContents().get(23);
+		private final Keyword cFullStopKeyword_24 = (Keyword)cGroup.eContents().get(24);
+		private final Assignment cPreciosAssignment_25 = (Assignment)cGroup.eContents().get(25);
+		private final RuleCall cPreciosColorParserRuleCall_25_0 = (RuleCall)cPreciosAssignment_25.eContents().get(0);
+		private final Keyword cColonKeyword_26 = (Keyword)cGroup.eContents().get(26);
+		private final Keyword cTextoKeyword_27 = (Keyword)cGroup.eContents().get(27);
+		private final Keyword cFullStopKeyword_28 = (Keyword)cGroup.eContents().get(28);
+		private final Assignment cTextoAssignment_29 = (Assignment)cGroup.eContents().get(29);
+		private final RuleCall cTextoColorParserRuleCall_29_0 = (RuleCall)cTextoAssignment_29.eContents().get(0);
+		private final Keyword cColonKeyword_30 = (Keyword)cGroup.eContents().get(30);
+		private final Keyword cTituloKeyword_31 = (Keyword)cGroup.eContents().get(31);
+		private final Keyword cFullStopKeyword_32 = (Keyword)cGroup.eContents().get(32);
+		private final Assignment cTituloColorAssignment_33 = (Assignment)cGroup.eContents().get(33);
+		private final RuleCall cTituloColorColorParserRuleCall_33_0 = (RuleCall)cTituloColorAssignment_33.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_34 = (Keyword)cGroup.eContents().get(34);
+		private final Keyword cLeftSquareBracketKeyword_35 = (Keyword)cGroup.eContents().get(35);
+		private final Keyword cTextoKeyword_36 = (Keyword)cGroup.eContents().get(36);
+		private final Keyword cEqualsSignKeyword_37 = (Keyword)cGroup.eContents().get(37);
+		private final Keyword cNormalKeyword_38 = (Keyword)cGroup.eContents().get(38);
+		private final Keyword cFullStopKeyword_39 = (Keyword)cGroup.eContents().get(39);
+		private final Assignment cNormalAssignment_40 = (Assignment)cGroup.eContents().get(40);
+		private final RuleCall cNormalMedidaParserRuleCall_40_0 = (RuleCall)cNormalAssignment_40.eContents().get(0);
+		private final Keyword cColonKeyword_41 = (Keyword)cGroup.eContents().get(41);
+		private final Keyword cGrandeKeyword_42 = (Keyword)cGroup.eContents().get(42);
+		private final Keyword cFullStopKeyword_43 = (Keyword)cGroup.eContents().get(43);
+		private final Assignment cGrandeAssignment_44 = (Assignment)cGroup.eContents().get(44);
+		private final RuleCall cGrandeMedidaParserRuleCall_44_0 = (RuleCall)cGrandeAssignment_44.eContents().get(0);
+		private final Keyword cColonKeyword_45 = (Keyword)cGroup.eContents().get(45);
+		private final Keyword cTituloKeyword_46 = (Keyword)cGroup.eContents().get(46);
+		private final Keyword cFullStopKeyword_47 = (Keyword)cGroup.eContents().get(47);
+		private final Assignment cTituloAssignment_48 = (Assignment)cGroup.eContents().get(48);
+		private final RuleCall cTituloMedidaParserRuleCall_48_0 = (RuleCall)cTituloAssignment_48.eContents().get(0);
+		private final Keyword cColonKeyword_49 = (Keyword)cGroup.eContents().get(49);
+		private final Keyword cMenuKeyword_50 = (Keyword)cGroup.eContents().get(50);
+		private final Keyword cFullStopKeyword_51 = (Keyword)cGroup.eContents().get(51);
+		private final Assignment cMenuAssignment_52 = (Assignment)cGroup.eContents().get(52);
+		private final RuleCall cMenuMedidaParserRuleCall_52_0 = (RuleCall)cMenuAssignment_52.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_53 = (Keyword)cGroup.eContents().get(53);
+		private final Keyword cLeftSquareBracketKeyword_54 = (Keyword)cGroup.eContents().get(54);
+		private final Keyword cMargenKeyword_55 = (Keyword)cGroup.eContents().get(55);
+		private final Keyword cEqualsSignKeyword_56 = (Keyword)cGroup.eContents().get(56);
+		private final Assignment cLateralAssignment_57 = (Assignment)cGroup.eContents().get(57);
+		private final RuleCall cLateralMedidaParserRuleCall_57_0 = (RuleCall)cLateralAssignment_57.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_58 = (Keyword)cGroup.eContents().get(58);
 		
 		//Apariencia:
-		//	'[' 'Color' '=' principal=Color ':' principalClaro=Color ':'
-		//	secundario=Color ':' fondo=Color ':' fondoProductos=Color ':' precios=Color
-		//	':' texto=Color ':' tituloColor=Color ']'
-		//	'[' 'Texto' '=' normal=Medida ':' grande=Medida ':'
-		//	titulo=Medida ':' menu=Medida ']'
+		//	'[' 'Color' '=' 'principal' '.' principal=Color ':' 'principalClaro' '.' principalClaro=Color ':'
+		//	'secundario' '.' secundario=Color ':' 'fondo' '.' fondo=Color ':' 'fondoProductos' '.' fondoProductos=Color ':'
+		//	'precios' '.' precios=Color
+		//	':' 'texto' '.' texto=Color ':' 'titulo' '.' tituloColor=Color ']'
+		//	'[' 'Texto' '=' 'normal' '.' normal=Medida ':' 'grande' '.' grande=Medida ':'
+		//	'titulo' '.' titulo=Medida ':' 'menu' '.' menu=Medida ']'
 		//	'[' 'Margen' '=' lateral=Medida ']';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'[' 'Color' '=' principal=Color ':' principalClaro=Color ':' secundario=Color ':' fondo=Color ':' fondoProductos=Color
-		//':' precios=Color ':' texto=Color ':' tituloColor=Color ']' '[' 'Texto' '=' normal=Medida ':' grande=Medida ':'
-		//titulo=Medida ':' menu=Medida ']' '[' 'Margen' '=' lateral=Medida ']'
+		//'[' 'Color' '=' 'principal' '.' principal=Color ':' 'principalClaro' '.' principalClaro=Color ':' 'secundario' '.'
+		//secundario=Color ':' 'fondo' '.' fondo=Color ':' 'fondoProductos' '.' fondoProductos=Color ':' 'precios' '.'
+		//precios=Color ':' 'texto' '.' texto=Color ':' 'titulo' '.' tituloColor=Color ']' '[' 'Texto' '=' 'normal' '.'
+		//normal=Medida ':' 'grande' '.' grande=Medida ':' 'titulo' '.' titulo=Medida ':' 'menu' '.' menu=Medida ']' '['
+		//'Margen' '=' lateral=Medida ']'
 		public Group getGroup() { return cGroup; }
 		
 		//'['
@@ -405,140 +432,212 @@ public class GeneradorGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
 		
+		//'principal'
+		public Keyword getPrincipalKeyword_3() { return cPrincipalKeyword_3; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_4() { return cFullStopKeyword_4; }
+		
 		//principal=Color
-		public Assignment getPrincipalAssignment_3() { return cPrincipalAssignment_3; }
+		public Assignment getPrincipalAssignment_5() { return cPrincipalAssignment_5; }
 		
 		//Color
-		public RuleCall getPrincipalColorParserRuleCall_3_0() { return cPrincipalColorParserRuleCall_3_0; }
-		
-		//':'
-		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
-		
-		//principalClaro=Color
-		public Assignment getPrincipalClaroAssignment_5() { return cPrincipalClaroAssignment_5; }
-		
-		//Color
-		public RuleCall getPrincipalClaroColorParserRuleCall_5_0() { return cPrincipalClaroColorParserRuleCall_5_0; }
+		public RuleCall getPrincipalColorParserRuleCall_5_0() { return cPrincipalColorParserRuleCall_5_0; }
 		
 		//':'
 		public Keyword getColonKeyword_6() { return cColonKeyword_6; }
 		
-		//secundario=Color
-		public Assignment getSecundarioAssignment_7() { return cSecundarioAssignment_7; }
+		//'principalClaro'
+		public Keyword getPrincipalClaroKeyword_7() { return cPrincipalClaroKeyword_7; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_8() { return cFullStopKeyword_8; }
+		
+		//principalClaro=Color
+		public Assignment getPrincipalClaroAssignment_9() { return cPrincipalClaroAssignment_9; }
 		
 		//Color
-		public RuleCall getSecundarioColorParserRuleCall_7_0() { return cSecundarioColorParserRuleCall_7_0; }
-		
-		//':'
-		public Keyword getColonKeyword_8() { return cColonKeyword_8; }
-		
-		//fondo=Color
-		public Assignment getFondoAssignment_9() { return cFondoAssignment_9; }
-		
-		//Color
-		public RuleCall getFondoColorParserRuleCall_9_0() { return cFondoColorParserRuleCall_9_0; }
+		public RuleCall getPrincipalClaroColorParserRuleCall_9_0() { return cPrincipalClaroColorParserRuleCall_9_0; }
 		
 		//':'
 		public Keyword getColonKeyword_10() { return cColonKeyword_10; }
 		
-		//fondoProductos=Color
-		public Assignment getFondoProductosAssignment_11() { return cFondoProductosAssignment_11; }
+		//'secundario'
+		public Keyword getSecundarioKeyword_11() { return cSecundarioKeyword_11; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_12() { return cFullStopKeyword_12; }
+		
+		//secundario=Color
+		public Assignment getSecundarioAssignment_13() { return cSecundarioAssignment_13; }
 		
 		//Color
-		public RuleCall getFondoProductosColorParserRuleCall_11_0() { return cFondoProductosColorParserRuleCall_11_0; }
-		
-		//':'
-		public Keyword getColonKeyword_12() { return cColonKeyword_12; }
-		
-		//precios=Color
-		public Assignment getPreciosAssignment_13() { return cPreciosAssignment_13; }
-		
-		//Color
-		public RuleCall getPreciosColorParserRuleCall_13_0() { return cPreciosColorParserRuleCall_13_0; }
+		public RuleCall getSecundarioColorParserRuleCall_13_0() { return cSecundarioColorParserRuleCall_13_0; }
 		
 		//':'
 		public Keyword getColonKeyword_14() { return cColonKeyword_14; }
 		
-		//texto=Color
-		public Assignment getTextoAssignment_15() { return cTextoAssignment_15; }
+		//'fondo'
+		public Keyword getFondoKeyword_15() { return cFondoKeyword_15; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_16() { return cFullStopKeyword_16; }
+		
+		//fondo=Color
+		public Assignment getFondoAssignment_17() { return cFondoAssignment_17; }
 		
 		//Color
-		public RuleCall getTextoColorParserRuleCall_15_0() { return cTextoColorParserRuleCall_15_0; }
+		public RuleCall getFondoColorParserRuleCall_17_0() { return cFondoColorParserRuleCall_17_0; }
 		
 		//':'
-		public Keyword getColonKeyword_16() { return cColonKeyword_16; }
+		public Keyword getColonKeyword_18() { return cColonKeyword_18; }
+		
+		//'fondoProductos'
+		public Keyword getFondoProductosKeyword_19() { return cFondoProductosKeyword_19; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_20() { return cFullStopKeyword_20; }
+		
+		//fondoProductos=Color
+		public Assignment getFondoProductosAssignment_21() { return cFondoProductosAssignment_21; }
+		
+		//Color
+		public RuleCall getFondoProductosColorParserRuleCall_21_0() { return cFondoProductosColorParserRuleCall_21_0; }
+		
+		//':'
+		public Keyword getColonKeyword_22() { return cColonKeyword_22; }
+		
+		//'precios'
+		public Keyword getPreciosKeyword_23() { return cPreciosKeyword_23; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_24() { return cFullStopKeyword_24; }
+		
+		//precios=Color
+		public Assignment getPreciosAssignment_25() { return cPreciosAssignment_25; }
+		
+		//Color
+		public RuleCall getPreciosColorParserRuleCall_25_0() { return cPreciosColorParserRuleCall_25_0; }
+		
+		//':'
+		public Keyword getColonKeyword_26() { return cColonKeyword_26; }
+		
+		//'texto'
+		public Keyword getTextoKeyword_27() { return cTextoKeyword_27; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_28() { return cFullStopKeyword_28; }
+		
+		//texto=Color
+		public Assignment getTextoAssignment_29() { return cTextoAssignment_29; }
+		
+		//Color
+		public RuleCall getTextoColorParserRuleCall_29_0() { return cTextoColorParserRuleCall_29_0; }
+		
+		//':'
+		public Keyword getColonKeyword_30() { return cColonKeyword_30; }
+		
+		//'titulo'
+		public Keyword getTituloKeyword_31() { return cTituloKeyword_31; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_32() { return cFullStopKeyword_32; }
 		
 		//tituloColor=Color
-		public Assignment getTituloColorAssignment_17() { return cTituloColorAssignment_17; }
+		public Assignment getTituloColorAssignment_33() { return cTituloColorAssignment_33; }
 		
 		//Color
-		public RuleCall getTituloColorColorParserRuleCall_17_0() { return cTituloColorColorParserRuleCall_17_0; }
-		
-		//']'
-		public Keyword getRightSquareBracketKeyword_18() { return cRightSquareBracketKeyword_18; }
-		
-		//'['
-		public Keyword getLeftSquareBracketKeyword_19() { return cLeftSquareBracketKeyword_19; }
-		
-		//'Texto'
-		public Keyword getTextoKeyword_20() { return cTextoKeyword_20; }
-		
-		//'='
-		public Keyword getEqualsSignKeyword_21() { return cEqualsSignKeyword_21; }
-		
-		//normal=Medida
-		public Assignment getNormalAssignment_22() { return cNormalAssignment_22; }
-		
-		//Medida
-		public RuleCall getNormalMedidaParserRuleCall_22_0() { return cNormalMedidaParserRuleCall_22_0; }
-		
-		//':'
-		public Keyword getColonKeyword_23() { return cColonKeyword_23; }
-		
-		//grande=Medida
-		public Assignment getGrandeAssignment_24() { return cGrandeAssignment_24; }
-		
-		//Medida
-		public RuleCall getGrandeMedidaParserRuleCall_24_0() { return cGrandeMedidaParserRuleCall_24_0; }
-		
-		//':'
-		public Keyword getColonKeyword_25() { return cColonKeyword_25; }
-		
-		//titulo=Medida
-		public Assignment getTituloAssignment_26() { return cTituloAssignment_26; }
-		
-		//Medida
-		public RuleCall getTituloMedidaParserRuleCall_26_0() { return cTituloMedidaParserRuleCall_26_0; }
-		
-		//':'
-		public Keyword getColonKeyword_27() { return cColonKeyword_27; }
-		
-		//menu=Medida
-		public Assignment getMenuAssignment_28() { return cMenuAssignment_28; }
-		
-		//Medida
-		public RuleCall getMenuMedidaParserRuleCall_28_0() { return cMenuMedidaParserRuleCall_28_0; }
-		
-		//']'
-		public Keyword getRightSquareBracketKeyword_29() { return cRightSquareBracketKeyword_29; }
-		
-		//'['
-		public Keyword getLeftSquareBracketKeyword_30() { return cLeftSquareBracketKeyword_30; }
-		
-		//'Margen'
-		public Keyword getMargenKeyword_31() { return cMargenKeyword_31; }
-		
-		//'='
-		public Keyword getEqualsSignKeyword_32() { return cEqualsSignKeyword_32; }
-		
-		//lateral=Medida
-		public Assignment getLateralAssignment_33() { return cLateralAssignment_33; }
-		
-		//Medida
-		public RuleCall getLateralMedidaParserRuleCall_33_0() { return cLateralMedidaParserRuleCall_33_0; }
+		public RuleCall getTituloColorColorParserRuleCall_33_0() { return cTituloColorColorParserRuleCall_33_0; }
 		
 		//']'
 		public Keyword getRightSquareBracketKeyword_34() { return cRightSquareBracketKeyword_34; }
+		
+		//'['
+		public Keyword getLeftSquareBracketKeyword_35() { return cLeftSquareBracketKeyword_35; }
+		
+		//'Texto'
+		public Keyword getTextoKeyword_36() { return cTextoKeyword_36; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_37() { return cEqualsSignKeyword_37; }
+		
+		//'normal'
+		public Keyword getNormalKeyword_38() { return cNormalKeyword_38; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_39() { return cFullStopKeyword_39; }
+		
+		//normal=Medida
+		public Assignment getNormalAssignment_40() { return cNormalAssignment_40; }
+		
+		//Medida
+		public RuleCall getNormalMedidaParserRuleCall_40_0() { return cNormalMedidaParserRuleCall_40_0; }
+		
+		//':'
+		public Keyword getColonKeyword_41() { return cColonKeyword_41; }
+		
+		//'grande'
+		public Keyword getGrandeKeyword_42() { return cGrandeKeyword_42; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_43() { return cFullStopKeyword_43; }
+		
+		//grande=Medida
+		public Assignment getGrandeAssignment_44() { return cGrandeAssignment_44; }
+		
+		//Medida
+		public RuleCall getGrandeMedidaParserRuleCall_44_0() { return cGrandeMedidaParserRuleCall_44_0; }
+		
+		//':'
+		public Keyword getColonKeyword_45() { return cColonKeyword_45; }
+		
+		//'titulo'
+		public Keyword getTituloKeyword_46() { return cTituloKeyword_46; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_47() { return cFullStopKeyword_47; }
+		
+		//titulo=Medida
+		public Assignment getTituloAssignment_48() { return cTituloAssignment_48; }
+		
+		//Medida
+		public RuleCall getTituloMedidaParserRuleCall_48_0() { return cTituloMedidaParserRuleCall_48_0; }
+		
+		//':'
+		public Keyword getColonKeyword_49() { return cColonKeyword_49; }
+		
+		//'menu'
+		public Keyword getMenuKeyword_50() { return cMenuKeyword_50; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_51() { return cFullStopKeyword_51; }
+		
+		//menu=Medida
+		public Assignment getMenuAssignment_52() { return cMenuAssignment_52; }
+		
+		//Medida
+		public RuleCall getMenuMedidaParserRuleCall_52_0() { return cMenuMedidaParserRuleCall_52_0; }
+		
+		//']'
+		public Keyword getRightSquareBracketKeyword_53() { return cRightSquareBracketKeyword_53; }
+		
+		//'['
+		public Keyword getLeftSquareBracketKeyword_54() { return cLeftSquareBracketKeyword_54; }
+		
+		//'Margen'
+		public Keyword getMargenKeyword_55() { return cMargenKeyword_55; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_56() { return cEqualsSignKeyword_56; }
+		
+		//lateral=Medida
+		public Assignment getLateralAssignment_57() { return cLateralAssignment_57; }
+		
+		//Medida
+		public RuleCall getLateralMedidaParserRuleCall_57_0() { return cLateralMedidaParserRuleCall_57_0; }
+		
+		//']'
+		public Keyword getRightSquareBracketKeyword_58() { return cRightSquareBracketKeyword_58; }
 	}
 	public class ProductoElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.dsl.generador.Generador.Producto");
@@ -1082,11 +1181,12 @@ public class GeneradorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Apariencia:
-	//	'[' 'Color' '=' principal=Color ':' principalClaro=Color ':'
-	//	secundario=Color ':' fondo=Color ':' fondoProductos=Color ':' precios=Color
-	//	':' texto=Color ':' tituloColor=Color ']'
-	//	'[' 'Texto' '=' normal=Medida ':' grande=Medida ':'
-	//	titulo=Medida ':' menu=Medida ']'
+	//	'[' 'Color' '=' 'principal' '.' principal=Color ':' 'principalClaro' '.' principalClaro=Color ':'
+	//	'secundario' '.' secundario=Color ':' 'fondo' '.' fondo=Color ':' 'fondoProductos' '.' fondoProductos=Color ':'
+	//	'precios' '.' precios=Color
+	//	':' 'texto' '.' texto=Color ':' 'titulo' '.' tituloColor=Color ']'
+	//	'[' 'Texto' '=' 'normal' '.' normal=Medida ':' 'grande' '.' grande=Medida ':'
+	//	'titulo' '.' titulo=Medida ':' 'menu' '.' menu=Medida ']'
 	//	'[' 'Margen' '=' lateral=Medida ']';
 	public AparienciaElements getAparienciaAccess() {
 		return pApariencia;

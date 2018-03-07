@@ -16,12 +16,12 @@ Parafarmacia:
 ;
 
 Apariencia:
-	'[' 'Color' '=' principal=Color ':' principalClaro=Color ':'  
-		secundario=Color ':' fondo=Color ':' fondoProductos=Color ':' precios=Color 
-		':' texto=Color ':' tituloColor=Color ']'
+	'[' 'Color' '=' 'principal' '.' principal=Color ':' 'principalClaro' '.' principalClaro=Color ':'  
+		'secundario' '.' secundario=Color ':' 'fondo' '.' fondo=Color ':' 'fondoProductos' '.' fondoProductos=Color ':' 'precios' '.' precios=Color 
+		':' 'texto' '.' texto=Color ':' 'titulo' '.' tituloColor=Color ']'
 		
-	'[' 'Texto' '=' normal=Medida ':' grande=Medida ':'  
-		titulo=Medida ':' menu=Medida ']'
+	'[' 'Texto' '=' 'normal' '.' normal=Medida ':' 'grande' '.' grande=Medida ':'  
+		'titulo' '.' titulo=Medida ':'  'menu' '.' menu=Medida ']'
 		
 	'[' 'Margen' '=' lateral=Medida ']'
 ;  

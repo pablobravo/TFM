@@ -559,12 +559,20 @@ ruleApariencia returns [EObject current=null]
 		{
 			newLeafNode(otherlv_2, grammarAccess.getAparienciaAccess().getEqualsSignKeyword_2());
 		}
+		otherlv_3='principal'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getAparienciaAccess().getPrincipalKeyword_3());
+		}
+		otherlv_4='.'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getAparienciaAccess().getFullStopKeyword_4());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getPrincipalColorParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getAparienciaAccess().getPrincipalColorParserRuleCall_5_0());
 				}
-				lv_principal_3_0=ruleColor
+				lv_principal_5_0=ruleColor
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
@@ -572,30 +580,7 @@ ruleApariencia returns [EObject current=null]
 					set(
 						$current,
 						"principal",
-						lv_principal_3_0,
-						"org.xtext.dsl.generador.Generador.Color");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_4=':'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getAparienciaAccess().getColonKeyword_4());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getPrincipalClaroColorParserRuleCall_5_0());
-				}
-				lv_principalClaro_5_0=ruleColor
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
-					}
-					set(
-						$current,
-						"principalClaro",
-						lv_principalClaro_5_0,
+						lv_principal_5_0,
 						"org.xtext.dsl.generador.Generador.Color");
 					afterParserOrEnumRuleCall();
 				}
@@ -605,43 +590,28 @@ ruleApariencia returns [EObject current=null]
 		{
 			newLeafNode(otherlv_6, grammarAccess.getAparienciaAccess().getColonKeyword_6());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getSecundarioColorParserRuleCall_7_0());
-				}
-				lv_secundario_7_0=ruleColor
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
-					}
-					set(
-						$current,
-						"secundario",
-						lv_secundario_7_0,
-						"org.xtext.dsl.generador.Generador.Color");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_8=':'
+		otherlv_7='principalClaro'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getAparienciaAccess().getColonKeyword_8());
+			newLeafNode(otherlv_7, grammarAccess.getAparienciaAccess().getPrincipalClaroKeyword_7());
+		}
+		otherlv_8='.'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getAparienciaAccess().getFullStopKeyword_8());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getFondoColorParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getAparienciaAccess().getPrincipalClaroColorParserRuleCall_9_0());
 				}
-				lv_fondo_9_0=ruleColor
+				lv_principalClaro_9_0=ruleColor
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
 					}
 					set(
 						$current,
-						"fondo",
-						lv_fondo_9_0,
+						"principalClaro",
+						lv_principalClaro_9_0,
 						"org.xtext.dsl.generador.Generador.Color");
 					afterParserOrEnumRuleCall();
 				}
@@ -651,43 +621,28 @@ ruleApariencia returns [EObject current=null]
 		{
 			newLeafNode(otherlv_10, grammarAccess.getAparienciaAccess().getColonKeyword_10());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getFondoProductosColorParserRuleCall_11_0());
-				}
-				lv_fondoProductos_11_0=ruleColor
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
-					}
-					set(
-						$current,
-						"fondoProductos",
-						lv_fondoProductos_11_0,
-						"org.xtext.dsl.generador.Generador.Color");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_12=':'
+		otherlv_11='secundario'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getAparienciaAccess().getColonKeyword_12());
+			newLeafNode(otherlv_11, grammarAccess.getAparienciaAccess().getSecundarioKeyword_11());
+		}
+		otherlv_12='.'
+		{
+			newLeafNode(otherlv_12, grammarAccess.getAparienciaAccess().getFullStopKeyword_12());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getPreciosColorParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getAparienciaAccess().getSecundarioColorParserRuleCall_13_0());
 				}
-				lv_precios_13_0=ruleColor
+				lv_secundario_13_0=ruleColor
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
 					}
 					set(
 						$current,
-						"precios",
-						lv_precios_13_0,
+						"secundario",
+						lv_secundario_13_0,
 						"org.xtext.dsl.generador.Generador.Color");
 					afterParserOrEnumRuleCall();
 				}
@@ -697,12 +652,113 @@ ruleApariencia returns [EObject current=null]
 		{
 			newLeafNode(otherlv_14, grammarAccess.getAparienciaAccess().getColonKeyword_14());
 		}
+		otherlv_15='fondo'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getAparienciaAccess().getFondoKeyword_15());
+		}
+		otherlv_16='.'
+		{
+			newLeafNode(otherlv_16, grammarAccess.getAparienciaAccess().getFullStopKeyword_16());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getTextoColorParserRuleCall_15_0());
+					newCompositeNode(grammarAccess.getAparienciaAccess().getFondoColorParserRuleCall_17_0());
 				}
-				lv_texto_15_0=ruleColor
+				lv_fondo_17_0=ruleColor
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
+					}
+					set(
+						$current,
+						"fondo",
+						lv_fondo_17_0,
+						"org.xtext.dsl.generador.Generador.Color");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_18=':'
+		{
+			newLeafNode(otherlv_18, grammarAccess.getAparienciaAccess().getColonKeyword_18());
+		}
+		otherlv_19='fondoProductos'
+		{
+			newLeafNode(otherlv_19, grammarAccess.getAparienciaAccess().getFondoProductosKeyword_19());
+		}
+		otherlv_20='.'
+		{
+			newLeafNode(otherlv_20, grammarAccess.getAparienciaAccess().getFullStopKeyword_20());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAparienciaAccess().getFondoProductosColorParserRuleCall_21_0());
+				}
+				lv_fondoProductos_21_0=ruleColor
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
+					}
+					set(
+						$current,
+						"fondoProductos",
+						lv_fondoProductos_21_0,
+						"org.xtext.dsl.generador.Generador.Color");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_22=':'
+		{
+			newLeafNode(otherlv_22, grammarAccess.getAparienciaAccess().getColonKeyword_22());
+		}
+		otherlv_23='precios'
+		{
+			newLeafNode(otherlv_23, grammarAccess.getAparienciaAccess().getPreciosKeyword_23());
+		}
+		otherlv_24='.'
+		{
+			newLeafNode(otherlv_24, grammarAccess.getAparienciaAccess().getFullStopKeyword_24());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAparienciaAccess().getPreciosColorParserRuleCall_25_0());
+				}
+				lv_precios_25_0=ruleColor
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
+					}
+					set(
+						$current,
+						"precios",
+						lv_precios_25_0,
+						"org.xtext.dsl.generador.Generador.Color");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_26=':'
+		{
+			newLeafNode(otherlv_26, grammarAccess.getAparienciaAccess().getColonKeyword_26());
+		}
+		otherlv_27='texto'
+		{
+			newLeafNode(otherlv_27, grammarAccess.getAparienciaAccess().getTextoKeyword_27());
+		}
+		otherlv_28='.'
+		{
+			newLeafNode(otherlv_28, grammarAccess.getAparienciaAccess().getFullStopKeyword_28());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAparienciaAccess().getTextoColorParserRuleCall_29_0());
+				}
+				lv_texto_29_0=ruleColor
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
@@ -710,22 +766,30 @@ ruleApariencia returns [EObject current=null]
 					set(
 						$current,
 						"texto",
-						lv_texto_15_0,
+						lv_texto_29_0,
 						"org.xtext.dsl.generador.Generador.Color");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_16=':'
+		otherlv_30=':'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getAparienciaAccess().getColonKeyword_16());
+			newLeafNode(otherlv_30, grammarAccess.getAparienciaAccess().getColonKeyword_30());
+		}
+		otherlv_31='titulo'
+		{
+			newLeafNode(otherlv_31, grammarAccess.getAparienciaAccess().getTituloKeyword_31());
+		}
+		otherlv_32='.'
+		{
+			newLeafNode(otherlv_32, grammarAccess.getAparienciaAccess().getFullStopKeyword_32());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getTituloColorColorParserRuleCall_17_0());
+					newCompositeNode(grammarAccess.getAparienciaAccess().getTituloColorColorParserRuleCall_33_0());
 				}
-				lv_tituloColor_17_0=ruleColor
+				lv_tituloColor_33_0=ruleColor
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
@@ -733,147 +797,8 @@ ruleApariencia returns [EObject current=null]
 					set(
 						$current,
 						"tituloColor",
-						lv_tituloColor_17_0,
+						lv_tituloColor_33_0,
 						"org.xtext.dsl.generador.Generador.Color");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_18=']'
-		{
-			newLeafNode(otherlv_18, grammarAccess.getAparienciaAccess().getRightSquareBracketKeyword_18());
-		}
-		otherlv_19='['
-		{
-			newLeafNode(otherlv_19, grammarAccess.getAparienciaAccess().getLeftSquareBracketKeyword_19());
-		}
-		otherlv_20='Texto'
-		{
-			newLeafNode(otherlv_20, grammarAccess.getAparienciaAccess().getTextoKeyword_20());
-		}
-		otherlv_21='='
-		{
-			newLeafNode(otherlv_21, grammarAccess.getAparienciaAccess().getEqualsSignKeyword_21());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getNormalMedidaParserRuleCall_22_0());
-				}
-				lv_normal_22_0=ruleMedida
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
-					}
-					set(
-						$current,
-						"normal",
-						lv_normal_22_0,
-						"org.xtext.dsl.generador.Generador.Medida");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_23=':'
-		{
-			newLeafNode(otherlv_23, grammarAccess.getAparienciaAccess().getColonKeyword_23());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getGrandeMedidaParserRuleCall_24_0());
-				}
-				lv_grande_24_0=ruleMedida
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
-					}
-					set(
-						$current,
-						"grande",
-						lv_grande_24_0,
-						"org.xtext.dsl.generador.Generador.Medida");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_25=':'
-		{
-			newLeafNode(otherlv_25, grammarAccess.getAparienciaAccess().getColonKeyword_25());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getTituloMedidaParserRuleCall_26_0());
-				}
-				lv_titulo_26_0=ruleMedida
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
-					}
-					set(
-						$current,
-						"titulo",
-						lv_titulo_26_0,
-						"org.xtext.dsl.generador.Generador.Medida");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_27=':'
-		{
-			newLeafNode(otherlv_27, grammarAccess.getAparienciaAccess().getColonKeyword_27());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getMenuMedidaParserRuleCall_28_0());
-				}
-				lv_menu_28_0=ruleMedida
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
-					}
-					set(
-						$current,
-						"menu",
-						lv_menu_28_0,
-						"org.xtext.dsl.generador.Generador.Medida");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_29=']'
-		{
-			newLeafNode(otherlv_29, grammarAccess.getAparienciaAccess().getRightSquareBracketKeyword_29());
-		}
-		otherlv_30='['
-		{
-			newLeafNode(otherlv_30, grammarAccess.getAparienciaAccess().getLeftSquareBracketKeyword_30());
-		}
-		otherlv_31='Margen'
-		{
-			newLeafNode(otherlv_31, grammarAccess.getAparienciaAccess().getMargenKeyword_31());
-		}
-		otherlv_32='='
-		{
-			newLeafNode(otherlv_32, grammarAccess.getAparienciaAccess().getEqualsSignKeyword_32());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAparienciaAccess().getLateralMedidaParserRuleCall_33_0());
-				}
-				lv_lateral_33_0=ruleMedida
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
-					}
-					set(
-						$current,
-						"lateral",
-						lv_lateral_33_0,
-						"org.xtext.dsl.generador.Generador.Medida");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -881,6 +806,177 @@ ruleApariencia returns [EObject current=null]
 		otherlv_34=']'
 		{
 			newLeafNode(otherlv_34, grammarAccess.getAparienciaAccess().getRightSquareBracketKeyword_34());
+		}
+		otherlv_35='['
+		{
+			newLeafNode(otherlv_35, grammarAccess.getAparienciaAccess().getLeftSquareBracketKeyword_35());
+		}
+		otherlv_36='Texto'
+		{
+			newLeafNode(otherlv_36, grammarAccess.getAparienciaAccess().getTextoKeyword_36());
+		}
+		otherlv_37='='
+		{
+			newLeafNode(otherlv_37, grammarAccess.getAparienciaAccess().getEqualsSignKeyword_37());
+		}
+		otherlv_38='normal'
+		{
+			newLeafNode(otherlv_38, grammarAccess.getAparienciaAccess().getNormalKeyword_38());
+		}
+		otherlv_39='.'
+		{
+			newLeafNode(otherlv_39, grammarAccess.getAparienciaAccess().getFullStopKeyword_39());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAparienciaAccess().getNormalMedidaParserRuleCall_40_0());
+				}
+				lv_normal_40_0=ruleMedida
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
+					}
+					set(
+						$current,
+						"normal",
+						lv_normal_40_0,
+						"org.xtext.dsl.generador.Generador.Medida");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_41=':'
+		{
+			newLeafNode(otherlv_41, grammarAccess.getAparienciaAccess().getColonKeyword_41());
+		}
+		otherlv_42='grande'
+		{
+			newLeafNode(otherlv_42, grammarAccess.getAparienciaAccess().getGrandeKeyword_42());
+		}
+		otherlv_43='.'
+		{
+			newLeafNode(otherlv_43, grammarAccess.getAparienciaAccess().getFullStopKeyword_43());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAparienciaAccess().getGrandeMedidaParserRuleCall_44_0());
+				}
+				lv_grande_44_0=ruleMedida
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
+					}
+					set(
+						$current,
+						"grande",
+						lv_grande_44_0,
+						"org.xtext.dsl.generador.Generador.Medida");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_45=':'
+		{
+			newLeafNode(otherlv_45, grammarAccess.getAparienciaAccess().getColonKeyword_45());
+		}
+		otherlv_46='titulo'
+		{
+			newLeafNode(otherlv_46, grammarAccess.getAparienciaAccess().getTituloKeyword_46());
+		}
+		otherlv_47='.'
+		{
+			newLeafNode(otherlv_47, grammarAccess.getAparienciaAccess().getFullStopKeyword_47());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAparienciaAccess().getTituloMedidaParserRuleCall_48_0());
+				}
+				lv_titulo_48_0=ruleMedida
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
+					}
+					set(
+						$current,
+						"titulo",
+						lv_titulo_48_0,
+						"org.xtext.dsl.generador.Generador.Medida");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_49=':'
+		{
+			newLeafNode(otherlv_49, grammarAccess.getAparienciaAccess().getColonKeyword_49());
+		}
+		otherlv_50='menu'
+		{
+			newLeafNode(otherlv_50, grammarAccess.getAparienciaAccess().getMenuKeyword_50());
+		}
+		otherlv_51='.'
+		{
+			newLeafNode(otherlv_51, grammarAccess.getAparienciaAccess().getFullStopKeyword_51());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAparienciaAccess().getMenuMedidaParserRuleCall_52_0());
+				}
+				lv_menu_52_0=ruleMedida
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
+					}
+					set(
+						$current,
+						"menu",
+						lv_menu_52_0,
+						"org.xtext.dsl.generador.Generador.Medida");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_53=']'
+		{
+			newLeafNode(otherlv_53, grammarAccess.getAparienciaAccess().getRightSquareBracketKeyword_53());
+		}
+		otherlv_54='['
+		{
+			newLeafNode(otherlv_54, grammarAccess.getAparienciaAccess().getLeftSquareBracketKeyword_54());
+		}
+		otherlv_55='Margen'
+		{
+			newLeafNode(otherlv_55, grammarAccess.getAparienciaAccess().getMargenKeyword_55());
+		}
+		otherlv_56='='
+		{
+			newLeafNode(otherlv_56, grammarAccess.getAparienciaAccess().getEqualsSignKeyword_56());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAparienciaAccess().getLateralMedidaParserRuleCall_57_0());
+				}
+				lv_lateral_57_0=ruleMedida
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAparienciaRule());
+					}
+					set(
+						$current,
+						"lateral",
+						lv_lateral_57_0,
+						"org.xtext.dsl.generador.Generador.Medida");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_58=']'
+		{
+			newLeafNode(otherlv_58, grammarAccess.getAparienciaAccess().getRightSquareBracketKeyword_58());
 		}
 	)
 ;

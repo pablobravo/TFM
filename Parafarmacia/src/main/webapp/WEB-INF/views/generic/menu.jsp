@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <header>
 	<img id="logo" src="<c:url value="/resources/img/logo.png"/>"
-		alt="Logo Bravo Air">
+		alt="Logo">
 	<h1>BravoFarma</h1>
 </header>
 
@@ -27,8 +27,7 @@
 							<li class="menusecundario"><a href="mispedidos">Mis
 									pedidos</a></li>
 						</ul></li>
-					<li class="menusecundario"><a href="cerrarsesion">Cerrar
-							sesión</a></li>
+					<li class="menusecundario"><a href="cerrarsesion"><spring:message code="cerrarsesion" /></a></li>
 				</ul>
 			</c:when>
 			<c:otherwise>
@@ -59,11 +58,12 @@
 		
 		<li class="menugeneral"><a id="productos" href="productos"> Productos</a>
 			<ul class="submenu">
-				<li class="submenugeneral"><a id="cosmetica" href="cosmetica">Cosmética</a></li>
-				<li class="submenugeneral"><a id="higiene" href="higiene">Higiene</a></li>
-				<li class="submenugeneral"><a id="salud" href="salud">Salud</a></li>
-				<li class="submenugeneral"><a id="dietetica" href="dietetica">Dietética</a></li>
-				<li class="submenugeneral"><a id="bebes" href="bebes">Bebes</a></li>
+			<li class="submenugeneral"><a id="salud" href="salud"><spring:message code="salud" /></a></li>
+			<li class="submenugeneral"><a id="cosmetica" href="cosmetica"><spring:message code="cosmetica" /></a></li>					
+			<li class="submenugeneral"><a id="higiene" href="higiene"><spring:message code="higiene" /></a></li>
+			<li class="submenugeneral"><a id="dietetica" href="dietetica"><spring:message code="dietetica" /></a></li>
+			<li class="submenugeneral"><a id="bebes" href="bebes"><spring:message code="bebes" /></a></li>
+				
 			</ul></li>
 			
 		<li class="menugeneral"><a id="inicio" href="inicio">Inicio</a></li>
@@ -83,19 +83,18 @@
   		<ul class="menumovil">
 			<li><a href="inicio">Inicio</a></li>
 			<li><a href="productos">Productos</a></li>
-	        <li><a class="menumovilsecundaria" href="cosmetica">Cosmética</a></li>
-			<li><a class="menumovilsecundaria" href="higiene">Higiene</a></li>
-			<li><a class="menumovilsecundaria" href="salud">Salud</a></li>
-			<li><a class="menumovilsecundaria" href="dietetica">Dietética</a></li>
-			<li><a class="menumovilsecundaria" href="bebes">Bebes</a></li>
+			<li><a class="menumovilsecundaria" href="salud"><spring:message code="salud" /></a></li>
+			<li><a class="menumovilsecundaria" href="cosmetica"><spring:message code="cosmetica" /></a></li>
+			<li><a class="menumovilsecundaria" href="higiene"><spring:message code="higiene" /></a></li>
+			<li><a class="menumovilsecundaria" href="dietetica"><spring:message code="dietetica" /></a></li>
+			<li><a class="menumovilsecundaria" href="bebes"><spring:message code="bebes" /></a></li>
 			<c:choose>
 				<c:when test="${sesion != null}">
 
 					<li><a href="cuenta">Modificar cuenta</a></li>
 					<li><a href="mispedidos">Mis
 							pedidos</a></li>
-					<li><a href="cerrarsesion">Cerrar
-							sesión</a></li>
+					<li><a href="cerrarsesion"><spring:message code="cerrarsesion" /></a></li>
 					
 				</c:when>
 				<c:otherwise>
@@ -164,3 +163,4 @@ $(document).ready(function(){
 	      
 	  });
 	})</script>
+

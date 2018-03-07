@@ -32,14 +32,28 @@
 							<img class="imageproducto" src="<c:url value="/resources/product/${fn:replace(producto.nombre,' ', '')}.JPG"/>" alt="<c:out value="${producto.nombre}"></c:out>">
 							<h3><c:out value="${fn:substring(producto.nombre, 0, 1)}"></c:out><c:out value="${fn:toLowerCase(fn:substring(producto.nombre, 1, 1000))}"></c:out></h3>
 							
-							<%-- <p><c:out value="${fn:substring(producto.descripcion, 0, 250)}"></c:out>...</p>--%>
 							<p><c:out value="${producto.precio}"></c:out> €</p>
 							<div class="detalles">
 								
-				                <a class="boton" href='./producto/details.php?id=5'><img src="<c:url value='./resources/img/detalles.png'/>" alt='detalles'>Detalles</a>
-				                
-				                <a class="boton" href="addcarrito?idproducto=${producto.id}"><img src="<c:url value='./resources/img/carrito.png'/>" alt='carrito'> Añadir</a>
-				            </div>
+				                <c:choose>
+									<c:when test="${producto.cantidad > 0}">
+										<a class="boton" href='detalles?idproducto=${producto.id}'><img
+											src="<c:url value='./resources/img/detalles.png'/>" alt='detalles'>Detalles</a>
+				
+										<a class="boton" href="addcarrito?idproducto=${producto.id}"><img
+											src='<c:url value='./resources/img/carrito.png'/>' alt='carrito'>
+											 Añadir</a>
+									</c:when>
+									<c:otherwise>
+										<a class="boton" href='detalles?idproducto=${producto.id}'><img
+											src="<c:url value='./resources/img/detalles.png'/>" alt='detalles'>Detalles</a>
+				
+										<a class="boton agotado" ><img
+											src='<c:url value='./resources/img/carrito.png'/>' alt='carrito'>
+											 Agotado</a>
+									</c:otherwise>
+								</c:choose>
+							</div>
 						</article>
 					</c:forEach>
 			</div>

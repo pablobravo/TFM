@@ -33,12 +33,12 @@
 					personal para uso promocional interno el cual está inscrito en la
 					Agencia Española de Protección de datos. Nunca se proporcionarán o
 					venderán estos datos a terceros. El responsable del fichero es
-					Parafarmacia Bravo. Si desea ser eliminado de nuestra base de datos
+					Pablo. Si desea ser eliminado de nuestra base de datos
 					o bien modificar los mismos puede solcitarlo en esta dirección
 					postal:</p>
-				<p>Calle prueba número 324 Oviedo España</p>
+				<p>calle estación, Colloto, España</p>
 				<p>O bien en la siguiente dirección de correo electrónico:
-					prueba@parafarmacia.es</p>
+					pablo@gmail.com</p>
 			</div>
 		</div>
 		<jsp:include page="generic/footer.jsp" />

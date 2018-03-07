@@ -77,30 +77,22 @@ public class ProductoDAO {
 		return producto;
 	}
 
-	@SuppressWarnings("resource")
-	public synchronized Producto newProducto(Producto producto) throws Exception {
+	public synchronized static Producto newProducto(Producto producto) throws Exception {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		Connection con = null;
 		
 		try {
+			
 			con = Jdbc.getConnection();
 			
-			ps = con.prepareStatement(Conf.get("SQL_MAXID_PRODUCTO"));
-			rs = ps.executeQuery();
-			Integer id=0;
-			while (rs.next()) {
-				 id = rs.getInt("maximo");
-			}
-			
-			producto.setId(id);
-			ps = con.prepareStatement("SQL_INSERT_PRODUCTO");
-			ps.setInt(1, id+1);
-			ps.setString(2,producto.getNombre());
-			ps.setString(3,producto.getDescripcion());
-			ps.setDouble(4,producto.getPrecio());
-			ps.setInt(5,producto.getCantidad());
-			ps.setString(6,producto.getCategoria());
+			ps = con.prepareStatement(Conf.get("SQL_INSERT_PRODUCTO"));
+	
+			ps.setString(1,producto.getNombre());
+			ps.setString(2,producto.getDescripcion());
+			ps.setDouble(3,producto.getPrecio());
+			ps.setInt(4,producto.getCantidad());
+			ps.setString(5,producto.getCategoria());
 		
 			ps.executeUpdate();
 			con.close();

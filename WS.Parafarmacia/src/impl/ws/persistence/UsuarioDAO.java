@@ -52,7 +52,6 @@ public class UsuarioDAO {
 	}
 
 
-	@SuppressWarnings("resource")
 	public synchronized Usuario newUsuario(Usuario usuario) throws Exception {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -60,24 +59,15 @@ public class UsuarioDAO {
 		
 		try {
 			con = Jdbc.getConnection();
-			
-			ps = con.prepareStatement(Conf.get("SQL_MAXID_USUARIO"));
-			rs = ps.executeQuery();
-			Integer id=0;
-			while (rs.next()) {
-				 id = rs.getInt("maximo");
-			}
-			
-			usuario.setId(id);
+		
 			ps = con.prepareStatement(Conf.get("SQL_INSERT_USUARIO"));
-			ps.setInt(1, id+1);
-			ps.setString(2,usuario.getNombre());
-			ps.setString(3,usuario.getPassword());
-			ps.setString(4,usuario.getEmail());
-			ps.setString(5,usuario.getCodpostal());
-			ps.setString(6,usuario.getDireccion());
-			ps.setString(7,usuario.getCiudad());
-			ps.setString(8,usuario.getProvincia());
+			ps.setString(1,usuario.getNombre());
+			ps.setString(2,usuario.getPassword());
+			ps.setString(3,usuario.getEmail());
+			ps.setString(4,usuario.getCodpostal());
+			ps.setString(5,usuario.getDireccion());
+			ps.setString(6,usuario.getCiudad());
+			ps.setString(7,usuario.getProvincia());
 		
 			ps.executeUpdate();
 

@@ -48,7 +48,6 @@ public class PedidoDAO {
 		return pedidos;
 	}
 
-	@SuppressWarnings("resource")
 	public Pedido newPedido(Pedido pedido) throws Exception {
 
 		PreparedStatement ps = null;
@@ -58,21 +57,14 @@ public class PedidoDAO {
 		try {
 			con = Jdbc.getConnection();
 			
-			ps = con.prepareStatement(Conf.get("SQL_MAXID_PEDIDO"));
-			rs = ps.executeQuery();
-			Integer id=0;
-			while (rs.next()) {
-				 id = rs.getInt("maximo");
-			}
-			
-			pedido.setId(id);
+		
 			ps = con.prepareStatement(Conf.get("SQL_INSERT_PEDIDO"));
-			ps.setInt(1, id+1);
-			ps.setInt(2,pedido.getIdUsuario());
-			ps.setInt(3,pedido.getIdProducto());
-			ps.setInt(4,pedido.getUnidades());
-			ps.setDate(5,pedido.getFecha());
-			ps.setString(6,pedido.getEstado());
+		
+			ps.setInt(1,pedido.getIdUsuario());
+			ps.setInt(2,pedido.getIdProducto());
+			ps.setInt(3,pedido.getUnidades());
+			ps.setDate(4,pedido.getFecha());
+			ps.setString(5,pedido.getEstado());
 		
 			ps.executeUpdate();
 
