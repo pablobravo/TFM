@@ -56,7 +56,27 @@ public class GeneradorProductosBD {
           this.producto.setDescripcion(pr.getDescripcion());
           this.producto.setPrecio(Double.parseDouble(pr.getPrecio()));
           this.producto.setCantidad(pr.getCantidad());
-          this.producto.setCategoria(pr.getCategoria());
+          boolean _equals = pr.getCategoria().equals("Salud");
+          if (_equals) {
+            this.producto.setCategoria("SALUD");
+          } else {
+            boolean _equals_1 = pr.getCategoria().equals("Cosmetica");
+            if (_equals_1) {
+              this.producto.setCategoria("COSMÉTICA");
+            } else {
+              boolean _equals_2 = pr.getCategoria().equals("Higiene");
+              if (_equals_2) {
+                this.producto.setCategoria("HIGIENE");
+              } else {
+                boolean _equals_3 = pr.getCategoria().equals("Dietetica");
+                if (_equals_3) {
+                  this.producto.setCategoria("DIETÉTICA");
+                } else {
+                  this.producto.setCategoria("BEBES");
+                }
+              }
+            }
+          }
           this.parafarmacia.newProducto(this.producto);
         }
       }

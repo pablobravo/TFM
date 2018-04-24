@@ -6,6 +6,7 @@ import org.xtext.dsl.generador.generador.Parafarmacia
 import static java.nio.file.StandardCopyOption.*
 import java.nio.file.Files
 import java.io.File
+import org.xtext.dsl.generador.conf.Conf
 
 /**
  * Generates code from your model files on save.
@@ -16,11 +17,14 @@ class GeneradorCSS {
 
 	Resource resource;
 	IFileSystemAccess fsa;
-	final String path = "C:\\Users\\UO223531\\git\\parafarmacia\\";
+	final String path;
 	
 	new (Resource resource, IFileSystemAccess fsa) {
 		this.resource = resource;
 		this.fsa = fsa;
+		path = Conf.get("path");
+		System.out.println("pathh1: "+Conf.get("path"));
+		System.out.println("pathh: "+path);
 	}
 	
 	def compilar() {
@@ -837,7 +841,7 @@ class GeneradorCSS {
 		.pedido p span.total {
 			font-size: var(--size-texto-grande);
 		}
-		/* Formulario inicio sesión */
+		/* Formulario inicio sesion */
 		.formacceso {
 			display: flex;
 			flex-direction: column;
@@ -912,12 +916,14 @@ class GeneradorCSS {
 			padding:10px;
 		}
 		
+		
 		.pedidoproducto{
 		
 			width:100%;
 			
 			display:flex;
-			justify-content:space-around;
+			justify-content:flex-start;
+			flex-wrap:wrap;
 		
 		    border: 1px solid #ddd;
 		    
@@ -926,17 +932,25 @@ class GeneradorCSS {
 			
 		}
 		.pedidoproducto .imgproducto{
-			display:flex;
-			justify-content:space-around;
+			    display: flex;
+			    justify-content: flex-start;
+			    width: 100%;
+			    align-items: center;
+			    margin-bottom: 20px;
+			    text-align: left;
 		}
 		.pedidoproducto .imgproducto p{
 			margin:10px 20px;
-			}
+			width: 25%;
+		}
+		.pedidoproducto .imgproducto p.total{
+			text-align:right;
+		}
 		.pedidoproducto img{
 			height:100px;
 		}
 		
-		/* Descripción productos */
+		/* Descripcion productos */
 		.descripcion {
 			width: 100%;
 			margin: 30px var(--margenes-laterales);
@@ -1087,7 +1101,7 @@ class GeneradorCSS {
 			text-align:center;
 		}
 		
-		/* versión pantalla mayor de 935 px */
+		/* version pantalla mayor de 935 px */
 		@media (min-width: 935px) {
 			
 			:root { 
@@ -1419,7 +1433,7 @@ class GeneradorCSS {
 			}
 		}
 		
-		/* versión móvil menor 935 px */
+		/* version movil menor 935 px */
 		@media (max-width: 599px) {
 			:root { 
 				/* Colores */

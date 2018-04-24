@@ -33,7 +33,7 @@ public class PedidoDAO implements PedidoDataService{
 				t.setIdUsuario(rs.getInt("idusuario"));
 				t.setIdProducto(rs.getInt("idproducto"));
 				t.setUnidades(rs.getInt("unidades"));
-				t.setFecha(rs.getDate("fecha"));
+				t.setFecha(rs.getString("fecha"));
 				t.setEstado(rs.getString("estado"));
 
 				pedidos.add(t);
@@ -66,7 +66,7 @@ public class PedidoDAO implements PedidoDataService{
 			ps.setInt(1,pedido.getIdUsuario());
 			ps.setInt(2,pedido.getIdProducto());
 			ps.setInt(3,pedido.getUnidades());
-			ps.setDate(4,pedido.getFecha());
+			ps.setString(4,pedido.getFecha());
 			ps.setString(5,pedido.getEstado());
 		
 			ps.executeUpdate();
@@ -94,7 +94,7 @@ public class PedidoDAO implements PedidoDataService{
 			ps.setInt(1,pedido.getIdUsuario());
 			ps.setInt(2,pedido.getIdProducto());
 			ps.setInt(3,pedido.getUnidades());
-			ps.setDate(4,pedido.getFecha());
+			ps.setString(4,pedido.getFecha());
 			ps.setString(5,pedido.getEstado());
 			ps.setInt(6, pedido.getId());
 			ps.executeUpdate();

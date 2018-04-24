@@ -45,7 +45,21 @@ class GeneradorProductosBD {
 			producto.setDescripcion(pr.descripcion);
 			producto.setPrecio(Double.parseDouble(pr.precio));
 			producto.setCantidad(pr.cantidad);
-			producto.setCategoria(pr.categoria);
+			if(pr.categoria.equals("Salud")){
+				producto.setCategoria("SALUD");
+			}
+			else if(pr.categoria.equals("Cosmetica")){
+				producto.setCategoria("COSMÉTICA");
+				}
+			else if(pr.categoria.equals("Higiene")){
+				producto.setCategoria("HIGIENE");
+				}
+			else if(pr.categoria.equals("Dietetica")){
+				producto.setCategoria("DIETÉTICA");
+				}
+			else{
+				producto.setCategoria("BEBES");
+			}
 			parafarmacia.newProducto(producto);
 		}
 			

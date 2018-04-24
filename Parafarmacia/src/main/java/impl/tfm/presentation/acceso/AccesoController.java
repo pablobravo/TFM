@@ -54,14 +54,8 @@ public class AccesoController {
 		Vector<Usuario> usuarios=  usuarioManagerService.getUsuarios();
 		boolean existe = false;
 		for(Usuario b: usuarios){
-			if(b.getEmail().equals(email) && b.getPassword().equals(password)){
+			if((b.getEmail().equals(email) || b.getNombre().equals(email)) && b.getPassword().equals(password)){
 				existe= true;
-				/*usuario.setCiudad(b.getCiudad());
-				usuario.setCodpostal(b.getCodpostal());
-				usuario.setDireccion(b.getDireccion());
-				usuario.setId(b.getId());
-				usuario.setNombre(b.getNombre());
-				usuario.setProvincia(b.getProvincia());*/
 				request.getSession().setAttribute("sesion", b);
 			}
 		}

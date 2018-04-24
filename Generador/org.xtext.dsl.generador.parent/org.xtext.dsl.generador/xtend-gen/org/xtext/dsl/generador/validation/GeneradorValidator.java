@@ -3,6 +3,9 @@
  */
 package org.xtext.dsl.generador.validation;
 
+import org.eclipse.xtext.validation.Check;
+import org.xtext.dsl.generador.generador.Apariencia;
+import org.xtext.dsl.generador.generador.GeneradorPackage;
 import org.xtext.dsl.generador.validation.AbstractGeneradorValidator;
 
 /**
@@ -12,4 +15,51 @@ import org.xtext.dsl.generador.validation.AbstractGeneradorValidator;
  */
 @SuppressWarnings("all")
 public class GeneradorValidator extends AbstractGeneradorValidator {
+  public final static String INVALID_COLOR = "invalidColor";
+  
+  public final static String INVALID_SIZE_TEXT = "invalidSizeText";
+  
+  @Check
+  public void checkFormatColor(final Apariencia apariencia) {
+    if (((apariencia.getPrincipal().length() > 7) || (apariencia.getPrincipal().length() < 3))) {
+      this.error("El color no puede tener más de 7 caracteres ni menos de 3", 
+        GeneradorPackage.Literals.APARIENCIA__PRINCIPAL, 
+        GeneradorValidator.INVALID_COLOR);
+    }
+    if (((apariencia.getPrincipalClaro().length() > 7) || (apariencia.getPrincipalClaro().length() < 3))) {
+      this.error("El color no puede tener más de 7 caracteres ni menos de 3", 
+        GeneradorPackage.Literals.APARIENCIA__PRINCIPAL_CLARO, 
+        GeneradorValidator.INVALID_COLOR);
+    }
+    if (((apariencia.getSecundario().length() > 7) || (apariencia.getSecundario().length() < 3))) {
+      this.error("El color no puede tener más de 7 caracteres ni menos de 3", 
+        GeneradorPackage.Literals.APARIENCIA__SECUNDARIO, 
+        GeneradorValidator.INVALID_COLOR);
+    }
+    if (((apariencia.getFondo().length() > 7) || (apariencia.getFondo().length() < 3))) {
+      this.error("El color no puede tener más de 7 caracteres ni menos de 3", 
+        GeneradorPackage.Literals.APARIENCIA__FONDO, 
+        GeneradorValidator.INVALID_COLOR);
+    }
+    if (((apariencia.getFondoProductos().length() > 7) || (apariencia.getFondoProductos().length() < 3))) {
+      this.error("El color no puede tener más de 7 caracteres ni menos de 3", 
+        GeneradorPackage.Literals.APARIENCIA__FONDO_PRODUCTOS, 
+        GeneradorValidator.INVALID_COLOR);
+    }
+    if (((apariencia.getPrecios().length() > 7) || (apariencia.getPrecios().length() < 3))) {
+      this.error("El color no puede tener más de 7 caracteres ni menos de 3", 
+        GeneradorPackage.Literals.APARIENCIA__PRECIOS, 
+        GeneradorValidator.INVALID_COLOR);
+    }
+    if (((apariencia.getTexto().length() > 7) || (apariencia.getTexto().length() < 3))) {
+      this.error("El color no puede tener más de 7 caracteres ni menos de 3", 
+        GeneradorPackage.Literals.APARIENCIA__TEXTO, 
+        GeneradorValidator.INVALID_COLOR);
+    }
+    if (((apariencia.getTituloColor().length() > 7) || (apariencia.getTituloColor().length() < 3))) {
+      this.error("El color no puede tener más de 7 caracteres ni menos de 3", 
+        GeneradorPackage.Literals.APARIENCIA__TITULO_COLOR, 
+        GeneradorValidator.INVALID_COLOR);
+    }
+  }
 }

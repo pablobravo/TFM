@@ -30,12 +30,33 @@ public class PedidosController {
 		Usuario usuario = (Usuario)request.getSession().getAttribute("sesion");
 		Vector<Pedido> pedidos = pedidoManagerService.getPedidos();
 		Collections.reverse(pedidos);
-		Vector<Pedido> pedidosusuario = new Vector<Pedido>();
-		for(Pedido p : pedidos){
+		Vector<Vector<Pedido>> pedidosusuario = new Vector<Vector<Pedido>>();
+		/*for(Pedido p : pedidos){
 			if(p.getIdUsuario()==usuario.getId()){
 				pedidosusuario.add(p);
 			}
 		}
+*/
+		
+		int z = 0;
+        for(int i=0; i<pedidos.size(); i++){
+        	if(pedidos.get(i).getIdUsuario()==usuario.getId()){
+        		pedidosusuario.add(new Vector<Pedido>());
+                pedidosusuario.get(z).add(pedidos.get(i));
+                int j=i+1;
+                while(j<pedidos.size()){
+                    if(pedidos.get(i).getIdUsuario()==pedidos.get(j).getIdUsuario() && pedidos.get(i).getFecha().equals(pedidos.get(j).getFecha()))
+                    {
+                        pedidosusuario.get(z).add(pedidos.get(j));
+                        pedidos.remove(pedidos.get(j));
+                        j--;
+                    }
+                    j++;
+                }
+                z++;
+        	}
+        }
+		
 		
 		model.addAttribute("pedidosusuario", pedidosusuario);
 		return "/mispedidos";

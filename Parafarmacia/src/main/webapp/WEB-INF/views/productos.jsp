@@ -32,11 +32,10 @@
 			<c:forEach items="${productos}" var="producto">
 				<article class="producto">
 					<img class="imageproducto"
-						src="<c:url value="/resources/product/${fn:replace(producto.nombre,' ', '')}.JPG"/>"
+						src="<c:url value="/resources/product/${fn:toUpperCase(fn:replace(producto.nombre,' ', ''))}.JPG"/>"
 						alt="<c:out value="${producto.nombre}"></c:out>">
 					<h3>
-						<c:out value="${fn:substring(producto.nombre, 0, 1)}"></c:out>
-						<c:out
+						<c:out value="${fn:substring(producto.nombre, 0, 1)}"></c:out><c:out
 							value="${fn:toLowerCase(fn:substring(producto.nombre, 1, 1000))}"></c:out>
 					</h3>
 

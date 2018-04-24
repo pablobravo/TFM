@@ -23,12 +23,21 @@
 				<ul class="nav">
 					<li class="menusecundario"><a href="" class="has-submenu">Cuenta</a>
 						<ul class="submenu">
-							<li class="menusecundario"><a href="cuenta">Modificar</a></li>
-							<li class="menusecundario"><a href="mispedidos">Mis
-									pedidos</a></li>
+						<c:choose>
+							<c:when test="${sesion.nombre == 'admin'}">
+								<li class="menusecundario"><a href="cuenta">Modificar</a></li>
+								<li class="menusecundario"><a href="misproductos">Mis
+													productos</a></li>
+							</c:when>
+							<c:otherwise>
+								<li class="menusecundario"><a href="cuenta">Modificar</a></li>
+								<li class="menusecundario"><a href="mispedidos">Mis
+													pedidos</a></li>
+							</c:otherwise>
+						</c:choose>
+							
 						</ul></li>
-					<li class="menusecundario"><a href="cerrarsesion">Cerrar
-							sesión</a></li>
+					<li class="menusecundario"><a href="cerrarsesion"><spring:message code="cerrarsesion" /></a></li>
 				</ul>
 			</c:when>
 			<c:otherwise>

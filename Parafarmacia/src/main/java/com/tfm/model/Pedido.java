@@ -1,13 +1,11 @@
 package com.tfm.model;
 
 
-import java.sql.Date;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.format.annotation.DateTimeFormat;
 
 public class Pedido {
 	private int id;
@@ -18,8 +16,7 @@ public class Pedido {
 	@NotNull
 	@Min(1)
 	private int unidades;
-	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Date fecha;
+	private String fecha;
 	@NotEmpty
 	private String estado;
 	public int getId() {
@@ -46,10 +43,10 @@ public class Pedido {
 	public void setUnidades(int unidades) {
 		this.unidades = unidades;
 	}
-	public Date getFecha() {
+	public String getFecha() {
 		return fecha;
 	}
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
 	public String getEstado() {

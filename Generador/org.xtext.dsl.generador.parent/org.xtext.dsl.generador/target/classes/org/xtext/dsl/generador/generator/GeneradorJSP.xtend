@@ -6,6 +6,7 @@ import org.xtext.dsl.generador.generador.Parafarmacia
 import static java.nio.file.StandardCopyOption.*
 import java.nio.file.Files
 import java.io.File
+import org.xtext.dsl.generador.conf.Conf
 
 /**
  * Generates code from your model files on save.
@@ -16,12 +17,13 @@ class GeneradorJSP {
 
 	Resource resource;
 	IFileSystemAccess fsa;
-	final String path = "C:\\Users\\UO223531\\git\\parafarmacia\\";
+	final String path ;
 	
 	
 	new (Resource resource, IFileSystemAccess fsa) {
 		this.resource = resource;
 		this.fsa = fsa;
+		path = Conf.get("path");
 	}
 	
 	def compilar() {
@@ -749,26 +751,36 @@ class GeneradorJSP {
 			</form>
 		</div>
 		<div class="usuario">
-			<c:choose>
-				<c:when test="${sesion != null}">
-					<ul class="nav">
-						<li class="menusecundario"><a href="" class="has-submenu">Cuenta</a>
-							<ul class="submenu">
-								<li class="menusecundario"><a href="cuenta">Modificar</a></li>
-								<li class="menusecundario"><a href="mispedidos">Mis
-										pedidos</a></li>
-							</ul></li>
-						<li class="menusecundario"><a href="cerrarsesion"><spring:message code="cerrarsesion" /></a></li>
-					</ul>
-				</c:when>
-				<c:otherwise>
-					<ul class="nav">
-						<li class="menusecundario"><a href="acceso">Acceso</a></li>
-						<li class="menusecundario"><a href="registro">Registro</a></li>
-					</ul>
-				</c:otherwise>
-			</c:choose>
-		</div>
+				<c:choose>
+					<c:when test="${sesion != null}">
+						<ul class="nav">
+							<li class="menusecundario"><a href="" class="has-submenu">Cuenta</a>
+								<ul class="submenu">
+								<c:choose>
+									<c:when test="${sesion.nombre == 'admin'}">
+										<li class="menusecundario"><a href="cuenta">Modificar</a></li>
+										<li class="menusecundario"><a href="misproductos">Mis
+															productos</a></li>
+									</c:when>
+									<c:otherwise>
+										<li class="menusecundario"><a href="cuenta">Modificar</a></li>
+										<li class="menusecundario"><a href="mispedidos">Mis
+															pedidos</a></li>
+									</c:otherwise>
+								</c:choose>
+									
+								</ul></li>
+							<li class="menusecundario"><a href="cerrarsesion"><spring:message code="cerrarsesion" /></a></li>
+						</ul>
+					</c:when>
+					<c:otherwise>
+						<ul class="nav">
+							<li class="menusecundario"><a href="acceso">Acceso</a></li>
+							<li class="menusecundario"><a href="registro">Registro</a></li>
+						</ul>
+					</c:otherwise>
+				</c:choose>
+			</div>
 	
 		<ul class="nav">
 			

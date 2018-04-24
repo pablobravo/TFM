@@ -34,13 +34,13 @@
 
 				<div class="imgminiatura">
 					<img id="imgminiatura1"
-						src="<c:url value="/resources/product/${fn:replace(producto.nombre,' ', '')}.JPG"/>"
+						src="<c:url value="/resources/product/${fn:toUpperCase(fn:replace(producto.nombre,' ', ''))}.JPG"/>"
 						alt="<c:out value="${producto.nombre}"></c:out>">
 				</div>
 
 				<div class="imggrande">
 					<img id="imggrande1"
-						src="<c:url value="/resources/product/${fn:replace(producto.nombre,' ', '')}.JPG"/>"
+						src="<c:url value="/resources/product/${fn:toUpperCase(fn:replace(producto.nombre,' ', ''))}.JPG"/>"
 						alt="<c:out value="${producto.nombre}"></c:out>">
 				</div>
 

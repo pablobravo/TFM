@@ -51,7 +51,7 @@ public class FinalizarPedidoController {
 			pedido.setIdUsuario(usuario.getId());
 			pedido.setIdProducto(((Producto)e.getKey()).getId());
 			pedido.setUnidades((Integer)e.getValue());
-			pedido.setFecha(new Date(Calendar.getInstance().getTime().getTime()));
+			pedido.setFecha(new Date(Calendar.getInstance().getTime().getTime()).toString());
 			pedido.setEstado("aceptado");
 			pedidoManagerService.newPedido(pedido);
 		    

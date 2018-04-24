@@ -52,11 +52,10 @@
 						<div class='content grid cuerpocart' id="product${p.key.id}">
 							<div class='imgproducto'>
 								<img
-									src="<c:url value="/resources/product/${fn:replace(p.key.nombre,' ', '')}.JPG"/>"
+									src="<c:url value="/resources/product/${fn:toUpperCase(fn:replace(p.key.nombre,' ', ''))}.JPG"/>"
 									alt="<c:out value="${p.key.nombre}"></c:out>">
 								<p class='nombreproducto'>
-									<c:out value="${fn:substring(p.key.nombre, 0, 1)}"></c:out>
-									<c:out
+									<c:out value="${fn:substring(p.key.nombre, 0, 1)}"></c:out><c:out
 										value="${fn:toLowerCase(fn:substring(p.key.nombre, 1, 1000))}"></c:out>
 								</p>
 							</div>

@@ -78,24 +78,26 @@ public class GeneradorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLessThanSignKeyword_39 = (Keyword)cGroup.eContents().get(39);
 		private final Keyword cProductosKeyword_40 = (Keyword)cGroup.eContents().get(40);
 		private final Keyword cEqualsSignKeyword_41 = (Keyword)cGroup.eContents().get(41);
-		private final Assignment cNumProductosPorFilaAssignment_42 = (Assignment)cGroup.eContents().get(42);
-		private final RuleCall cNumProductosPorFilaINTTerminalRuleCall_42_0 = (RuleCall)cNumProductosPorFilaAssignment_42.eContents().get(0);
-		private final Assignment cProductosAssignment_43 = (Assignment)cGroup.eContents().get(43);
-		private final RuleCall cProductosProductoParserRuleCall_43_0 = (RuleCall)cProductosAssignment_43.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_44 = (Keyword)cGroup.eContents().get(44);
-		private final Keyword cLessThanSignKeyword_45 = (Keyword)cGroup.eContents().get(45);
-		private final Keyword cUsuarioKeyword_46 = (Keyword)cGroup.eContents().get(46);
-		private final Keyword cEqualsSignKeyword_47 = (Keyword)cGroup.eContents().get(47);
-		private final Assignment cNombreUsuarioAssignment_48 = (Assignment)cGroup.eContents().get(48);
-		private final RuleCall cNombreUsuarioSTRINGTerminalRuleCall_48_0 = (RuleCall)cNombreUsuarioAssignment_48.eContents().get(0);
-		private final Keyword cColonKeyword_49 = (Keyword)cGroup.eContents().get(49);
-		private final Assignment cEmailAssignment_50 = (Assignment)cGroup.eContents().get(50);
-		private final RuleCall cEmailCorreoParserRuleCall_50_0 = (RuleCall)cEmailAssignment_50.eContents().get(0);
+		private final Keyword cProductosPorFilaKeyword_42 = (Keyword)cGroup.eContents().get(42);
+		private final Keyword cFullStopKeyword_43 = (Keyword)cGroup.eContents().get(43);
+		private final Assignment cNumProductosPorFilaAssignment_44 = (Assignment)cGroup.eContents().get(44);
+		private final RuleCall cNumProductosPorFilaINTTerminalRuleCall_44_0 = (RuleCall)cNumProductosPorFilaAssignment_44.eContents().get(0);
+		private final Assignment cProductosAssignment_45 = (Assignment)cGroup.eContents().get(45);
+		private final RuleCall cProductosProductoParserRuleCall_45_0 = (RuleCall)cProductosAssignment_45.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_46 = (Keyword)cGroup.eContents().get(46);
+		private final Keyword cLessThanSignKeyword_47 = (Keyword)cGroup.eContents().get(47);
+		private final Keyword cUsuarioKeyword_48 = (Keyword)cGroup.eContents().get(48);
+		private final Keyword cEqualsSignKeyword_49 = (Keyword)cGroup.eContents().get(49);
+		private final Assignment cNombreUsuarioAssignment_50 = (Assignment)cGroup.eContents().get(50);
+		private final RuleCall cNombreUsuarioSTRINGTerminalRuleCall_50_0 = (RuleCall)cNombreUsuarioAssignment_50.eContents().get(0);
 		private final Keyword cColonKeyword_51 = (Keyword)cGroup.eContents().get(51);
-		private final Assignment cPasswordAssignment_52 = (Assignment)cGroup.eContents().get(52);
-		private final RuleCall cPasswordSTRINGTerminalRuleCall_52_0 = (RuleCall)cPasswordAssignment_52.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_53 = (Keyword)cGroup.eContents().get(53);
-		private final Keyword cRightCurlyBracketKeyword_54 = (Keyword)cGroup.eContents().get(54);
+		private final Assignment cEmailAssignment_52 = (Assignment)cGroup.eContents().get(52);
+		private final RuleCall cEmailCorreoParserRuleCall_52_0 = (RuleCall)cEmailAssignment_52.eContents().get(0);
+		private final Keyword cColonKeyword_53 = (Keyword)cGroup.eContents().get(53);
+		private final Assignment cPasswordAssignment_54 = (Assignment)cGroup.eContents().get(54);
+		private final RuleCall cPasswordSTRINGTerminalRuleCall_54_0 = (RuleCall)cPasswordAssignment_54.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_55 = (Keyword)cGroup.eContents().get(55);
+		private final Keyword cRightCurlyBracketKeyword_56 = (Keyword)cGroup.eContents().get(56);
 		
 		//Parafarmacia:
 		//	'Parafarmacia' '{'
@@ -105,7 +107,7 @@ public class GeneradorGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<' 'Menu' '=' tipo=Tipo '>'
 		//	'<' 'Apariencia' '=' apariencia=Apariencia '>'
 		//	'<' 'Categorias' '=' categorias+=Categoria* '>'
-		//	'<' 'Productos' '=' numProductosPorFila=INT productos+=Producto* '>'
+		//	'<' 'Productos' '=' 'productosPorFila' '.' numProductosPorFila=INT productos+=Producto* '>'
 		//	'<' 'Usuario' '=' nombreUsuario=STRING ':' email=Correo ':' password=STRING '>'
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -113,8 +115,8 @@ public class GeneradorGrammarAccess extends AbstractGrammarElementFinder {
 		//'Parafarmacia' '{' '<' 'Nombre' '=' titulo=STRING ':' fuente=STRING '>' '<' 'Titular' '=' nombre=STRING ':'
 		//direccion=Direccion ':' cif=STRING ':' registro=Registro ':' correo=Correo ':' telefono=INT '>' '<' 'Menu' '='
 		//tipo=Tipo '>' '<' 'Apariencia' '=' apariencia=Apariencia '>' '<' 'Categorias' '=' categorias+=Categoria* '>' '<'
-		//'Productos' '=' numProductosPorFila=INT productos+=Producto* '>' '<' 'Usuario' '=' nombreUsuario=STRING ':'
-		//email=Correo ':' password=STRING '>' '}'
+		//'Productos' '=' 'productosPorFila' '.' numProductosPorFila=INT productos+=Producto* '>' '<' 'Usuario' '='
+		//nombreUsuario=STRING ':' email=Correo ':' password=STRING '>' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Parafarmacia'
@@ -276,59 +278,65 @@ public class GeneradorGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_41() { return cEqualsSignKeyword_41; }
 		
+		//'productosPorFila'
+		public Keyword getProductosPorFilaKeyword_42() { return cProductosPorFilaKeyword_42; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_43() { return cFullStopKeyword_43; }
+		
 		//numProductosPorFila=INT
-		public Assignment getNumProductosPorFilaAssignment_42() { return cNumProductosPorFilaAssignment_42; }
+		public Assignment getNumProductosPorFilaAssignment_44() { return cNumProductosPorFilaAssignment_44; }
 		
 		//INT
-		public RuleCall getNumProductosPorFilaINTTerminalRuleCall_42_0() { return cNumProductosPorFilaINTTerminalRuleCall_42_0; }
+		public RuleCall getNumProductosPorFilaINTTerminalRuleCall_44_0() { return cNumProductosPorFilaINTTerminalRuleCall_44_0; }
 		
 		//productos+=Producto*
-		public Assignment getProductosAssignment_43() { return cProductosAssignment_43; }
+		public Assignment getProductosAssignment_45() { return cProductosAssignment_45; }
 		
 		//Producto
-		public RuleCall getProductosProductoParserRuleCall_43_0() { return cProductosProductoParserRuleCall_43_0; }
+		public RuleCall getProductosProductoParserRuleCall_45_0() { return cProductosProductoParserRuleCall_45_0; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_44() { return cGreaterThanSignKeyword_44; }
+		public Keyword getGreaterThanSignKeyword_46() { return cGreaterThanSignKeyword_46; }
 		
 		//'<'
-		public Keyword getLessThanSignKeyword_45() { return cLessThanSignKeyword_45; }
+		public Keyword getLessThanSignKeyword_47() { return cLessThanSignKeyword_47; }
 		
 		//'Usuario'
-		public Keyword getUsuarioKeyword_46() { return cUsuarioKeyword_46; }
+		public Keyword getUsuarioKeyword_48() { return cUsuarioKeyword_48; }
 		
 		//'='
-		public Keyword getEqualsSignKeyword_47() { return cEqualsSignKeyword_47; }
+		public Keyword getEqualsSignKeyword_49() { return cEqualsSignKeyword_49; }
 		
 		//nombreUsuario=STRING
-		public Assignment getNombreUsuarioAssignment_48() { return cNombreUsuarioAssignment_48; }
+		public Assignment getNombreUsuarioAssignment_50() { return cNombreUsuarioAssignment_50; }
 		
 		//STRING
-		public RuleCall getNombreUsuarioSTRINGTerminalRuleCall_48_0() { return cNombreUsuarioSTRINGTerminalRuleCall_48_0; }
-		
-		//':'
-		public Keyword getColonKeyword_49() { return cColonKeyword_49; }
-		
-		//email=Correo
-		public Assignment getEmailAssignment_50() { return cEmailAssignment_50; }
-		
-		//Correo
-		public RuleCall getEmailCorreoParserRuleCall_50_0() { return cEmailCorreoParserRuleCall_50_0; }
+		public RuleCall getNombreUsuarioSTRINGTerminalRuleCall_50_0() { return cNombreUsuarioSTRINGTerminalRuleCall_50_0; }
 		
 		//':'
 		public Keyword getColonKeyword_51() { return cColonKeyword_51; }
 		
+		//email=Correo
+		public Assignment getEmailAssignment_52() { return cEmailAssignment_52; }
+		
+		//Correo
+		public RuleCall getEmailCorreoParserRuleCall_52_0() { return cEmailCorreoParserRuleCall_52_0; }
+		
+		//':'
+		public Keyword getColonKeyword_53() { return cColonKeyword_53; }
+		
 		//password=STRING
-		public Assignment getPasswordAssignment_52() { return cPasswordAssignment_52; }
+		public Assignment getPasswordAssignment_54() { return cPasswordAssignment_54; }
 		
 		//STRING
-		public RuleCall getPasswordSTRINGTerminalRuleCall_52_0() { return cPasswordSTRINGTerminalRuleCall_52_0; }
+		public RuleCall getPasswordSTRINGTerminalRuleCall_54_0() { return cPasswordSTRINGTerminalRuleCall_54_0; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_53() { return cGreaterThanSignKeyword_53; }
+		public Keyword getGreaterThanSignKeyword_55() { return cGreaterThanSignKeyword_55; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_54() { return cRightCurlyBracketKeyword_54; }
+		public Keyword getRightCurlyBracketKeyword_56() { return cRightCurlyBracketKeyword_56; }
 	}
 	public class AparienciaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.dsl.generador.Generador.Apariencia");
@@ -1169,7 +1177,7 @@ public class GeneradorGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<' 'Menu' '=' tipo=Tipo '>'
 	//	'<' 'Apariencia' '=' apariencia=Apariencia '>'
 	//	'<' 'Categorias' '=' categorias+=Categoria* '>'
-	//	'<' 'Productos' '=' numProductosPorFila=INT productos+=Producto* '>'
+	//	'<' 'Productos' '=' 'productosPorFila' '.' numProductosPorFila=INT productos+=Producto* '>'
 	//	'<' 'Usuario' '=' nombreUsuario=STRING ':' email=Correo ':' password=STRING '>'
 	//	'}';
 	public ParafarmaciaElements getParafarmaciaAccess() {

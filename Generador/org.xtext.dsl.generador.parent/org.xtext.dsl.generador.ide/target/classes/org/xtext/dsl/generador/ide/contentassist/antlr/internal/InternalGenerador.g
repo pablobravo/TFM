@@ -1628,9 +1628,9 @@ rule__Parafarmacia__Group__42__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaAssignment_42()); }
-	(rule__Parafarmacia__NumProductosPorFilaAssignment_42)
-	{ after(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaAssignment_42()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getProductosPorFilaKeyword_42()); }
+	'productosPorFila'
+	{ after(grammarAccess.getParafarmaciaAccess().getProductosPorFilaKeyword_42()); }
 )
 ;
 finally {
@@ -1655,9 +1655,9 @@ rule__Parafarmacia__Group__43__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getProductosAssignment_43()); }
-	(rule__Parafarmacia__ProductosAssignment_43)*
-	{ after(grammarAccess.getParafarmaciaAccess().getProductosAssignment_43()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getFullStopKeyword_43()); }
+	'.'
+	{ after(grammarAccess.getParafarmaciaAccess().getFullStopKeyword_43()); }
 )
 ;
 finally {
@@ -1682,9 +1682,9 @@ rule__Parafarmacia__Group__44__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_44()); }
-	'>'
-	{ after(grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_44()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaAssignment_44()); }
+	(rule__Parafarmacia__NumProductosPorFilaAssignment_44)
+	{ after(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaAssignment_44()); }
 )
 ;
 finally {
@@ -1709,9 +1709,9 @@ rule__Parafarmacia__Group__45__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getLessThanSignKeyword_45()); }
-	'<'
-	{ after(grammarAccess.getParafarmaciaAccess().getLessThanSignKeyword_45()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getProductosAssignment_45()); }
+	(rule__Parafarmacia__ProductosAssignment_45)*
+	{ after(grammarAccess.getParafarmaciaAccess().getProductosAssignment_45()); }
 )
 ;
 finally {
@@ -1736,9 +1736,9 @@ rule__Parafarmacia__Group__46__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getUsuarioKeyword_46()); }
-	'Usuario'
-	{ after(grammarAccess.getParafarmaciaAccess().getUsuarioKeyword_46()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_46()); }
+	'>'
+	{ after(grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_46()); }
 )
 ;
 finally {
@@ -1763,9 +1763,9 @@ rule__Parafarmacia__Group__47__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_47()); }
-	'='
-	{ after(grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_47()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getLessThanSignKeyword_47()); }
+	'<'
+	{ after(grammarAccess.getParafarmaciaAccess().getLessThanSignKeyword_47()); }
 )
 ;
 finally {
@@ -1790,9 +1790,9 @@ rule__Parafarmacia__Group__48__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getNombreUsuarioAssignment_48()); }
-	(rule__Parafarmacia__NombreUsuarioAssignment_48)
-	{ after(grammarAccess.getParafarmaciaAccess().getNombreUsuarioAssignment_48()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getUsuarioKeyword_48()); }
+	'Usuario'
+	{ after(grammarAccess.getParafarmaciaAccess().getUsuarioKeyword_48()); }
 )
 ;
 finally {
@@ -1817,9 +1817,9 @@ rule__Parafarmacia__Group__49__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getColonKeyword_49()); }
-	':'
-	{ after(grammarAccess.getParafarmaciaAccess().getColonKeyword_49()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_49()); }
+	'='
+	{ after(grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_49()); }
 )
 ;
 finally {
@@ -1844,9 +1844,9 @@ rule__Parafarmacia__Group__50__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getEmailAssignment_50()); }
-	(rule__Parafarmacia__EmailAssignment_50)
-	{ after(grammarAccess.getParafarmaciaAccess().getEmailAssignment_50()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getNombreUsuarioAssignment_50()); }
+	(rule__Parafarmacia__NombreUsuarioAssignment_50)
+	{ after(grammarAccess.getParafarmaciaAccess().getNombreUsuarioAssignment_50()); }
 )
 ;
 finally {
@@ -1898,9 +1898,9 @@ rule__Parafarmacia__Group__52__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getPasswordAssignment_52()); }
-	(rule__Parafarmacia__PasswordAssignment_52)
-	{ after(grammarAccess.getParafarmaciaAccess().getPasswordAssignment_52()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getEmailAssignment_52()); }
+	(rule__Parafarmacia__EmailAssignment_52)
+	{ after(grammarAccess.getParafarmaciaAccess().getEmailAssignment_52()); }
 )
 ;
 finally {
@@ -1925,9 +1925,9 @@ rule__Parafarmacia__Group__53__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_53()); }
-	'>'
-	{ after(grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_53()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getColonKeyword_53()); }
+	':'
+	{ after(grammarAccess.getParafarmaciaAccess().getColonKeyword_53()); }
 )
 ;
 finally {
@@ -1940,6 +1940,7 @@ rule__Parafarmacia__Group__54
 	}
 :
 	rule__Parafarmacia__Group__54__Impl
+	rule__Parafarmacia__Group__55
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1951,9 +1952,62 @@ rule__Parafarmacia__Group__54__Impl
 	}
 :
 (
-	{ before(grammarAccess.getParafarmaciaAccess().getRightCurlyBracketKeyword_54()); }
+	{ before(grammarAccess.getParafarmaciaAccess().getPasswordAssignment_54()); }
+	(rule__Parafarmacia__PasswordAssignment_54)
+	{ after(grammarAccess.getParafarmaciaAccess().getPasswordAssignment_54()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Parafarmacia__Group__55
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Parafarmacia__Group__55__Impl
+	rule__Parafarmacia__Group__56
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Parafarmacia__Group__55__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_55()); }
+	'>'
+	{ after(grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_55()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Parafarmacia__Group__56
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Parafarmacia__Group__56__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Parafarmacia__Group__56__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getParafarmaciaAccess().getRightCurlyBracketKeyword_56()); }
 	'}'
-	{ after(grammarAccess.getParafarmaciaAccess().getRightCurlyBracketKeyword_54()); }
+	{ after(grammarAccess.getParafarmaciaAccess().getRightCurlyBracketKeyword_56()); }
 )
 ;
 finally {
@@ -5211,75 +5265,75 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Parafarmacia__NumProductosPorFilaAssignment_42
+rule__Parafarmacia__NumProductosPorFilaAssignment_44
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaINTTerminalRuleCall_42_0()); }
+		{ before(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaINTTerminalRuleCall_44_0()); }
 		RULE_INT
-		{ after(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaINTTerminalRuleCall_42_0()); }
+		{ after(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaINTTerminalRuleCall_44_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Parafarmacia__ProductosAssignment_43
+rule__Parafarmacia__ProductosAssignment_45
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getParafarmaciaAccess().getProductosProductoParserRuleCall_43_0()); }
+		{ before(grammarAccess.getParafarmaciaAccess().getProductosProductoParserRuleCall_45_0()); }
 		ruleProducto
-		{ after(grammarAccess.getParafarmaciaAccess().getProductosProductoParserRuleCall_43_0()); }
+		{ after(grammarAccess.getParafarmaciaAccess().getProductosProductoParserRuleCall_45_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Parafarmacia__NombreUsuarioAssignment_48
+rule__Parafarmacia__NombreUsuarioAssignment_50
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getParafarmaciaAccess().getNombreUsuarioSTRINGTerminalRuleCall_48_0()); }
+		{ before(grammarAccess.getParafarmaciaAccess().getNombreUsuarioSTRINGTerminalRuleCall_50_0()); }
 		RULE_STRING
-		{ after(grammarAccess.getParafarmaciaAccess().getNombreUsuarioSTRINGTerminalRuleCall_48_0()); }
+		{ after(grammarAccess.getParafarmaciaAccess().getNombreUsuarioSTRINGTerminalRuleCall_50_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Parafarmacia__EmailAssignment_50
+rule__Parafarmacia__EmailAssignment_52
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getParafarmaciaAccess().getEmailCorreoParserRuleCall_50_0()); }
+		{ before(grammarAccess.getParafarmaciaAccess().getEmailCorreoParserRuleCall_52_0()); }
 		ruleCorreo
-		{ after(grammarAccess.getParafarmaciaAccess().getEmailCorreoParserRuleCall_50_0()); }
+		{ after(grammarAccess.getParafarmaciaAccess().getEmailCorreoParserRuleCall_52_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Parafarmacia__PasswordAssignment_52
+rule__Parafarmacia__PasswordAssignment_54
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getParafarmaciaAccess().getPasswordSTRINGTerminalRuleCall_52_0()); }
+		{ before(grammarAccess.getParafarmaciaAccess().getPasswordSTRINGTerminalRuleCall_54_0()); }
 		RULE_STRING
-		{ after(grammarAccess.getParafarmaciaAccess().getPasswordSTRINGTerminalRuleCall_52_0()); }
+		{ after(grammarAccess.getParafarmaciaAccess().getPasswordSTRINGTerminalRuleCall_54_0()); }
 	)
 ;
 finally {

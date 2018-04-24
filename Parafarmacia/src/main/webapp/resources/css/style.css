@@ -275,7 +275,7 @@ nav li.menusecundario {
 	top: -15px;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-	border-bottom: 10px solid #9A7D0A; 
+	border-bottom: 10px solid #333; 
 }
 
 .nav li:hover .submenu:before {
@@ -523,6 +523,9 @@ article.producto p {
 	-webkit-box-shadow: -2px 3px 15px 0 rgba(64, 135, 51, 0.4);
 	-moz-box-shadow: -2px 3px 15px 0 rgba(64, 135, 51, 0.4);
 	box-shadow: -2px 3px 15px 0 rgba(64, 135, 51, 0.4);
+}
+.agotado{
+	background: #FA5858;
 }
 .politicas{
 	width:100%;
@@ -794,7 +797,7 @@ h2.tituloresumen {
 .pedido p span.total {
 	font-size: var(--size-texto-grande);
 }
-/* Formulario inicio sesión */
+/* Formulario inicio sesion */
 .formacceso {
 	display: flex;
 	flex-direction: column;
@@ -869,12 +872,14 @@ h2.tituloresumen {
 	padding:10px;
 }
 
+
 .pedidoproducto{
 
 	width:100%;
 	
 	display:flex;
-	justify-content:space-around;
+	justify-content:flex-start;
+	flex-wrap:wrap;
 
     border: 1px solid #ddd;
     
@@ -883,17 +888,25 @@ h2.tituloresumen {
 	
 }
 .pedidoproducto .imgproducto{
-	display:flex;
-	justify-content:space-around;
+	    display: flex;
+	    justify-content: flex-start;
+	    width: 100%;
+	    align-items: center;
+	    margin-bottom: 20px;
+	    text-align: left;
 }
 .pedidoproducto .imgproducto p{
 	margin:10px 20px;
-	}
+	width: 25%;
+}
+.pedidoproducto .imgproducto p.total{
+	text-align:right;
+}
 .pedidoproducto img{
 	height:100px;
 }
 
-/* Descripción productos */
+/* Descripcion productos */
 .descripcion {
 	width: 100%;
 	margin: 30px var(--margenes-laterales);
@@ -983,9 +996,6 @@ footer a {
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
-.agotado{
-	background: #FA5858;
-}
 
 footer a:hover {
 	color: var(--second-color);
@@ -1047,33 +1057,33 @@ footer div.segundo p {
 	text-align:center;
 }
 
-/* versión pantalla mayor de 935 px */
+/* version pantalla mayor de 935 px */
 @media (min-width: 935px) {
 	
 	:root { 
 	/* Colores */
-	--main-color: #229954; 
-	--main-color-claro: #9A7D0A; 
-	--second-color: #F5B041;
-	--nav-color:#9A7D0A; 
-	--background-color:#F2F3F4;
+	--main-color: #408733; 
+	--main-color-claro: #CEF6CE; 
+	--second-color: #89c441;
+	--nav-color:#333; 
+	--background-color:#e7e8ea;
 	--color-background-prductos: #fff;
 	--color-text-nav: #fff;
-	--color-precios: #D35400;
-	--color-text: #1C2833;
-	--color-titulo: #145A32;
+	--color-precios: #FE642E;
+	--color-text: #2E2E2E;
+	--color-titulo: #585858;
 	
 	/* Tamaños elementos */
 	--margenes-laterales: 10%;
-	--altura-menu: 80px;
+	--altura-menu: 60px;
 	
 	--ancho-productos:calc(33% - 50px);
 	
 	
 	/* Tamaños textos */
-	--size-texto: 18px;
-	--size-texto-grande:22px;
-	--size-menu:22px;
+	--size-texto: 14px;
+	--size-texto-grande:16px;
+	--size-menu:20px;
 	--size-titulo:26px;
 	
 	/* Familia fuentes */
@@ -1183,20 +1193,20 @@ footer div.segundo p {
 				
 	:root { 
 		/* Colores */
-		--main-color: #229954; 
-		--main-color-claro: #9A7D0A; 
-		--second-color: #F5B041;
-		--nav-color:#9A7D0A; 
-		--background-color:#F2F3F4;
+		--main-color: #408733; 
+		--main-color-claro: #CEF6CE; 
+		--second-color: #89c441;
+		--nav-color:#333; 
+		--background-color:#e7e8ea;
 		--color-background-prductos: #fff;
 		--color-text-nav: #fff;
-		--color-precios: #D35400;
-		--color-text: #1C2833;
-		--color-titulo: #145A32;
+		--color-precios: #FE642E;
+		--color-text: #2E2E2E;
+		--color-titulo: #585858;
 		
 		/* Tamaños elementos */
 		--margenes-laterales: 10%;
-		--altura-menu: 80px;
+		--altura-menu: 60px;
 		
 		--ancho-productos:calc(33% - 50px);
 		
@@ -1337,24 +1347,24 @@ footer div.segundo p {
 	}
 }
 
-/* versión móvil menor 935 px */
+/* version movil menor 935 px */
 @media (max-width: 599px) {
 	:root { 
 		/* Colores */
-		--main-color: #229954; 
-		--main-color-claro: #9A7D0A; 
-		--second-color: #F5B041;
-		--nav-color:#9A7D0A; 
-		--background-color:#F2F3F4;
+		--main-color: #408733; 
+		--main-color-claro: #CEF6CE; 
+		--second-color: #89c441;
+		--nav-color:#333; 
+		--background-color:#e7e8ea;
 		--color-background-prductos: #fff;
 		--color-text-nav: #fff;
-		--color-precios: #D35400;
-		--color-text: #1C2833;
-		--color-titulo: #145A32;
+		--color-precios: #FE642E;
+		--color-text: #2E2E2E;
+		--color-titulo: #585858;
 		
 		/* Tamaños elementos */
 		--margenes-laterales: 10%;
-		--altura-menu: 80px;
+		--altura-menu: 60px;
 		
 		--ancho-productos:calc(33% - 50px);
 		

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Parafarmacia</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="productos">Productos</string>
+    <string name="usuarios">Usuarios</string>
+    <string name="envio">Datos de envío</string>
+    <string name="addproducto">Nuevo Producto</string>
+    <string name="nombre">Nombre</string>
+    <string name="descripcion">Descripción</string>
+    <string name="cifra">Precio</string>
+    <string name="euro">€</string>
+    <string name="disponible">Disponible</string>
+    <string name="categoria">Categoría</string>
+    <string name="añadir">Añadir</string>
+    <string name="preparando">Preparando</string>
+    <string name="enviado">Enviado</string>
+    <string name="entregado">Entregado</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="subirimagen">Modificar imagen</string>
+
+    <string-array name="categorias">
+        <item>Cosmética</item>
+        <item>Higiene</item>
+        <item>Salud</item>
+        <item>Dietética</item>
+        <item>Bebes</item>
+    </string-array>
+</resources>

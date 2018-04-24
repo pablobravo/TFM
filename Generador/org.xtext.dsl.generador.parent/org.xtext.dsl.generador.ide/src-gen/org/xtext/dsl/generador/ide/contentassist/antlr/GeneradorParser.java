@@ -58,11 +58,11 @@ public class GeneradorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParafarmaciaAccess().getTipoAssignment_27(), "rule__Parafarmacia__TipoAssignment_27");
 					put(grammarAccess.getParafarmaciaAccess().getAparienciaAssignment_32(), "rule__Parafarmacia__AparienciaAssignment_32");
 					put(grammarAccess.getParafarmaciaAccess().getCategoriasAssignment_37(), "rule__Parafarmacia__CategoriasAssignment_37");
-					put(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaAssignment_42(), "rule__Parafarmacia__NumProductosPorFilaAssignment_42");
-					put(grammarAccess.getParafarmaciaAccess().getProductosAssignment_43(), "rule__Parafarmacia__ProductosAssignment_43");
-					put(grammarAccess.getParafarmaciaAccess().getNombreUsuarioAssignment_48(), "rule__Parafarmacia__NombreUsuarioAssignment_48");
-					put(grammarAccess.getParafarmaciaAccess().getEmailAssignment_50(), "rule__Parafarmacia__EmailAssignment_50");
-					put(grammarAccess.getParafarmaciaAccess().getPasswordAssignment_52(), "rule__Parafarmacia__PasswordAssignment_52");
+					put(grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaAssignment_44(), "rule__Parafarmacia__NumProductosPorFilaAssignment_44");
+					put(grammarAccess.getParafarmaciaAccess().getProductosAssignment_45(), "rule__Parafarmacia__ProductosAssignment_45");
+					put(grammarAccess.getParafarmaciaAccess().getNombreUsuarioAssignment_50(), "rule__Parafarmacia__NombreUsuarioAssignment_50");
+					put(grammarAccess.getParafarmaciaAccess().getEmailAssignment_52(), "rule__Parafarmacia__EmailAssignment_52");
+					put(grammarAccess.getParafarmaciaAccess().getPasswordAssignment_54(), "rule__Parafarmacia__PasswordAssignment_54");
 					put(grammarAccess.getAparienciaAccess().getPrincipalAssignment_5(), "rule__Apariencia__PrincipalAssignment_5");
 					put(grammarAccess.getAparienciaAccess().getPrincipalClaroAssignment_9(), "rule__Apariencia__PrincipalClaroAssignment_9");
 					put(grammarAccess.getAparienciaAccess().getSecundarioAssignment_13(), "rule__Apariencia__SecundarioAssignment_13");

@@ -11,6 +11,7 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.dsl.generador.conf.Conf;
 import org.xtext.dsl.generador.generador.Parafarmacia;
 import org.xtext.dsl.generador.generador.Permanente;
 
@@ -25,11 +26,16 @@ public class GeneradorCSS {
   
   private IFileSystemAccess fsa;
   
-  private final String path = "C:\\Users\\UO223531\\git\\parafarmacia\\";
+  private final String path;
   
   public GeneradorCSS(final Resource resource, final IFileSystemAccess fsa) {
     this.resource = resource;
     this.fsa = fsa;
+    this.path = Conf.get("path");
+    String _get = Conf.get("path");
+    String _plus = ("pathh1: " + _get);
+    System.out.println(_plus);
+    System.out.println(("pathh: " + this.path));
   }
   
   public Path compilar() {
@@ -2013,7 +2019,7 @@ public class GeneradorCSS {
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
-    _builder.append("/* Formulario inicio sesión */");
+    _builder.append("/* Formulario inicio sesion */");
     _builder.newLine();
     _builder.append(".formacceso {");
     _builder.newLine();
@@ -2188,6 +2194,7 @@ public class GeneradorCSS {
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
+    _builder.newLine();
     _builder.append(".pedidoproducto{");
     _builder.newLine();
     _builder.newLine();
@@ -2200,7 +2207,10 @@ public class GeneradorCSS {
     _builder.append("display:flex;");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("justify-content:space-around;");
+    _builder.append("justify-content:flex-start;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("flex-wrap:wrap;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("    ");
@@ -2220,11 +2230,23 @@ public class GeneradorCSS {
     _builder.newLine();
     _builder.append(".pedidoproducto .imgproducto{");
     _builder.newLine();
-    _builder.append("\t");
-    _builder.append("display:flex;");
+    _builder.append("\t    ");
+    _builder.append("display: flex;");
     _builder.newLine();
-    _builder.append("\t");
-    _builder.append("justify-content:space-around;");
+    _builder.append("\t    ");
+    _builder.append("justify-content: flex-start;");
+    _builder.newLine();
+    _builder.append("\t    ");
+    _builder.append("width: 100%;");
+    _builder.newLine();
+    _builder.append("\t    ");
+    _builder.append("align-items: center;");
+    _builder.newLine();
+    _builder.append("\t    ");
+    _builder.append("margin-bottom: 20px;");
+    _builder.newLine();
+    _builder.append("\t    ");
+    _builder.append("text-align: left;");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
@@ -2234,6 +2256,15 @@ public class GeneradorCSS {
     _builder.append("margin:10px 20px;");
     _builder.newLine();
     _builder.append("\t");
+    _builder.append("width: 25%;");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append(".pedidoproducto .imgproducto p.total{");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("text-align:right;");
+    _builder.newLine();
     _builder.append("}");
     _builder.newLine();
     _builder.append(".pedidoproducto img{");
@@ -2244,7 +2275,7 @@ public class GeneradorCSS {
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("/* Descripción productos */");
+    _builder.append("/* Descripcion productos */");
     _builder.newLine();
     _builder.append(".descripcion {");
     _builder.newLine();
@@ -2622,7 +2653,7 @@ public class GeneradorCSS {
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("/* versión pantalla mayor de 935 px */");
+    _builder.append("/* version pantalla mayor de 935 px */");
     _builder.newLine();
     _builder.append("@media (min-width: 935px) {");
     _builder.newLine();
@@ -3664,7 +3695,7 @@ public class GeneradorCSS {
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("/* versión móvil menor 935 px */");
+    _builder.append("/* version movil menor 935 px */");
     _builder.newLine();
     _builder.append("@media (max-width: 599px) {");
     _builder.newLine();

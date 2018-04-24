@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGeneradorParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Parafarmacia'", "'{'", "'<'", "'Nombre'", "'='", "':'", "'>'", "'Titular'", "'Menu'", "'Apariencia'", "'Categorias'", "'Productos'", "'Usuario'", "'}'", "'['", "'Color'", "'principal'", "'.'", "'principalClaro'", "'secundario'", "'fondo'", "'fondoProductos'", "'precios'", "'texto'", "'titulo'", "']'", "'Texto'", "'normal'", "'grande'", "'menu'", "'Margen'", "'Producto'", "'Cosmetica'", "'Higiene'", "'Salud'", "'Dietetica'", "'Bebes'", "'Desplegable'", "'Permanente'", "'#'", "'px'", "'%'", "'@'", "'Registro'", "'Direccion'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Parafarmacia'", "'{'", "'<'", "'Nombre'", "'='", "':'", "'>'", "'Titular'", "'Menu'", "'Apariencia'", "'Categorias'", "'Productos'", "'productosPorFila'", "'.'", "'Usuario'", "'}'", "'['", "'Color'", "'principal'", "'principalClaro'", "'secundario'", "'fondo'", "'fondoProductos'", "'precios'", "'texto'", "'titulo'", "']'", "'Texto'", "'normal'", "'grande'", "'menu'", "'Margen'", "'Producto'", "'Cosmetica'", "'Higiene'", "'Salud'", "'Dietetica'", "'Bebes'", "'Desplegable'", "'Permanente'", "'#'", "'px'", "'%'", "'@'", "'Registro'", "'Direccion'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -32,6 +32,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
     public static final int T__11=11;
     public static final int T__55=55;
     public static final int T__12=12;
+    public static final int T__56=56;
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int T__51=51;
@@ -153,7 +154,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParafarmacia"
-    // InternalGenerador.g:71:1: ruleParafarmacia returns [EObject current=null] : (otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' ( (lv_numProductosPorFila_42_0= RULE_INT ) ) ( (lv_productos_43_0= ruleProducto ) )* otherlv_44= '>' otherlv_45= '<' otherlv_46= 'Usuario' otherlv_47= '=' ( (lv_nombreUsuario_48_0= RULE_STRING ) ) otherlv_49= ':' ( (lv_email_50_0= ruleCorreo ) ) otherlv_51= ':' ( (lv_password_52_0= RULE_STRING ) ) otherlv_53= '>' otherlv_54= '}' ) ;
+    // InternalGenerador.g:71:1: ruleParafarmacia returns [EObject current=null] : (otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' otherlv_42= 'productosPorFila' otherlv_43= '.' ( (lv_numProductosPorFila_44_0= RULE_INT ) ) ( (lv_productos_45_0= ruleProducto ) )* otherlv_46= '>' otherlv_47= '<' otherlv_48= 'Usuario' otherlv_49= '=' ( (lv_nombreUsuario_50_0= RULE_STRING ) ) otherlv_51= ':' ( (lv_email_52_0= ruleCorreo ) ) otherlv_53= ':' ( (lv_password_54_0= RULE_STRING ) ) otherlv_55= '>' otherlv_56= '}' ) ;
     public final EObject ruleParafarmacia() throws RecognitionException {
         EObject current = null;
 
@@ -193,17 +194,19 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         Token otherlv_39=null;
         Token otherlv_40=null;
         Token otherlv_41=null;
-        Token lv_numProductosPorFila_42_0=null;
-        Token otherlv_44=null;
-        Token otherlv_45=null;
+        Token otherlv_42=null;
+        Token otherlv_43=null;
+        Token lv_numProductosPorFila_44_0=null;
         Token otherlv_46=null;
         Token otherlv_47=null;
-        Token lv_nombreUsuario_48_0=null;
+        Token otherlv_48=null;
         Token otherlv_49=null;
+        Token lv_nombreUsuario_50_0=null;
         Token otherlv_51=null;
-        Token lv_password_52_0=null;
         Token otherlv_53=null;
-        Token otherlv_54=null;
+        Token lv_password_54_0=null;
+        Token otherlv_55=null;
+        Token otherlv_56=null;
         EObject lv_direccion_14_0 = null;
 
         EObject lv_registro_18_0 = null;
@@ -216,20 +219,20 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
         AntlrDatatypeRuleToken lv_categorias_37_0 = null;
 
-        EObject lv_productos_43_0 = null;
+        EObject lv_productos_45_0 = null;
 
-        AntlrDatatypeRuleToken lv_email_50_0 = null;
+        AntlrDatatypeRuleToken lv_email_52_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalGenerador.g:77:2: ( (otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' ( (lv_numProductosPorFila_42_0= RULE_INT ) ) ( (lv_productos_43_0= ruleProducto ) )* otherlv_44= '>' otherlv_45= '<' otherlv_46= 'Usuario' otherlv_47= '=' ( (lv_nombreUsuario_48_0= RULE_STRING ) ) otherlv_49= ':' ( (lv_email_50_0= ruleCorreo ) ) otherlv_51= ':' ( (lv_password_52_0= RULE_STRING ) ) otherlv_53= '>' otherlv_54= '}' ) )
-            // InternalGenerador.g:78:2: (otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' ( (lv_numProductosPorFila_42_0= RULE_INT ) ) ( (lv_productos_43_0= ruleProducto ) )* otherlv_44= '>' otherlv_45= '<' otherlv_46= 'Usuario' otherlv_47= '=' ( (lv_nombreUsuario_48_0= RULE_STRING ) ) otherlv_49= ':' ( (lv_email_50_0= ruleCorreo ) ) otherlv_51= ':' ( (lv_password_52_0= RULE_STRING ) ) otherlv_53= '>' otherlv_54= '}' )
+            // InternalGenerador.g:77:2: ( (otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' otherlv_42= 'productosPorFila' otherlv_43= '.' ( (lv_numProductosPorFila_44_0= RULE_INT ) ) ( (lv_productos_45_0= ruleProducto ) )* otherlv_46= '>' otherlv_47= '<' otherlv_48= 'Usuario' otherlv_49= '=' ( (lv_nombreUsuario_50_0= RULE_STRING ) ) otherlv_51= ':' ( (lv_email_52_0= ruleCorreo ) ) otherlv_53= ':' ( (lv_password_54_0= RULE_STRING ) ) otherlv_55= '>' otherlv_56= '}' ) )
+            // InternalGenerador.g:78:2: (otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' otherlv_42= 'productosPorFila' otherlv_43= '.' ( (lv_numProductosPorFila_44_0= RULE_INT ) ) ( (lv_productos_45_0= ruleProducto ) )* otherlv_46= '>' otherlv_47= '<' otherlv_48= 'Usuario' otherlv_49= '=' ( (lv_nombreUsuario_50_0= RULE_STRING ) ) otherlv_51= ':' ( (lv_email_52_0= ruleCorreo ) ) otherlv_53= ':' ( (lv_password_54_0= RULE_STRING ) ) otherlv_55= '>' otherlv_56= '}' )
             {
-            // InternalGenerador.g:78:2: (otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' ( (lv_numProductosPorFila_42_0= RULE_INT ) ) ( (lv_productos_43_0= ruleProducto ) )* otherlv_44= '>' otherlv_45= '<' otherlv_46= 'Usuario' otherlv_47= '=' ( (lv_nombreUsuario_48_0= RULE_STRING ) ) otherlv_49= ':' ( (lv_email_50_0= ruleCorreo ) ) otherlv_51= ':' ( (lv_password_52_0= RULE_STRING ) ) otherlv_53= '>' otherlv_54= '}' )
-            // InternalGenerador.g:79:3: otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' ( (lv_numProductosPorFila_42_0= RULE_INT ) ) ( (lv_productos_43_0= ruleProducto ) )* otherlv_44= '>' otherlv_45= '<' otherlv_46= 'Usuario' otherlv_47= '=' ( (lv_nombreUsuario_48_0= RULE_STRING ) ) otherlv_49= ':' ( (lv_email_50_0= ruleCorreo ) ) otherlv_51= ':' ( (lv_password_52_0= RULE_STRING ) ) otherlv_53= '>' otherlv_54= '}'
+            // InternalGenerador.g:78:2: (otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' otherlv_42= 'productosPorFila' otherlv_43= '.' ( (lv_numProductosPorFila_44_0= RULE_INT ) ) ( (lv_productos_45_0= ruleProducto ) )* otherlv_46= '>' otherlv_47= '<' otherlv_48= 'Usuario' otherlv_49= '=' ( (lv_nombreUsuario_50_0= RULE_STRING ) ) otherlv_51= ':' ( (lv_email_52_0= ruleCorreo ) ) otherlv_53= ':' ( (lv_password_54_0= RULE_STRING ) ) otherlv_55= '>' otherlv_56= '}' )
+            // InternalGenerador.g:79:3: otherlv_0= 'Parafarmacia' otherlv_1= '{' otherlv_2= '<' otherlv_3= 'Nombre' otherlv_4= '=' ( (lv_titulo_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_fuente_7_0= RULE_STRING ) ) otherlv_8= '>' otherlv_9= '<' otherlv_10= 'Titular' otherlv_11= '=' ( (lv_nombre_12_0= RULE_STRING ) ) otherlv_13= ':' ( (lv_direccion_14_0= ruleDireccion ) ) otherlv_15= ':' ( (lv_cif_16_0= RULE_STRING ) ) otherlv_17= ':' ( (lv_registro_18_0= ruleRegistro ) ) otherlv_19= ':' ( (lv_correo_20_0= ruleCorreo ) ) otherlv_21= ':' ( (lv_telefono_22_0= RULE_INT ) ) otherlv_23= '>' otherlv_24= '<' otherlv_25= 'Menu' otherlv_26= '=' ( (lv_tipo_27_0= ruleTipo ) ) otherlv_28= '>' otherlv_29= '<' otherlv_30= 'Apariencia' otherlv_31= '=' ( (lv_apariencia_32_0= ruleApariencia ) ) otherlv_33= '>' otherlv_34= '<' otherlv_35= 'Categorias' otherlv_36= '=' ( (lv_categorias_37_0= ruleCategoria ) )* otherlv_38= '>' otherlv_39= '<' otherlv_40= 'Productos' otherlv_41= '=' otherlv_42= 'productosPorFila' otherlv_43= '.' ( (lv_numProductosPorFila_44_0= RULE_INT ) ) ( (lv_productos_45_0= ruleProducto ) )* otherlv_46= '>' otherlv_47= '<' otherlv_48= 'Usuario' otherlv_49= '=' ( (lv_nombreUsuario_50_0= RULE_STRING ) ) otherlv_51= ':' ( (lv_email_52_0= ruleCorreo ) ) otherlv_53= ':' ( (lv_password_54_0= RULE_STRING ) ) otherlv_55= '>' otherlv_56= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_3); 
 
@@ -630,7 +633,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=43 && LA1_0<=47)) ) {
+                if ( ((LA1_0>=44 && LA1_0<=48)) ) {
                     alt1=1;
                 }
 
@@ -685,19 +688,27 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_40, grammarAccess.getParafarmaciaAccess().getProductosKeyword_40());
             		
-            otherlv_41=(Token)match(input,15,FOLLOW_13); 
+            otherlv_41=(Token)match(input,15,FOLLOW_20); 
 
             			newLeafNode(otherlv_41, grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_41());
             		
-            // InternalGenerador.g:407:3: ( (lv_numProductosPorFila_42_0= RULE_INT ) )
-            // InternalGenerador.g:408:4: (lv_numProductosPorFila_42_0= RULE_INT )
-            {
-            // InternalGenerador.g:408:4: (lv_numProductosPorFila_42_0= RULE_INT )
-            // InternalGenerador.g:409:5: lv_numProductosPorFila_42_0= RULE_INT
-            {
-            lv_numProductosPorFila_42_0=(Token)match(input,RULE_INT,FOLLOW_20); 
+            otherlv_42=(Token)match(input,23,FOLLOW_21); 
 
-            					newLeafNode(lv_numProductosPorFila_42_0, grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaINTTerminalRuleCall_42_0());
+            			newLeafNode(otherlv_42, grammarAccess.getParafarmaciaAccess().getProductosPorFilaKeyword_42());
+            		
+            otherlv_43=(Token)match(input,24,FOLLOW_13); 
+
+            			newLeafNode(otherlv_43, grammarAccess.getParafarmaciaAccess().getFullStopKeyword_43());
+            		
+            // InternalGenerador.g:415:3: ( (lv_numProductosPorFila_44_0= RULE_INT ) )
+            // InternalGenerador.g:416:4: (lv_numProductosPorFila_44_0= RULE_INT )
+            {
+            // InternalGenerador.g:416:4: (lv_numProductosPorFila_44_0= RULE_INT )
+            // InternalGenerador.g:417:5: lv_numProductosPorFila_44_0= RULE_INT
+            {
+            lv_numProductosPorFila_44_0=(Token)match(input,RULE_INT,FOLLOW_22); 
+
+            					newLeafNode(lv_numProductosPorFila_44_0, grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaINTTerminalRuleCall_44_0());
             				
 
             					if (current==null) {
@@ -706,7 +717,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"numProductosPorFila",
-            						lv_numProductosPorFila_42_0,
+            						lv_numProductosPorFila_44_0,
             						"org.eclipse.xtext.common.Terminals.INT");
             				
 
@@ -715,29 +726,29 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGenerador.g:425:3: ( (lv_productos_43_0= ruleProducto ) )*
+            // InternalGenerador.g:433:3: ( (lv_productos_45_0= ruleProducto ) )*
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==25) ) {
+                if ( (LA2_0==27) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalGenerador.g:426:4: (lv_productos_43_0= ruleProducto )
+            	    // InternalGenerador.g:434:4: (lv_productos_45_0= ruleProducto )
             	    {
-            	    // InternalGenerador.g:426:4: (lv_productos_43_0= ruleProducto )
-            	    // InternalGenerador.g:427:5: lv_productos_43_0= ruleProducto
+            	    // InternalGenerador.g:434:4: (lv_productos_45_0= ruleProducto )
+            	    // InternalGenerador.g:435:5: lv_productos_45_0= ruleProducto
             	    {
 
-            	    					newCompositeNode(grammarAccess.getParafarmaciaAccess().getProductosProductoParserRuleCall_43_0());
+            	    					newCompositeNode(grammarAccess.getParafarmaciaAccess().getProductosProductoParserRuleCall_45_0());
             	    				
-            	    pushFollow(FOLLOW_20);
-            	    lv_productos_43_0=ruleProducto();
+            	    pushFollow(FOLLOW_22);
+            	    lv_productos_45_0=ruleProducto();
 
             	    state._fsp--;
 
@@ -748,7 +759,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
             	    					add(
             	    						current,
             	    						"productos",
-            	    						lv_productos_43_0,
+            	    						lv_productos_45_0,
             	    						"org.xtext.dsl.generador.Generador.Producto");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -764,31 +775,31 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_44=(Token)match(input,17,FOLLOW_4); 
+            otherlv_46=(Token)match(input,17,FOLLOW_4); 
 
-            			newLeafNode(otherlv_44, grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_44());
+            			newLeafNode(otherlv_46, grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_46());
             		
-            otherlv_45=(Token)match(input,13,FOLLOW_21); 
+            otherlv_47=(Token)match(input,13,FOLLOW_23); 
 
-            			newLeafNode(otherlv_45, grammarAccess.getParafarmaciaAccess().getLessThanSignKeyword_45());
+            			newLeafNode(otherlv_47, grammarAccess.getParafarmaciaAccess().getLessThanSignKeyword_47());
             		
-            otherlv_46=(Token)match(input,23,FOLLOW_6); 
+            otherlv_48=(Token)match(input,25,FOLLOW_6); 
 
-            			newLeafNode(otherlv_46, grammarAccess.getParafarmaciaAccess().getUsuarioKeyword_46());
+            			newLeafNode(otherlv_48, grammarAccess.getParafarmaciaAccess().getUsuarioKeyword_48());
             		
-            otherlv_47=(Token)match(input,15,FOLLOW_7); 
+            otherlv_49=(Token)match(input,15,FOLLOW_7); 
 
-            			newLeafNode(otherlv_47, grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_47());
+            			newLeafNode(otherlv_49, grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_49());
             		
-            // InternalGenerador.g:460:3: ( (lv_nombreUsuario_48_0= RULE_STRING ) )
-            // InternalGenerador.g:461:4: (lv_nombreUsuario_48_0= RULE_STRING )
+            // InternalGenerador.g:468:3: ( (lv_nombreUsuario_50_0= RULE_STRING ) )
+            // InternalGenerador.g:469:4: (lv_nombreUsuario_50_0= RULE_STRING )
             {
-            // InternalGenerador.g:461:4: (lv_nombreUsuario_48_0= RULE_STRING )
-            // InternalGenerador.g:462:5: lv_nombreUsuario_48_0= RULE_STRING
+            // InternalGenerador.g:469:4: (lv_nombreUsuario_50_0= RULE_STRING )
+            // InternalGenerador.g:470:5: lv_nombreUsuario_50_0= RULE_STRING
             {
-            lv_nombreUsuario_48_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
+            lv_nombreUsuario_50_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
 
-            					newLeafNode(lv_nombreUsuario_48_0, grammarAccess.getParafarmaciaAccess().getNombreUsuarioSTRINGTerminalRuleCall_48_0());
+            					newLeafNode(lv_nombreUsuario_50_0, grammarAccess.getParafarmaciaAccess().getNombreUsuarioSTRINGTerminalRuleCall_50_0());
             				
 
             					if (current==null) {
@@ -797,7 +808,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"nombreUsuario",
-            						lv_nombreUsuario_48_0,
+            						lv_nombreUsuario_50_0,
             						"org.eclipse.xtext.common.Terminals.STRING");
             				
 
@@ -806,21 +817,21 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_49=(Token)match(input,16,FOLLOW_12); 
+            otherlv_51=(Token)match(input,16,FOLLOW_12); 
 
-            			newLeafNode(otherlv_49, grammarAccess.getParafarmaciaAccess().getColonKeyword_49());
+            			newLeafNode(otherlv_51, grammarAccess.getParafarmaciaAccess().getColonKeyword_51());
             		
-            // InternalGenerador.g:482:3: ( (lv_email_50_0= ruleCorreo ) )
-            // InternalGenerador.g:483:4: (lv_email_50_0= ruleCorreo )
+            // InternalGenerador.g:490:3: ( (lv_email_52_0= ruleCorreo ) )
+            // InternalGenerador.g:491:4: (lv_email_52_0= ruleCorreo )
             {
-            // InternalGenerador.g:483:4: (lv_email_50_0= ruleCorreo )
-            // InternalGenerador.g:484:5: lv_email_50_0= ruleCorreo
+            // InternalGenerador.g:491:4: (lv_email_52_0= ruleCorreo )
+            // InternalGenerador.g:492:5: lv_email_52_0= ruleCorreo
             {
 
-            					newCompositeNode(grammarAccess.getParafarmaciaAccess().getEmailCorreoParserRuleCall_50_0());
+            					newCompositeNode(grammarAccess.getParafarmaciaAccess().getEmailCorreoParserRuleCall_52_0());
             				
             pushFollow(FOLLOW_8);
-            lv_email_50_0=ruleCorreo();
+            lv_email_52_0=ruleCorreo();
 
             state._fsp--;
 
@@ -831,7 +842,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"email",
-            						lv_email_50_0,
+            						lv_email_52_0,
             						"org.xtext.dsl.generador.Generador.Correo");
             					afterParserOrEnumRuleCall();
             				
@@ -841,19 +852,19 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_51=(Token)match(input,16,FOLLOW_7); 
+            otherlv_53=(Token)match(input,16,FOLLOW_7); 
 
-            			newLeafNode(otherlv_51, grammarAccess.getParafarmaciaAccess().getColonKeyword_51());
+            			newLeafNode(otherlv_53, grammarAccess.getParafarmaciaAccess().getColonKeyword_53());
             		
-            // InternalGenerador.g:505:3: ( (lv_password_52_0= RULE_STRING ) )
-            // InternalGenerador.g:506:4: (lv_password_52_0= RULE_STRING )
+            // InternalGenerador.g:513:3: ( (lv_password_54_0= RULE_STRING ) )
+            // InternalGenerador.g:514:4: (lv_password_54_0= RULE_STRING )
             {
-            // InternalGenerador.g:506:4: (lv_password_52_0= RULE_STRING )
-            // InternalGenerador.g:507:5: lv_password_52_0= RULE_STRING
+            // InternalGenerador.g:514:4: (lv_password_54_0= RULE_STRING )
+            // InternalGenerador.g:515:5: lv_password_54_0= RULE_STRING
             {
-            lv_password_52_0=(Token)match(input,RULE_STRING,FOLLOW_9); 
+            lv_password_54_0=(Token)match(input,RULE_STRING,FOLLOW_9); 
 
-            					newLeafNode(lv_password_52_0, grammarAccess.getParafarmaciaAccess().getPasswordSTRINGTerminalRuleCall_52_0());
+            					newLeafNode(lv_password_54_0, grammarAccess.getParafarmaciaAccess().getPasswordSTRINGTerminalRuleCall_54_0());
             				
 
             					if (current==null) {
@@ -862,7 +873,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"password",
-            						lv_password_52_0,
+            						lv_password_54_0,
             						"org.eclipse.xtext.common.Terminals.STRING");
             				
 
@@ -871,13 +882,13 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_53=(Token)match(input,17,FOLLOW_22); 
+            otherlv_55=(Token)match(input,17,FOLLOW_24); 
 
-            			newLeafNode(otherlv_53, grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_53());
+            			newLeafNode(otherlv_55, grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_55());
             		
-            otherlv_54=(Token)match(input,24,FOLLOW_2); 
+            otherlv_56=(Token)match(input,26,FOLLOW_2); 
 
-            			newLeafNode(otherlv_54, grammarAccess.getParafarmaciaAccess().getRightCurlyBracketKeyword_54());
+            			newLeafNode(otherlv_56, grammarAccess.getParafarmaciaAccess().getRightCurlyBracketKeyword_56());
             		
 
             }
@@ -902,7 +913,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleApariencia"
-    // InternalGenerador.g:535:1: entryRuleApariencia returns [EObject current=null] : iv_ruleApariencia= ruleApariencia EOF ;
+    // InternalGenerador.g:543:1: entryRuleApariencia returns [EObject current=null] : iv_ruleApariencia= ruleApariencia EOF ;
     public final EObject entryRuleApariencia() throws RecognitionException {
         EObject current = null;
 
@@ -910,8 +921,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:535:51: (iv_ruleApariencia= ruleApariencia EOF )
-            // InternalGenerador.g:536:2: iv_ruleApariencia= ruleApariencia EOF
+            // InternalGenerador.g:543:51: (iv_ruleApariencia= ruleApariencia EOF )
+            // InternalGenerador.g:544:2: iv_ruleApariencia= ruleApariencia EOF
             {
              newCompositeNode(grammarAccess.getAparienciaRule()); 
             pushFollow(FOLLOW_1);
@@ -938,7 +949,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleApariencia"
-    // InternalGenerador.g:542:1: ruleApariencia returns [EObject current=null] : (otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']' ) ;
+    // InternalGenerador.g:550:1: ruleApariencia returns [EObject current=null] : (otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']' ) ;
     public final EObject ruleApariencia() throws RecognitionException {
         EObject current = null;
 
@@ -1019,37 +1030,37 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:548:2: ( (otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']' ) )
-            // InternalGenerador.g:549:2: (otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']' )
+            // InternalGenerador.g:556:2: ( (otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']' ) )
+            // InternalGenerador.g:557:2: (otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']' )
             {
-            // InternalGenerador.g:549:2: (otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']' )
-            // InternalGenerador.g:550:3: otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']'
+            // InternalGenerador.g:557:2: (otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']' )
+            // InternalGenerador.g:558:3: otherlv_0= '[' otherlv_1= 'Color' otherlv_2= '=' otherlv_3= 'principal' otherlv_4= '.' ( (lv_principal_5_0= ruleColor ) ) otherlv_6= ':' otherlv_7= 'principalClaro' otherlv_8= '.' ( (lv_principalClaro_9_0= ruleColor ) ) otherlv_10= ':' otherlv_11= 'secundario' otherlv_12= '.' ( (lv_secundario_13_0= ruleColor ) ) otherlv_14= ':' otherlv_15= 'fondo' otherlv_16= '.' ( (lv_fondo_17_0= ruleColor ) ) otherlv_18= ':' otherlv_19= 'fondoProductos' otherlv_20= '.' ( (lv_fondoProductos_21_0= ruleColor ) ) otherlv_22= ':' otherlv_23= 'precios' otherlv_24= '.' ( (lv_precios_25_0= ruleColor ) ) otherlv_26= ':' otherlv_27= 'texto' otherlv_28= '.' ( (lv_texto_29_0= ruleColor ) ) otherlv_30= ':' otherlv_31= 'titulo' otherlv_32= '.' ( (lv_tituloColor_33_0= ruleColor ) ) otherlv_34= ']' otherlv_35= '[' otherlv_36= 'Texto' otherlv_37= '=' otherlv_38= 'normal' otherlv_39= '.' ( (lv_normal_40_0= ruleMedida ) ) otherlv_41= ':' otherlv_42= 'grande' otherlv_43= '.' ( (lv_grande_44_0= ruleMedida ) ) otherlv_45= ':' otherlv_46= 'titulo' otherlv_47= '.' ( (lv_titulo_48_0= ruleMedida ) ) otherlv_49= ':' otherlv_50= 'menu' otherlv_51= '.' ( (lv_menu_52_0= ruleMedida ) ) otherlv_53= ']' otherlv_54= '[' otherlv_55= 'Margen' otherlv_56= '=' ( (lv_lateral_57_0= ruleMedida ) ) otherlv_58= ']'
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_23); 
+            otherlv_0=(Token)match(input,27,FOLLOW_25); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAparienciaAccess().getLeftSquareBracketKeyword_0());
             		
-            otherlv_1=(Token)match(input,26,FOLLOW_6); 
+            otherlv_1=(Token)match(input,28,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getAparienciaAccess().getColorKeyword_1());
             		
-            otherlv_2=(Token)match(input,15,FOLLOW_24); 
+            otherlv_2=(Token)match(input,15,FOLLOW_26); 
 
             			newLeafNode(otherlv_2, grammarAccess.getAparienciaAccess().getEqualsSignKeyword_2());
             		
-            otherlv_3=(Token)match(input,27,FOLLOW_25); 
+            otherlv_3=(Token)match(input,29,FOLLOW_21); 
 
             			newLeafNode(otherlv_3, grammarAccess.getAparienciaAccess().getPrincipalKeyword_3());
             		
-            otherlv_4=(Token)match(input,28,FOLLOW_26); 
+            otherlv_4=(Token)match(input,24,FOLLOW_27); 
 
             			newLeafNode(otherlv_4, grammarAccess.getAparienciaAccess().getFullStopKeyword_4());
             		
-            // InternalGenerador.g:570:3: ( (lv_principal_5_0= ruleColor ) )
-            // InternalGenerador.g:571:4: (lv_principal_5_0= ruleColor )
+            // InternalGenerador.g:578:3: ( (lv_principal_5_0= ruleColor ) )
+            // InternalGenerador.g:579:4: (lv_principal_5_0= ruleColor )
             {
-            // InternalGenerador.g:571:4: (lv_principal_5_0= ruleColor )
-            // InternalGenerador.g:572:5: lv_principal_5_0= ruleColor
+            // InternalGenerador.g:579:4: (lv_principal_5_0= ruleColor )
+            // InternalGenerador.g:580:5: lv_principal_5_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getPrincipalColorParserRuleCall_5_0());
@@ -1076,23 +1087,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,16,FOLLOW_27); 
+            otherlv_6=(Token)match(input,16,FOLLOW_28); 
 
             			newLeafNode(otherlv_6, grammarAccess.getAparienciaAccess().getColonKeyword_6());
             		
-            otherlv_7=(Token)match(input,29,FOLLOW_25); 
+            otherlv_7=(Token)match(input,30,FOLLOW_21); 
 
             			newLeafNode(otherlv_7, grammarAccess.getAparienciaAccess().getPrincipalClaroKeyword_7());
             		
-            otherlv_8=(Token)match(input,28,FOLLOW_26); 
+            otherlv_8=(Token)match(input,24,FOLLOW_27); 
 
             			newLeafNode(otherlv_8, grammarAccess.getAparienciaAccess().getFullStopKeyword_8());
             		
-            // InternalGenerador.g:601:3: ( (lv_principalClaro_9_0= ruleColor ) )
-            // InternalGenerador.g:602:4: (lv_principalClaro_9_0= ruleColor )
+            // InternalGenerador.g:609:3: ( (lv_principalClaro_9_0= ruleColor ) )
+            // InternalGenerador.g:610:4: (lv_principalClaro_9_0= ruleColor )
             {
-            // InternalGenerador.g:602:4: (lv_principalClaro_9_0= ruleColor )
-            // InternalGenerador.g:603:5: lv_principalClaro_9_0= ruleColor
+            // InternalGenerador.g:610:4: (lv_principalClaro_9_0= ruleColor )
+            // InternalGenerador.g:611:5: lv_principalClaro_9_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getPrincipalClaroColorParserRuleCall_9_0());
@@ -1119,23 +1130,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,16,FOLLOW_28); 
+            otherlv_10=(Token)match(input,16,FOLLOW_29); 
 
             			newLeafNode(otherlv_10, grammarAccess.getAparienciaAccess().getColonKeyword_10());
             		
-            otherlv_11=(Token)match(input,30,FOLLOW_25); 
+            otherlv_11=(Token)match(input,31,FOLLOW_21); 
 
             			newLeafNode(otherlv_11, grammarAccess.getAparienciaAccess().getSecundarioKeyword_11());
             		
-            otherlv_12=(Token)match(input,28,FOLLOW_26); 
+            otherlv_12=(Token)match(input,24,FOLLOW_27); 
 
             			newLeafNode(otherlv_12, grammarAccess.getAparienciaAccess().getFullStopKeyword_12());
             		
-            // InternalGenerador.g:632:3: ( (lv_secundario_13_0= ruleColor ) )
-            // InternalGenerador.g:633:4: (lv_secundario_13_0= ruleColor )
+            // InternalGenerador.g:640:3: ( (lv_secundario_13_0= ruleColor ) )
+            // InternalGenerador.g:641:4: (lv_secundario_13_0= ruleColor )
             {
-            // InternalGenerador.g:633:4: (lv_secundario_13_0= ruleColor )
-            // InternalGenerador.g:634:5: lv_secundario_13_0= ruleColor
+            // InternalGenerador.g:641:4: (lv_secundario_13_0= ruleColor )
+            // InternalGenerador.g:642:5: lv_secundario_13_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getSecundarioColorParserRuleCall_13_0());
@@ -1162,23 +1173,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_14=(Token)match(input,16,FOLLOW_29); 
+            otherlv_14=(Token)match(input,16,FOLLOW_30); 
 
             			newLeafNode(otherlv_14, grammarAccess.getAparienciaAccess().getColonKeyword_14());
             		
-            otherlv_15=(Token)match(input,31,FOLLOW_25); 
+            otherlv_15=(Token)match(input,32,FOLLOW_21); 
 
             			newLeafNode(otherlv_15, grammarAccess.getAparienciaAccess().getFondoKeyword_15());
             		
-            otherlv_16=(Token)match(input,28,FOLLOW_26); 
+            otherlv_16=(Token)match(input,24,FOLLOW_27); 
 
             			newLeafNode(otherlv_16, grammarAccess.getAparienciaAccess().getFullStopKeyword_16());
             		
-            // InternalGenerador.g:663:3: ( (lv_fondo_17_0= ruleColor ) )
-            // InternalGenerador.g:664:4: (lv_fondo_17_0= ruleColor )
+            // InternalGenerador.g:671:3: ( (lv_fondo_17_0= ruleColor ) )
+            // InternalGenerador.g:672:4: (lv_fondo_17_0= ruleColor )
             {
-            // InternalGenerador.g:664:4: (lv_fondo_17_0= ruleColor )
-            // InternalGenerador.g:665:5: lv_fondo_17_0= ruleColor
+            // InternalGenerador.g:672:4: (lv_fondo_17_0= ruleColor )
+            // InternalGenerador.g:673:5: lv_fondo_17_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getFondoColorParserRuleCall_17_0());
@@ -1205,23 +1216,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,16,FOLLOW_30); 
+            otherlv_18=(Token)match(input,16,FOLLOW_31); 
 
             			newLeafNode(otherlv_18, grammarAccess.getAparienciaAccess().getColonKeyword_18());
             		
-            otherlv_19=(Token)match(input,32,FOLLOW_25); 
+            otherlv_19=(Token)match(input,33,FOLLOW_21); 
 
             			newLeafNode(otherlv_19, grammarAccess.getAparienciaAccess().getFondoProductosKeyword_19());
             		
-            otherlv_20=(Token)match(input,28,FOLLOW_26); 
+            otherlv_20=(Token)match(input,24,FOLLOW_27); 
 
             			newLeafNode(otherlv_20, grammarAccess.getAparienciaAccess().getFullStopKeyword_20());
             		
-            // InternalGenerador.g:694:3: ( (lv_fondoProductos_21_0= ruleColor ) )
-            // InternalGenerador.g:695:4: (lv_fondoProductos_21_0= ruleColor )
+            // InternalGenerador.g:702:3: ( (lv_fondoProductos_21_0= ruleColor ) )
+            // InternalGenerador.g:703:4: (lv_fondoProductos_21_0= ruleColor )
             {
-            // InternalGenerador.g:695:4: (lv_fondoProductos_21_0= ruleColor )
-            // InternalGenerador.g:696:5: lv_fondoProductos_21_0= ruleColor
+            // InternalGenerador.g:703:4: (lv_fondoProductos_21_0= ruleColor )
+            // InternalGenerador.g:704:5: lv_fondoProductos_21_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getFondoProductosColorParserRuleCall_21_0());
@@ -1248,23 +1259,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_22=(Token)match(input,16,FOLLOW_31); 
+            otherlv_22=(Token)match(input,16,FOLLOW_32); 
 
             			newLeafNode(otherlv_22, grammarAccess.getAparienciaAccess().getColonKeyword_22());
             		
-            otherlv_23=(Token)match(input,33,FOLLOW_25); 
+            otherlv_23=(Token)match(input,34,FOLLOW_21); 
 
             			newLeafNode(otherlv_23, grammarAccess.getAparienciaAccess().getPreciosKeyword_23());
             		
-            otherlv_24=(Token)match(input,28,FOLLOW_26); 
+            otherlv_24=(Token)match(input,24,FOLLOW_27); 
 
             			newLeafNode(otherlv_24, grammarAccess.getAparienciaAccess().getFullStopKeyword_24());
             		
-            // InternalGenerador.g:725:3: ( (lv_precios_25_0= ruleColor ) )
-            // InternalGenerador.g:726:4: (lv_precios_25_0= ruleColor )
+            // InternalGenerador.g:733:3: ( (lv_precios_25_0= ruleColor ) )
+            // InternalGenerador.g:734:4: (lv_precios_25_0= ruleColor )
             {
-            // InternalGenerador.g:726:4: (lv_precios_25_0= ruleColor )
-            // InternalGenerador.g:727:5: lv_precios_25_0= ruleColor
+            // InternalGenerador.g:734:4: (lv_precios_25_0= ruleColor )
+            // InternalGenerador.g:735:5: lv_precios_25_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getPreciosColorParserRuleCall_25_0());
@@ -1291,23 +1302,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_26=(Token)match(input,16,FOLLOW_32); 
+            otherlv_26=(Token)match(input,16,FOLLOW_33); 
 
             			newLeafNode(otherlv_26, grammarAccess.getAparienciaAccess().getColonKeyword_26());
             		
-            otherlv_27=(Token)match(input,34,FOLLOW_25); 
+            otherlv_27=(Token)match(input,35,FOLLOW_21); 
 
             			newLeafNode(otherlv_27, grammarAccess.getAparienciaAccess().getTextoKeyword_27());
             		
-            otherlv_28=(Token)match(input,28,FOLLOW_26); 
+            otherlv_28=(Token)match(input,24,FOLLOW_27); 
 
             			newLeafNode(otherlv_28, grammarAccess.getAparienciaAccess().getFullStopKeyword_28());
             		
-            // InternalGenerador.g:756:3: ( (lv_texto_29_0= ruleColor ) )
-            // InternalGenerador.g:757:4: (lv_texto_29_0= ruleColor )
+            // InternalGenerador.g:764:3: ( (lv_texto_29_0= ruleColor ) )
+            // InternalGenerador.g:765:4: (lv_texto_29_0= ruleColor )
             {
-            // InternalGenerador.g:757:4: (lv_texto_29_0= ruleColor )
-            // InternalGenerador.g:758:5: lv_texto_29_0= ruleColor
+            // InternalGenerador.g:765:4: (lv_texto_29_0= ruleColor )
+            // InternalGenerador.g:766:5: lv_texto_29_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getTextoColorParserRuleCall_29_0());
@@ -1334,28 +1345,28 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_30=(Token)match(input,16,FOLLOW_33); 
+            otherlv_30=(Token)match(input,16,FOLLOW_34); 
 
             			newLeafNode(otherlv_30, grammarAccess.getAparienciaAccess().getColonKeyword_30());
             		
-            otherlv_31=(Token)match(input,35,FOLLOW_25); 
+            otherlv_31=(Token)match(input,36,FOLLOW_21); 
 
             			newLeafNode(otherlv_31, grammarAccess.getAparienciaAccess().getTituloKeyword_31());
             		
-            otherlv_32=(Token)match(input,28,FOLLOW_26); 
+            otherlv_32=(Token)match(input,24,FOLLOW_27); 
 
             			newLeafNode(otherlv_32, grammarAccess.getAparienciaAccess().getFullStopKeyword_32());
             		
-            // InternalGenerador.g:787:3: ( (lv_tituloColor_33_0= ruleColor ) )
-            // InternalGenerador.g:788:4: (lv_tituloColor_33_0= ruleColor )
+            // InternalGenerador.g:795:3: ( (lv_tituloColor_33_0= ruleColor ) )
+            // InternalGenerador.g:796:4: (lv_tituloColor_33_0= ruleColor )
             {
-            // InternalGenerador.g:788:4: (lv_tituloColor_33_0= ruleColor )
-            // InternalGenerador.g:789:5: lv_tituloColor_33_0= ruleColor
+            // InternalGenerador.g:796:4: (lv_tituloColor_33_0= ruleColor )
+            // InternalGenerador.g:797:5: lv_tituloColor_33_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getTituloColorColorParserRuleCall_33_0());
             				
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             lv_tituloColor_33_0=ruleColor();
 
             state._fsp--;
@@ -1377,35 +1388,35 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_34=(Token)match(input,36,FOLLOW_11); 
+            otherlv_34=(Token)match(input,37,FOLLOW_11); 
 
             			newLeafNode(otherlv_34, grammarAccess.getAparienciaAccess().getRightSquareBracketKeyword_34());
             		
-            otherlv_35=(Token)match(input,25,FOLLOW_35); 
+            otherlv_35=(Token)match(input,27,FOLLOW_36); 
 
             			newLeafNode(otherlv_35, grammarAccess.getAparienciaAccess().getLeftSquareBracketKeyword_35());
             		
-            otherlv_36=(Token)match(input,37,FOLLOW_6); 
+            otherlv_36=(Token)match(input,38,FOLLOW_6); 
 
             			newLeafNode(otherlv_36, grammarAccess.getAparienciaAccess().getTextoKeyword_36());
             		
-            otherlv_37=(Token)match(input,15,FOLLOW_36); 
+            otherlv_37=(Token)match(input,15,FOLLOW_37); 
 
             			newLeafNode(otherlv_37, grammarAccess.getAparienciaAccess().getEqualsSignKeyword_37());
             		
-            otherlv_38=(Token)match(input,38,FOLLOW_25); 
+            otherlv_38=(Token)match(input,39,FOLLOW_21); 
 
             			newLeafNode(otherlv_38, grammarAccess.getAparienciaAccess().getNormalKeyword_38());
             		
-            otherlv_39=(Token)match(input,28,FOLLOW_13); 
+            otherlv_39=(Token)match(input,24,FOLLOW_13); 
 
             			newLeafNode(otherlv_39, grammarAccess.getAparienciaAccess().getFullStopKeyword_39());
             		
-            // InternalGenerador.g:830:3: ( (lv_normal_40_0= ruleMedida ) )
-            // InternalGenerador.g:831:4: (lv_normal_40_0= ruleMedida )
+            // InternalGenerador.g:838:3: ( (lv_normal_40_0= ruleMedida ) )
+            // InternalGenerador.g:839:4: (lv_normal_40_0= ruleMedida )
             {
-            // InternalGenerador.g:831:4: (lv_normal_40_0= ruleMedida )
-            // InternalGenerador.g:832:5: lv_normal_40_0= ruleMedida
+            // InternalGenerador.g:839:4: (lv_normal_40_0= ruleMedida )
+            // InternalGenerador.g:840:5: lv_normal_40_0= ruleMedida
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getNormalMedidaParserRuleCall_40_0());
@@ -1432,23 +1443,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_41=(Token)match(input,16,FOLLOW_37); 
+            otherlv_41=(Token)match(input,16,FOLLOW_38); 
 
             			newLeafNode(otherlv_41, grammarAccess.getAparienciaAccess().getColonKeyword_41());
             		
-            otherlv_42=(Token)match(input,39,FOLLOW_25); 
+            otherlv_42=(Token)match(input,40,FOLLOW_21); 
 
             			newLeafNode(otherlv_42, grammarAccess.getAparienciaAccess().getGrandeKeyword_42());
             		
-            otherlv_43=(Token)match(input,28,FOLLOW_13); 
+            otherlv_43=(Token)match(input,24,FOLLOW_13); 
 
             			newLeafNode(otherlv_43, grammarAccess.getAparienciaAccess().getFullStopKeyword_43());
             		
-            // InternalGenerador.g:861:3: ( (lv_grande_44_0= ruleMedida ) )
-            // InternalGenerador.g:862:4: (lv_grande_44_0= ruleMedida )
+            // InternalGenerador.g:869:3: ( (lv_grande_44_0= ruleMedida ) )
+            // InternalGenerador.g:870:4: (lv_grande_44_0= ruleMedida )
             {
-            // InternalGenerador.g:862:4: (lv_grande_44_0= ruleMedida )
-            // InternalGenerador.g:863:5: lv_grande_44_0= ruleMedida
+            // InternalGenerador.g:870:4: (lv_grande_44_0= ruleMedida )
+            // InternalGenerador.g:871:5: lv_grande_44_0= ruleMedida
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getGrandeMedidaParserRuleCall_44_0());
@@ -1475,23 +1486,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_45=(Token)match(input,16,FOLLOW_33); 
+            otherlv_45=(Token)match(input,16,FOLLOW_34); 
 
             			newLeafNode(otherlv_45, grammarAccess.getAparienciaAccess().getColonKeyword_45());
             		
-            otherlv_46=(Token)match(input,35,FOLLOW_25); 
+            otherlv_46=(Token)match(input,36,FOLLOW_21); 
 
             			newLeafNode(otherlv_46, grammarAccess.getAparienciaAccess().getTituloKeyword_46());
             		
-            otherlv_47=(Token)match(input,28,FOLLOW_13); 
+            otherlv_47=(Token)match(input,24,FOLLOW_13); 
 
             			newLeafNode(otherlv_47, grammarAccess.getAparienciaAccess().getFullStopKeyword_47());
             		
-            // InternalGenerador.g:892:3: ( (lv_titulo_48_0= ruleMedida ) )
-            // InternalGenerador.g:893:4: (lv_titulo_48_0= ruleMedida )
+            // InternalGenerador.g:900:3: ( (lv_titulo_48_0= ruleMedida ) )
+            // InternalGenerador.g:901:4: (lv_titulo_48_0= ruleMedida )
             {
-            // InternalGenerador.g:893:4: (lv_titulo_48_0= ruleMedida )
-            // InternalGenerador.g:894:5: lv_titulo_48_0= ruleMedida
+            // InternalGenerador.g:901:4: (lv_titulo_48_0= ruleMedida )
+            // InternalGenerador.g:902:5: lv_titulo_48_0= ruleMedida
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getTituloMedidaParserRuleCall_48_0());
@@ -1518,28 +1529,28 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_49=(Token)match(input,16,FOLLOW_38); 
+            otherlv_49=(Token)match(input,16,FOLLOW_39); 
 
             			newLeafNode(otherlv_49, grammarAccess.getAparienciaAccess().getColonKeyword_49());
             		
-            otherlv_50=(Token)match(input,40,FOLLOW_25); 
+            otherlv_50=(Token)match(input,41,FOLLOW_21); 
 
             			newLeafNode(otherlv_50, grammarAccess.getAparienciaAccess().getMenuKeyword_50());
             		
-            otherlv_51=(Token)match(input,28,FOLLOW_13); 
+            otherlv_51=(Token)match(input,24,FOLLOW_13); 
 
             			newLeafNode(otherlv_51, grammarAccess.getAparienciaAccess().getFullStopKeyword_51());
             		
-            // InternalGenerador.g:923:3: ( (lv_menu_52_0= ruleMedida ) )
-            // InternalGenerador.g:924:4: (lv_menu_52_0= ruleMedida )
+            // InternalGenerador.g:931:3: ( (lv_menu_52_0= ruleMedida ) )
+            // InternalGenerador.g:932:4: (lv_menu_52_0= ruleMedida )
             {
-            // InternalGenerador.g:924:4: (lv_menu_52_0= ruleMedida )
-            // InternalGenerador.g:925:5: lv_menu_52_0= ruleMedida
+            // InternalGenerador.g:932:4: (lv_menu_52_0= ruleMedida )
+            // InternalGenerador.g:933:5: lv_menu_52_0= ruleMedida
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getMenuMedidaParserRuleCall_52_0());
             				
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             lv_menu_52_0=ruleMedida();
 
             state._fsp--;
@@ -1561,15 +1572,15 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_53=(Token)match(input,36,FOLLOW_11); 
+            otherlv_53=(Token)match(input,37,FOLLOW_11); 
 
             			newLeafNode(otherlv_53, grammarAccess.getAparienciaAccess().getRightSquareBracketKeyword_53());
             		
-            otherlv_54=(Token)match(input,25,FOLLOW_39); 
+            otherlv_54=(Token)match(input,27,FOLLOW_40); 
 
             			newLeafNode(otherlv_54, grammarAccess.getAparienciaAccess().getLeftSquareBracketKeyword_54());
             		
-            otherlv_55=(Token)match(input,41,FOLLOW_6); 
+            otherlv_55=(Token)match(input,42,FOLLOW_6); 
 
             			newLeafNode(otherlv_55, grammarAccess.getAparienciaAccess().getMargenKeyword_55());
             		
@@ -1577,16 +1588,16 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_56, grammarAccess.getAparienciaAccess().getEqualsSignKeyword_56());
             		
-            // InternalGenerador.g:958:3: ( (lv_lateral_57_0= ruleMedida ) )
-            // InternalGenerador.g:959:4: (lv_lateral_57_0= ruleMedida )
+            // InternalGenerador.g:966:3: ( (lv_lateral_57_0= ruleMedida ) )
+            // InternalGenerador.g:967:4: (lv_lateral_57_0= ruleMedida )
             {
-            // InternalGenerador.g:959:4: (lv_lateral_57_0= ruleMedida )
-            // InternalGenerador.g:960:5: lv_lateral_57_0= ruleMedida
+            // InternalGenerador.g:967:4: (lv_lateral_57_0= ruleMedida )
+            // InternalGenerador.g:968:5: lv_lateral_57_0= ruleMedida
             {
 
             					newCompositeNode(grammarAccess.getAparienciaAccess().getLateralMedidaParserRuleCall_57_0());
             				
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             lv_lateral_57_0=ruleMedida();
 
             state._fsp--;
@@ -1608,7 +1619,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_58=(Token)match(input,36,FOLLOW_2); 
+            otherlv_58=(Token)match(input,37,FOLLOW_2); 
 
             			newLeafNode(otherlv_58, grammarAccess.getAparienciaAccess().getRightSquareBracketKeyword_58());
             		
@@ -1635,7 +1646,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProducto"
-    // InternalGenerador.g:985:1: entryRuleProducto returns [EObject current=null] : iv_ruleProducto= ruleProducto EOF ;
+    // InternalGenerador.g:993:1: entryRuleProducto returns [EObject current=null] : iv_ruleProducto= ruleProducto EOF ;
     public final EObject entryRuleProducto() throws RecognitionException {
         EObject current = null;
 
@@ -1643,8 +1654,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:985:49: (iv_ruleProducto= ruleProducto EOF )
-            // InternalGenerador.g:986:2: iv_ruleProducto= ruleProducto EOF
+            // InternalGenerador.g:993:49: (iv_ruleProducto= ruleProducto EOF )
+            // InternalGenerador.g:994:2: iv_ruleProducto= ruleProducto EOF
             {
              newCompositeNode(grammarAccess.getProductoRule()); 
             pushFollow(FOLLOW_1);
@@ -1671,7 +1682,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProducto"
-    // InternalGenerador.g:992:1: ruleProducto returns [EObject current=null] : (otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']' ) ;
+    // InternalGenerador.g:1000:1: ruleProducto returns [EObject current=null] : (otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']' ) ;
     public final EObject ruleProducto() throws RecognitionException {
         EObject current = null;
 
@@ -1695,17 +1706,17 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:998:2: ( (otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']' ) )
-            // InternalGenerador.g:999:2: (otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']' )
+            // InternalGenerador.g:1006:2: ( (otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']' ) )
+            // InternalGenerador.g:1007:2: (otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']' )
             {
-            // InternalGenerador.g:999:2: (otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']' )
-            // InternalGenerador.g:1000:3: otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']'
+            // InternalGenerador.g:1007:2: (otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']' )
+            // InternalGenerador.g:1008:3: otherlv_0= '[' otherlv_1= 'Producto' otherlv_2= '=' ( (lv_nombreProducto_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_descripcion_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_precio_7_0= rulePrecio ) ) otherlv_8= ':' ( (lv_cantidad_9_0= RULE_INT ) ) otherlv_10= ':' ( (lv_categoria_11_0= ruleCategoria ) ) otherlv_12= ']'
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_40); 
+            otherlv_0=(Token)match(input,27,FOLLOW_41); 
 
             			newLeafNode(otherlv_0, grammarAccess.getProductoAccess().getLeftSquareBracketKeyword_0());
             		
-            otherlv_1=(Token)match(input,42,FOLLOW_6); 
+            otherlv_1=(Token)match(input,43,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getProductoAccess().getProductoKeyword_1());
             		
@@ -1713,11 +1724,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getProductoAccess().getEqualsSignKeyword_2());
             		
-            // InternalGenerador.g:1012:3: ( (lv_nombreProducto_3_0= RULE_STRING ) )
-            // InternalGenerador.g:1013:4: (lv_nombreProducto_3_0= RULE_STRING )
+            // InternalGenerador.g:1020:3: ( (lv_nombreProducto_3_0= RULE_STRING ) )
+            // InternalGenerador.g:1021:4: (lv_nombreProducto_3_0= RULE_STRING )
             {
-            // InternalGenerador.g:1013:4: (lv_nombreProducto_3_0= RULE_STRING )
-            // InternalGenerador.g:1014:5: lv_nombreProducto_3_0= RULE_STRING
+            // InternalGenerador.g:1021:4: (lv_nombreProducto_3_0= RULE_STRING )
+            // InternalGenerador.g:1022:5: lv_nombreProducto_3_0= RULE_STRING
             {
             lv_nombreProducto_3_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
 
@@ -1743,11 +1754,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getProductoAccess().getColonKeyword_4());
             		
-            // InternalGenerador.g:1034:3: ( (lv_descripcion_5_0= RULE_STRING ) )
-            // InternalGenerador.g:1035:4: (lv_descripcion_5_0= RULE_STRING )
+            // InternalGenerador.g:1042:3: ( (lv_descripcion_5_0= RULE_STRING ) )
+            // InternalGenerador.g:1043:4: (lv_descripcion_5_0= RULE_STRING )
             {
-            // InternalGenerador.g:1035:4: (lv_descripcion_5_0= RULE_STRING )
-            // InternalGenerador.g:1036:5: lv_descripcion_5_0= RULE_STRING
+            // InternalGenerador.g:1043:4: (lv_descripcion_5_0= RULE_STRING )
+            // InternalGenerador.g:1044:5: lv_descripcion_5_0= RULE_STRING
             {
             lv_descripcion_5_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
 
@@ -1773,11 +1784,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_6, grammarAccess.getProductoAccess().getColonKeyword_6());
             		
-            // InternalGenerador.g:1056:3: ( (lv_precio_7_0= rulePrecio ) )
-            // InternalGenerador.g:1057:4: (lv_precio_7_0= rulePrecio )
+            // InternalGenerador.g:1064:3: ( (lv_precio_7_0= rulePrecio ) )
+            // InternalGenerador.g:1065:4: (lv_precio_7_0= rulePrecio )
             {
-            // InternalGenerador.g:1057:4: (lv_precio_7_0= rulePrecio )
-            // InternalGenerador.g:1058:5: lv_precio_7_0= rulePrecio
+            // InternalGenerador.g:1065:4: (lv_precio_7_0= rulePrecio )
+            // InternalGenerador.g:1066:5: lv_precio_7_0= rulePrecio
             {
 
             					newCompositeNode(grammarAccess.getProductoAccess().getPrecioPrecioParserRuleCall_7_0());
@@ -1808,11 +1819,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getProductoAccess().getColonKeyword_8());
             		
-            // InternalGenerador.g:1079:3: ( (lv_cantidad_9_0= RULE_INT ) )
-            // InternalGenerador.g:1080:4: (lv_cantidad_9_0= RULE_INT )
+            // InternalGenerador.g:1087:3: ( (lv_cantidad_9_0= RULE_INT ) )
+            // InternalGenerador.g:1088:4: (lv_cantidad_9_0= RULE_INT )
             {
-            // InternalGenerador.g:1080:4: (lv_cantidad_9_0= RULE_INT )
-            // InternalGenerador.g:1081:5: lv_cantidad_9_0= RULE_INT
+            // InternalGenerador.g:1088:4: (lv_cantidad_9_0= RULE_INT )
+            // InternalGenerador.g:1089:5: lv_cantidad_9_0= RULE_INT
             {
             lv_cantidad_9_0=(Token)match(input,RULE_INT,FOLLOW_8); 
 
@@ -1834,20 +1845,20 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,16,FOLLOW_41); 
+            otherlv_10=(Token)match(input,16,FOLLOW_42); 
 
             			newLeafNode(otherlv_10, grammarAccess.getProductoAccess().getColonKeyword_10());
             		
-            // InternalGenerador.g:1101:3: ( (lv_categoria_11_0= ruleCategoria ) )
-            // InternalGenerador.g:1102:4: (lv_categoria_11_0= ruleCategoria )
+            // InternalGenerador.g:1109:3: ( (lv_categoria_11_0= ruleCategoria ) )
+            // InternalGenerador.g:1110:4: (lv_categoria_11_0= ruleCategoria )
             {
-            // InternalGenerador.g:1102:4: (lv_categoria_11_0= ruleCategoria )
-            // InternalGenerador.g:1103:5: lv_categoria_11_0= ruleCategoria
+            // InternalGenerador.g:1110:4: (lv_categoria_11_0= ruleCategoria )
+            // InternalGenerador.g:1111:5: lv_categoria_11_0= ruleCategoria
             {
 
             					newCompositeNode(grammarAccess.getProductoAccess().getCategoriaCategoriaParserRuleCall_11_0());
             				
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             lv_categoria_11_0=ruleCategoria();
 
             state._fsp--;
@@ -1869,7 +1880,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_12=(Token)match(input,36,FOLLOW_2); 
+            otherlv_12=(Token)match(input,37,FOLLOW_2); 
 
             			newLeafNode(otherlv_12, grammarAccess.getProductoAccess().getRightSquareBracketKeyword_12());
             		
@@ -1896,7 +1907,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePrecio"
-    // InternalGenerador.g:1128:1: entryRulePrecio returns [String current=null] : iv_rulePrecio= rulePrecio EOF ;
+    // InternalGenerador.g:1136:1: entryRulePrecio returns [String current=null] : iv_rulePrecio= rulePrecio EOF ;
     public final String entryRulePrecio() throws RecognitionException {
         String current = null;
 
@@ -1904,8 +1915,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1128:46: (iv_rulePrecio= rulePrecio EOF )
-            // InternalGenerador.g:1129:2: iv_rulePrecio= rulePrecio EOF
+            // InternalGenerador.g:1136:46: (iv_rulePrecio= rulePrecio EOF )
+            // InternalGenerador.g:1137:2: iv_rulePrecio= rulePrecio EOF
             {
              newCompositeNode(grammarAccess.getPrecioRule()); 
             pushFollow(FOLLOW_1);
@@ -1932,7 +1943,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrecio"
-    // InternalGenerador.g:1135:1: rulePrecio returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT ) ;
+    // InternalGenerador.g:1143:1: rulePrecio returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT ) ;
     public final AntlrDatatypeRuleToken rulePrecio() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1944,20 +1955,20 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1141:2: ( (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT ) )
-            // InternalGenerador.g:1142:2: (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT )
+            // InternalGenerador.g:1149:2: ( (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT ) )
+            // InternalGenerador.g:1150:2: (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT )
             {
-            // InternalGenerador.g:1142:2: (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT )
-            // InternalGenerador.g:1143:3: this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT
+            // InternalGenerador.g:1150:2: (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT )
+            // InternalGenerador.g:1151:3: this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT
             {
-            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_25); 
+            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_21); 
 
             			current.merge(this_INT_0);
             		
 
             			newLeafNode(this_INT_0, grammarAccess.getPrecioAccess().getINTTerminalRuleCall_0());
             		
-            kw=(Token)match(input,28,FOLLOW_13); 
+            kw=(Token)match(input,24,FOLLOW_13); 
 
             			current.merge(kw);
             			newLeafNode(kw, grammarAccess.getPrecioAccess().getFullStopKeyword_1());
@@ -1992,7 +2003,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCategoria"
-    // InternalGenerador.g:1166:1: entryRuleCategoria returns [String current=null] : iv_ruleCategoria= ruleCategoria EOF ;
+    // InternalGenerador.g:1174:1: entryRuleCategoria returns [String current=null] : iv_ruleCategoria= ruleCategoria EOF ;
     public final String entryRuleCategoria() throws RecognitionException {
         String current = null;
 
@@ -2000,8 +2011,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1166:49: (iv_ruleCategoria= ruleCategoria EOF )
-            // InternalGenerador.g:1167:2: iv_ruleCategoria= ruleCategoria EOF
+            // InternalGenerador.g:1174:49: (iv_ruleCategoria= ruleCategoria EOF )
+            // InternalGenerador.g:1175:2: iv_ruleCategoria= ruleCategoria EOF
             {
              newCompositeNode(grammarAccess.getCategoriaRule()); 
             pushFollow(FOLLOW_1);
@@ -2028,7 +2039,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCategoria"
-    // InternalGenerador.g:1173:1: ruleCategoria returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'Cosmetica' | kw= 'Higiene' | kw= 'Salud' | kw= 'Dietetica' | kw= 'Bebes' ) ;
+    // InternalGenerador.g:1181:1: ruleCategoria returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'Cosmetica' | kw= 'Higiene' | kw= 'Salud' | kw= 'Dietetica' | kw= 'Bebes' ) ;
     public final AntlrDatatypeRuleToken ruleCategoria() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2038,33 +2049,33 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1179:2: ( (kw= 'Cosmetica' | kw= 'Higiene' | kw= 'Salud' | kw= 'Dietetica' | kw= 'Bebes' ) )
-            // InternalGenerador.g:1180:2: (kw= 'Cosmetica' | kw= 'Higiene' | kw= 'Salud' | kw= 'Dietetica' | kw= 'Bebes' )
+            // InternalGenerador.g:1187:2: ( (kw= 'Cosmetica' | kw= 'Higiene' | kw= 'Salud' | kw= 'Dietetica' | kw= 'Bebes' ) )
+            // InternalGenerador.g:1188:2: (kw= 'Cosmetica' | kw= 'Higiene' | kw= 'Salud' | kw= 'Dietetica' | kw= 'Bebes' )
             {
-            // InternalGenerador.g:1180:2: (kw= 'Cosmetica' | kw= 'Higiene' | kw= 'Salud' | kw= 'Dietetica' | kw= 'Bebes' )
+            // InternalGenerador.g:1188:2: (kw= 'Cosmetica' | kw= 'Higiene' | kw= 'Salud' | kw= 'Dietetica' | kw= 'Bebes' )
             int alt3=5;
             switch ( input.LA(1) ) {
-            case 43:
+            case 44:
                 {
                 alt3=1;
                 }
                 break;
-            case 44:
+            case 45:
                 {
                 alt3=2;
                 }
                 break;
-            case 45:
+            case 46:
                 {
                 alt3=3;
                 }
                 break;
-            case 46:
+            case 47:
                 {
                 alt3=4;
                 }
                 break;
-            case 47:
+            case 48:
                 {
                 alt3=5;
                 }
@@ -2078,9 +2089,9 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             switch (alt3) {
                 case 1 :
-                    // InternalGenerador.g:1181:3: kw= 'Cosmetica'
+                    // InternalGenerador.g:1189:3: kw= 'Cosmetica'
                     {
-                    kw=(Token)match(input,43,FOLLOW_2); 
+                    kw=(Token)match(input,44,FOLLOW_2); 
 
                     			current.merge(kw);
                     			newLeafNode(kw, grammarAccess.getCategoriaAccess().getCosmeticaKeyword_0());
@@ -2089,9 +2100,9 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGenerador.g:1187:3: kw= 'Higiene'
+                    // InternalGenerador.g:1195:3: kw= 'Higiene'
                     {
-                    kw=(Token)match(input,44,FOLLOW_2); 
+                    kw=(Token)match(input,45,FOLLOW_2); 
 
                     			current.merge(kw);
                     			newLeafNode(kw, grammarAccess.getCategoriaAccess().getHigieneKeyword_1());
@@ -2100,9 +2111,9 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalGenerador.g:1193:3: kw= 'Salud'
+                    // InternalGenerador.g:1201:3: kw= 'Salud'
                     {
-                    kw=(Token)match(input,45,FOLLOW_2); 
+                    kw=(Token)match(input,46,FOLLOW_2); 
 
                     			current.merge(kw);
                     			newLeafNode(kw, grammarAccess.getCategoriaAccess().getSaludKeyword_2());
@@ -2111,9 +2122,9 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalGenerador.g:1199:3: kw= 'Dietetica'
+                    // InternalGenerador.g:1207:3: kw= 'Dietetica'
                     {
-                    kw=(Token)match(input,46,FOLLOW_2); 
+                    kw=(Token)match(input,47,FOLLOW_2); 
 
                     			current.merge(kw);
                     			newLeafNode(kw, grammarAccess.getCategoriaAccess().getDieteticaKeyword_3());
@@ -2122,9 +2133,9 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalGenerador.g:1205:3: kw= 'Bebes'
+                    // InternalGenerador.g:1213:3: kw= 'Bebes'
                     {
-                    kw=(Token)match(input,47,FOLLOW_2); 
+                    kw=(Token)match(input,48,FOLLOW_2); 
 
                     			current.merge(kw);
                     			newLeafNode(kw, grammarAccess.getCategoriaAccess().getBebesKeyword_4());
@@ -2155,7 +2166,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTipo"
-    // InternalGenerador.g:1214:1: entryRuleTipo returns [EObject current=null] : iv_ruleTipo= ruleTipo EOF ;
+    // InternalGenerador.g:1222:1: entryRuleTipo returns [EObject current=null] : iv_ruleTipo= ruleTipo EOF ;
     public final EObject entryRuleTipo() throws RecognitionException {
         EObject current = null;
 
@@ -2163,8 +2174,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1214:45: (iv_ruleTipo= ruleTipo EOF )
-            // InternalGenerador.g:1215:2: iv_ruleTipo= ruleTipo EOF
+            // InternalGenerador.g:1222:45: (iv_ruleTipo= ruleTipo EOF )
+            // InternalGenerador.g:1223:2: iv_ruleTipo= ruleTipo EOF
             {
              newCompositeNode(grammarAccess.getTipoRule()); 
             pushFollow(FOLLOW_1);
@@ -2191,7 +2202,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTipo"
-    // InternalGenerador.g:1221:1: ruleTipo returns [EObject current=null] : ( ( (lv_desplegable_0_0= ruleDesplegable ) ) | ( (lv_permanente_1_0= rulePermanente ) ) ) ;
+    // InternalGenerador.g:1229:1: ruleTipo returns [EObject current=null] : ( ( (lv_desplegable_0_0= ruleDesplegable ) ) | ( (lv_permanente_1_0= rulePermanente ) ) ) ;
     public final EObject ruleTipo() throws RecognitionException {
         EObject current = null;
 
@@ -2204,17 +2215,17 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1227:2: ( ( ( (lv_desplegable_0_0= ruleDesplegable ) ) | ( (lv_permanente_1_0= rulePermanente ) ) ) )
-            // InternalGenerador.g:1228:2: ( ( (lv_desplegable_0_0= ruleDesplegable ) ) | ( (lv_permanente_1_0= rulePermanente ) ) )
+            // InternalGenerador.g:1235:2: ( ( ( (lv_desplegable_0_0= ruleDesplegable ) ) | ( (lv_permanente_1_0= rulePermanente ) ) ) )
+            // InternalGenerador.g:1236:2: ( ( (lv_desplegable_0_0= ruleDesplegable ) ) | ( (lv_permanente_1_0= rulePermanente ) ) )
             {
-            // InternalGenerador.g:1228:2: ( ( (lv_desplegable_0_0= ruleDesplegable ) ) | ( (lv_permanente_1_0= rulePermanente ) ) )
+            // InternalGenerador.g:1236:2: ( ( (lv_desplegable_0_0= ruleDesplegable ) ) | ( (lv_permanente_1_0= rulePermanente ) ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==48) ) {
+            if ( (LA4_0==49) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==49) ) {
+            else if ( (LA4_0==50) ) {
                 alt4=2;
             }
             else {
@@ -2225,13 +2236,13 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalGenerador.g:1229:3: ( (lv_desplegable_0_0= ruleDesplegable ) )
+                    // InternalGenerador.g:1237:3: ( (lv_desplegable_0_0= ruleDesplegable ) )
                     {
-                    // InternalGenerador.g:1229:3: ( (lv_desplegable_0_0= ruleDesplegable ) )
-                    // InternalGenerador.g:1230:4: (lv_desplegable_0_0= ruleDesplegable )
+                    // InternalGenerador.g:1237:3: ( (lv_desplegable_0_0= ruleDesplegable ) )
+                    // InternalGenerador.g:1238:4: (lv_desplegable_0_0= ruleDesplegable )
                     {
-                    // InternalGenerador.g:1230:4: (lv_desplegable_0_0= ruleDesplegable )
-                    // InternalGenerador.g:1231:5: lv_desplegable_0_0= ruleDesplegable
+                    // InternalGenerador.g:1238:4: (lv_desplegable_0_0= ruleDesplegable )
+                    // InternalGenerador.g:1239:5: lv_desplegable_0_0= ruleDesplegable
                     {
 
                     					newCompositeNode(grammarAccess.getTipoAccess().getDesplegableDesplegableParserRuleCall_0_0());
@@ -2262,13 +2273,13 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGenerador.g:1249:3: ( (lv_permanente_1_0= rulePermanente ) )
+                    // InternalGenerador.g:1257:3: ( (lv_permanente_1_0= rulePermanente ) )
                     {
-                    // InternalGenerador.g:1249:3: ( (lv_permanente_1_0= rulePermanente ) )
-                    // InternalGenerador.g:1250:4: (lv_permanente_1_0= rulePermanente )
+                    // InternalGenerador.g:1257:3: ( (lv_permanente_1_0= rulePermanente ) )
+                    // InternalGenerador.g:1258:4: (lv_permanente_1_0= rulePermanente )
                     {
-                    // InternalGenerador.g:1250:4: (lv_permanente_1_0= rulePermanente )
-                    // InternalGenerador.g:1251:5: lv_permanente_1_0= rulePermanente
+                    // InternalGenerador.g:1258:4: (lv_permanente_1_0= rulePermanente )
+                    // InternalGenerador.g:1259:5: lv_permanente_1_0= rulePermanente
                     {
 
                     					newCompositeNode(grammarAccess.getTipoAccess().getPermanentePermanenteParserRuleCall_1_0());
@@ -2321,7 +2332,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDesplegable"
-    // InternalGenerador.g:1272:1: entryRuleDesplegable returns [EObject current=null] : iv_ruleDesplegable= ruleDesplegable EOF ;
+    // InternalGenerador.g:1280:1: entryRuleDesplegable returns [EObject current=null] : iv_ruleDesplegable= ruleDesplegable EOF ;
     public final EObject entryRuleDesplegable() throws RecognitionException {
         EObject current = null;
 
@@ -2329,8 +2340,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1272:52: (iv_ruleDesplegable= ruleDesplegable EOF )
-            // InternalGenerador.g:1273:2: iv_ruleDesplegable= ruleDesplegable EOF
+            // InternalGenerador.g:1280:52: (iv_ruleDesplegable= ruleDesplegable EOF )
+            // InternalGenerador.g:1281:2: iv_ruleDesplegable= ruleDesplegable EOF
             {
              newCompositeNode(grammarAccess.getDesplegableRule()); 
             pushFollow(FOLLOW_1);
@@ -2357,7 +2368,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDesplegable"
-    // InternalGenerador.g:1279:1: ruleDesplegable returns [EObject current=null] : (otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) ) ;
+    // InternalGenerador.g:1287:1: ruleDesplegable returns [EObject current=null] : (otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) ) ;
     public final EObject ruleDesplegable() throws RecognitionException {
         EObject current = null;
 
@@ -2370,25 +2381,25 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1285:2: ( (otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) ) )
-            // InternalGenerador.g:1286:2: (otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) )
+            // InternalGenerador.g:1293:2: ( (otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) ) )
+            // InternalGenerador.g:1294:2: (otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) )
             {
-            // InternalGenerador.g:1286:2: (otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) )
-            // InternalGenerador.g:1287:3: otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) )
+            // InternalGenerador.g:1294:2: (otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) )
+            // InternalGenerador.g:1295:3: otherlv_0= 'Desplegable' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) )
             {
-            otherlv_0=(Token)match(input,48,FOLLOW_8); 
+            otherlv_0=(Token)match(input,49,FOLLOW_8); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDesplegableAccess().getDesplegableKeyword_0());
             		
-            otherlv_1=(Token)match(input,16,FOLLOW_26); 
+            otherlv_1=(Token)match(input,16,FOLLOW_27); 
 
             			newLeafNode(otherlv_1, grammarAccess.getDesplegableAccess().getColonKeyword_1());
             		
-            // InternalGenerador.g:1295:3: ( (lv_color_2_0= ruleColor ) )
-            // InternalGenerador.g:1296:4: (lv_color_2_0= ruleColor )
+            // InternalGenerador.g:1303:3: ( (lv_color_2_0= ruleColor ) )
+            // InternalGenerador.g:1304:4: (lv_color_2_0= ruleColor )
             {
-            // InternalGenerador.g:1296:4: (lv_color_2_0= ruleColor )
-            // InternalGenerador.g:1297:5: lv_color_2_0= ruleColor
+            // InternalGenerador.g:1304:4: (lv_color_2_0= ruleColor )
+            // InternalGenerador.g:1305:5: lv_color_2_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getDesplegableAccess().getColorColorParserRuleCall_2_0());
@@ -2438,7 +2449,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePermanente"
-    // InternalGenerador.g:1318:1: entryRulePermanente returns [EObject current=null] : iv_rulePermanente= rulePermanente EOF ;
+    // InternalGenerador.g:1326:1: entryRulePermanente returns [EObject current=null] : iv_rulePermanente= rulePermanente EOF ;
     public final EObject entryRulePermanente() throws RecognitionException {
         EObject current = null;
 
@@ -2446,8 +2457,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1318:51: (iv_rulePermanente= rulePermanente EOF )
-            // InternalGenerador.g:1319:2: iv_rulePermanente= rulePermanente EOF
+            // InternalGenerador.g:1326:51: (iv_rulePermanente= rulePermanente EOF )
+            // InternalGenerador.g:1327:2: iv_rulePermanente= rulePermanente EOF
             {
              newCompositeNode(grammarAccess.getPermanenteRule()); 
             pushFollow(FOLLOW_1);
@@ -2474,7 +2485,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePermanente"
-    // InternalGenerador.g:1325:1: rulePermanente returns [EObject current=null] : (otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) ) ) ;
+    // InternalGenerador.g:1333:1: rulePermanente returns [EObject current=null] : (otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) ) ) ;
     public final EObject rulePermanente() throws RecognitionException {
         EObject current = null;
 
@@ -2490,25 +2501,25 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1331:2: ( (otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) ) ) )
-            // InternalGenerador.g:1332:2: (otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) ) )
+            // InternalGenerador.g:1339:2: ( (otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) ) ) )
+            // InternalGenerador.g:1340:2: (otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) ) )
             {
-            // InternalGenerador.g:1332:2: (otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) ) )
-            // InternalGenerador.g:1333:3: otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) )
+            // InternalGenerador.g:1340:2: (otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) ) )
+            // InternalGenerador.g:1341:3: otherlv_0= 'Permanente' otherlv_1= ':' ( (lv_color_2_0= ruleColor ) ) otherlv_3= ':' ( (lv_altura_4_0= ruleMedida ) )
             {
-            otherlv_0=(Token)match(input,49,FOLLOW_8); 
+            otherlv_0=(Token)match(input,50,FOLLOW_8); 
 
             			newLeafNode(otherlv_0, grammarAccess.getPermanenteAccess().getPermanenteKeyword_0());
             		
-            otherlv_1=(Token)match(input,16,FOLLOW_26); 
+            otherlv_1=(Token)match(input,16,FOLLOW_27); 
 
             			newLeafNode(otherlv_1, grammarAccess.getPermanenteAccess().getColonKeyword_1());
             		
-            // InternalGenerador.g:1341:3: ( (lv_color_2_0= ruleColor ) )
-            // InternalGenerador.g:1342:4: (lv_color_2_0= ruleColor )
+            // InternalGenerador.g:1349:3: ( (lv_color_2_0= ruleColor ) )
+            // InternalGenerador.g:1350:4: (lv_color_2_0= ruleColor )
             {
-            // InternalGenerador.g:1342:4: (lv_color_2_0= ruleColor )
-            // InternalGenerador.g:1343:5: lv_color_2_0= ruleColor
+            // InternalGenerador.g:1350:4: (lv_color_2_0= ruleColor )
+            // InternalGenerador.g:1351:5: lv_color_2_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getPermanenteAccess().getColorColorParserRuleCall_2_0());
@@ -2539,11 +2550,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getPermanenteAccess().getColonKeyword_3());
             		
-            // InternalGenerador.g:1364:3: ( (lv_altura_4_0= ruleMedida ) )
-            // InternalGenerador.g:1365:4: (lv_altura_4_0= ruleMedida )
+            // InternalGenerador.g:1372:3: ( (lv_altura_4_0= ruleMedida ) )
+            // InternalGenerador.g:1373:4: (lv_altura_4_0= ruleMedida )
             {
-            // InternalGenerador.g:1365:4: (lv_altura_4_0= ruleMedida )
-            // InternalGenerador.g:1366:5: lv_altura_4_0= ruleMedida
+            // InternalGenerador.g:1373:4: (lv_altura_4_0= ruleMedida )
+            // InternalGenerador.g:1374:5: lv_altura_4_0= ruleMedida
             {
 
             					newCompositeNode(grammarAccess.getPermanenteAccess().getAlturaMedidaParserRuleCall_4_0());
@@ -2593,7 +2604,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColor"
-    // InternalGenerador.g:1387:1: entryRuleColor returns [String current=null] : iv_ruleColor= ruleColor EOF ;
+    // InternalGenerador.g:1395:1: entryRuleColor returns [String current=null] : iv_ruleColor= ruleColor EOF ;
     public final String entryRuleColor() throws RecognitionException {
         String current = null;
 
@@ -2601,8 +2612,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1387:45: (iv_ruleColor= ruleColor EOF )
-            // InternalGenerador.g:1388:2: iv_ruleColor= ruleColor EOF
+            // InternalGenerador.g:1395:45: (iv_ruleColor= ruleColor EOF )
+            // InternalGenerador.g:1396:2: iv_ruleColor= ruleColor EOF
             {
              newCompositeNode(grammarAccess.getColorRule()); 
             pushFollow(FOLLOW_1);
@@ -2629,7 +2640,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColor"
-    // InternalGenerador.g:1394:1: ruleColor returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+ ) ;
+    // InternalGenerador.g:1402:1: ruleColor returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+ ) ;
     public final AntlrDatatypeRuleToken ruleColor() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2641,18 +2652,18 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1400:2: ( (kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+ ) )
-            // InternalGenerador.g:1401:2: (kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+ )
+            // InternalGenerador.g:1408:2: ( (kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+ ) )
+            // InternalGenerador.g:1409:2: (kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+ )
             {
-            // InternalGenerador.g:1401:2: (kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+ )
-            // InternalGenerador.g:1402:3: kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+
+            // InternalGenerador.g:1409:2: (kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+ )
+            // InternalGenerador.g:1410:3: kw= '#' (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+
             {
-            kw=(Token)match(input,50,FOLLOW_42); 
+            kw=(Token)match(input,51,FOLLOW_43); 
 
             			current.merge(kw);
             			newLeafNode(kw, grammarAccess.getColorAccess().getNumberSignKeyword_0());
             		
-            // InternalGenerador.g:1407:3: (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+
+            // InternalGenerador.g:1415:3: (this_ID_1= RULE_ID | this_INT_2= RULE_INT )+
             int cnt5=0;
             loop5:
             do {
@@ -2669,9 +2680,9 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalGenerador.g:1408:4: this_ID_1= RULE_ID
+            	    // InternalGenerador.g:1416:4: this_ID_1= RULE_ID
             	    {
-            	    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_43); 
+            	    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_44); 
 
             	    				current.merge(this_ID_1);
             	    			
@@ -2682,9 +2693,9 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalGenerador.g:1416:4: this_INT_2= RULE_INT
+            	    // InternalGenerador.g:1424:4: this_INT_2= RULE_INT
             	    {
-            	    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_43); 
+            	    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_44); 
 
             	    				current.merge(this_INT_2);
             	    			
@@ -2727,7 +2738,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMedida"
-    // InternalGenerador.g:1428:1: entryRuleMedida returns [String current=null] : iv_ruleMedida= ruleMedida EOF ;
+    // InternalGenerador.g:1436:1: entryRuleMedida returns [String current=null] : iv_ruleMedida= ruleMedida EOF ;
     public final String entryRuleMedida() throws RecognitionException {
         String current = null;
 
@@ -2735,8 +2746,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1428:46: (iv_ruleMedida= ruleMedida EOF )
-            // InternalGenerador.g:1429:2: iv_ruleMedida= ruleMedida EOF
+            // InternalGenerador.g:1436:46: (iv_ruleMedida= ruleMedida EOF )
+            // InternalGenerador.g:1437:2: iv_ruleMedida= ruleMedida EOF
             {
              newCompositeNode(grammarAccess.getMedidaRule()); 
             pushFollow(FOLLOW_1);
@@ -2763,7 +2774,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMedida"
-    // InternalGenerador.g:1435:1: ruleMedida returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT kw= 'px' ) | (this_INT_2= RULE_INT kw= '%' ) ) ;
+    // InternalGenerador.g:1443:1: ruleMedida returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT kw= 'px' ) | (this_INT_2= RULE_INT kw= '%' ) ) ;
     public final AntlrDatatypeRuleToken ruleMedida() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2775,21 +2786,21 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1441:2: ( ( (this_INT_0= RULE_INT kw= 'px' ) | (this_INT_2= RULE_INT kw= '%' ) ) )
-            // InternalGenerador.g:1442:2: ( (this_INT_0= RULE_INT kw= 'px' ) | (this_INT_2= RULE_INT kw= '%' ) )
+            // InternalGenerador.g:1449:2: ( ( (this_INT_0= RULE_INT kw= 'px' ) | (this_INT_2= RULE_INT kw= '%' ) ) )
+            // InternalGenerador.g:1450:2: ( (this_INT_0= RULE_INT kw= 'px' ) | (this_INT_2= RULE_INT kw= '%' ) )
             {
-            // InternalGenerador.g:1442:2: ( (this_INT_0= RULE_INT kw= 'px' ) | (this_INT_2= RULE_INT kw= '%' ) )
+            // InternalGenerador.g:1450:2: ( (this_INT_0= RULE_INT kw= 'px' ) | (this_INT_2= RULE_INT kw= '%' ) )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
             if ( (LA6_0==RULE_INT) ) {
                 int LA6_1 = input.LA(2);
 
-                if ( (LA6_1==51) ) {
-                    alt6=1;
+                if ( (LA6_1==53) ) {
+                    alt6=2;
                 }
                 else if ( (LA6_1==52) ) {
-                    alt6=2;
+                    alt6=1;
                 }
                 else {
                     NoViableAltException nvae =
@@ -2806,19 +2817,19 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalGenerador.g:1443:3: (this_INT_0= RULE_INT kw= 'px' )
+                    // InternalGenerador.g:1451:3: (this_INT_0= RULE_INT kw= 'px' )
                     {
-                    // InternalGenerador.g:1443:3: (this_INT_0= RULE_INT kw= 'px' )
-                    // InternalGenerador.g:1444:4: this_INT_0= RULE_INT kw= 'px'
+                    // InternalGenerador.g:1451:3: (this_INT_0= RULE_INT kw= 'px' )
+                    // InternalGenerador.g:1452:4: this_INT_0= RULE_INT kw= 'px'
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_44); 
+                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_45); 
 
                     				current.merge(this_INT_0);
                     			
 
                     				newLeafNode(this_INT_0, grammarAccess.getMedidaAccess().getINTTerminalRuleCall_0_0());
                     			
-                    kw=(Token)match(input,51,FOLLOW_2); 
+                    kw=(Token)match(input,52,FOLLOW_2); 
 
                     				current.merge(kw);
                     				newLeafNode(kw, grammarAccess.getMedidaAccess().getPxKeyword_0_1());
@@ -2830,19 +2841,19 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGenerador.g:1458:3: (this_INT_2= RULE_INT kw= '%' )
+                    // InternalGenerador.g:1466:3: (this_INT_2= RULE_INT kw= '%' )
                     {
-                    // InternalGenerador.g:1458:3: (this_INT_2= RULE_INT kw= '%' )
-                    // InternalGenerador.g:1459:4: this_INT_2= RULE_INT kw= '%'
+                    // InternalGenerador.g:1466:3: (this_INT_2= RULE_INT kw= '%' )
+                    // InternalGenerador.g:1467:4: this_INT_2= RULE_INT kw= '%'
                     {
-                    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_45); 
+                    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_46); 
 
                     				current.merge(this_INT_2);
                     			
 
                     				newLeafNode(this_INT_2, grammarAccess.getMedidaAccess().getINTTerminalRuleCall_1_0());
                     			
-                    kw=(Token)match(input,52,FOLLOW_2); 
+                    kw=(Token)match(input,53,FOLLOW_2); 
 
                     				current.merge(kw);
                     				newLeafNode(kw, grammarAccess.getMedidaAccess().getPercentSignKeyword_1_1());
@@ -2876,7 +2887,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCorreo"
-    // InternalGenerador.g:1476:1: entryRuleCorreo returns [String current=null] : iv_ruleCorreo= ruleCorreo EOF ;
+    // InternalGenerador.g:1484:1: entryRuleCorreo returns [String current=null] : iv_ruleCorreo= ruleCorreo EOF ;
     public final String entryRuleCorreo() throws RecognitionException {
         String current = null;
 
@@ -2884,8 +2895,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1476:46: (iv_ruleCorreo= ruleCorreo EOF )
-            // InternalGenerador.g:1477:2: iv_ruleCorreo= ruleCorreo EOF
+            // InternalGenerador.g:1484:46: (iv_ruleCorreo= ruleCorreo EOF )
+            // InternalGenerador.g:1485:2: iv_ruleCorreo= ruleCorreo EOF
             {
              newCompositeNode(grammarAccess.getCorreoRule()); 
             pushFollow(FOLLOW_1);
@@ -2912,7 +2923,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCorreo"
-    // InternalGenerador.g:1483:1: ruleCorreo returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID ) ;
+    // InternalGenerador.g:1491:1: ruleCorreo returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleCorreo() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2925,32 +2936,32 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1489:2: ( (this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID ) )
-            // InternalGenerador.g:1490:2: (this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID )
+            // InternalGenerador.g:1497:2: ( (this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID ) )
+            // InternalGenerador.g:1498:2: (this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID )
             {
-            // InternalGenerador.g:1490:2: (this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID )
-            // InternalGenerador.g:1491:3: this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID
+            // InternalGenerador.g:1498:2: (this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID )
+            // InternalGenerador.g:1499:3: this_ID_0= RULE_ID kw= '@' this_ID_2= RULE_ID kw= '.' this_ID_4= RULE_ID
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_46); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_47); 
 
             			current.merge(this_ID_0);
             		
 
             			newLeafNode(this_ID_0, grammarAccess.getCorreoAccess().getIDTerminalRuleCall_0());
             		
-            kw=(Token)match(input,53,FOLLOW_12); 
+            kw=(Token)match(input,54,FOLLOW_12); 
 
             			current.merge(kw);
             			newLeafNode(kw, grammarAccess.getCorreoAccess().getCommercialAtKeyword_1());
             		
-            this_ID_2=(Token)match(input,RULE_ID,FOLLOW_25); 
+            this_ID_2=(Token)match(input,RULE_ID,FOLLOW_21); 
 
             			current.merge(this_ID_2);
             		
 
             			newLeafNode(this_ID_2, grammarAccess.getCorreoAccess().getIDTerminalRuleCall_2());
             		
-            kw=(Token)match(input,28,FOLLOW_12); 
+            kw=(Token)match(input,24,FOLLOW_12); 
 
             			current.merge(kw);
             			newLeafNode(kw, grammarAccess.getCorreoAccess().getFullStopKeyword_3());
@@ -2985,7 +2996,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRegistro"
-    // InternalGenerador.g:1526:1: entryRuleRegistro returns [EObject current=null] : iv_ruleRegistro= ruleRegistro EOF ;
+    // InternalGenerador.g:1534:1: entryRuleRegistro returns [EObject current=null] : iv_ruleRegistro= ruleRegistro EOF ;
     public final EObject entryRuleRegistro() throws RecognitionException {
         EObject current = null;
 
@@ -2993,8 +3004,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1526:49: (iv_ruleRegistro= ruleRegistro EOF )
-            // InternalGenerador.g:1527:2: iv_ruleRegistro= ruleRegistro EOF
+            // InternalGenerador.g:1534:49: (iv_ruleRegistro= ruleRegistro EOF )
+            // InternalGenerador.g:1535:2: iv_ruleRegistro= ruleRegistro EOF
             {
              newCompositeNode(grammarAccess.getRegistroRule()); 
             pushFollow(FOLLOW_1);
@@ -3021,7 +3032,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRegistro"
-    // InternalGenerador.g:1533:1: ruleRegistro returns [EObject current=null] : (otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']' ) ;
+    // InternalGenerador.g:1541:1: ruleRegistro returns [EObject current=null] : (otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']' ) ;
     public final EObject ruleRegistro() throws RecognitionException {
         EObject current = null;
 
@@ -3041,17 +3052,17 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1539:2: ( (otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']' ) )
-            // InternalGenerador.g:1540:2: (otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']' )
+            // InternalGenerador.g:1547:2: ( (otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']' ) )
+            // InternalGenerador.g:1548:2: (otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']' )
             {
-            // InternalGenerador.g:1540:2: (otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']' )
-            // InternalGenerador.g:1541:3: otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']'
+            // InternalGenerador.g:1548:2: (otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']' )
+            // InternalGenerador.g:1549:3: otherlv_0= '[' otherlv_1= 'Registro' otherlv_2= '=' ( (lv_tomo_3_0= RULE_INT ) ) otherlv_4= ':' ( (lv_folio_5_0= RULE_INT ) ) otherlv_6= ':' ( (lv_seccion_7_0= RULE_INT ) ) otherlv_8= ':' ( (lv_hoja_9_0= RULE_INT ) ) otherlv_10= ']'
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_47); 
+            otherlv_0=(Token)match(input,27,FOLLOW_48); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRegistroAccess().getLeftSquareBracketKeyword_0());
             		
-            otherlv_1=(Token)match(input,54,FOLLOW_6); 
+            otherlv_1=(Token)match(input,55,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getRegistroAccess().getRegistroKeyword_1());
             		
@@ -3059,11 +3070,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getRegistroAccess().getEqualsSignKeyword_2());
             		
-            // InternalGenerador.g:1553:3: ( (lv_tomo_3_0= RULE_INT ) )
-            // InternalGenerador.g:1554:4: (lv_tomo_3_0= RULE_INT )
+            // InternalGenerador.g:1561:3: ( (lv_tomo_3_0= RULE_INT ) )
+            // InternalGenerador.g:1562:4: (lv_tomo_3_0= RULE_INT )
             {
-            // InternalGenerador.g:1554:4: (lv_tomo_3_0= RULE_INT )
-            // InternalGenerador.g:1555:5: lv_tomo_3_0= RULE_INT
+            // InternalGenerador.g:1562:4: (lv_tomo_3_0= RULE_INT )
+            // InternalGenerador.g:1563:5: lv_tomo_3_0= RULE_INT
             {
             lv_tomo_3_0=(Token)match(input,RULE_INT,FOLLOW_8); 
 
@@ -3089,11 +3100,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getRegistroAccess().getColonKeyword_4());
             		
-            // InternalGenerador.g:1575:3: ( (lv_folio_5_0= RULE_INT ) )
-            // InternalGenerador.g:1576:4: (lv_folio_5_0= RULE_INT )
+            // InternalGenerador.g:1583:3: ( (lv_folio_5_0= RULE_INT ) )
+            // InternalGenerador.g:1584:4: (lv_folio_5_0= RULE_INT )
             {
-            // InternalGenerador.g:1576:4: (lv_folio_5_0= RULE_INT )
-            // InternalGenerador.g:1577:5: lv_folio_5_0= RULE_INT
+            // InternalGenerador.g:1584:4: (lv_folio_5_0= RULE_INT )
+            // InternalGenerador.g:1585:5: lv_folio_5_0= RULE_INT
             {
             lv_folio_5_0=(Token)match(input,RULE_INT,FOLLOW_8); 
 
@@ -3119,11 +3130,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_6, grammarAccess.getRegistroAccess().getColonKeyword_6());
             		
-            // InternalGenerador.g:1597:3: ( (lv_seccion_7_0= RULE_INT ) )
-            // InternalGenerador.g:1598:4: (lv_seccion_7_0= RULE_INT )
+            // InternalGenerador.g:1605:3: ( (lv_seccion_7_0= RULE_INT ) )
+            // InternalGenerador.g:1606:4: (lv_seccion_7_0= RULE_INT )
             {
-            // InternalGenerador.g:1598:4: (lv_seccion_7_0= RULE_INT )
-            // InternalGenerador.g:1599:5: lv_seccion_7_0= RULE_INT
+            // InternalGenerador.g:1606:4: (lv_seccion_7_0= RULE_INT )
+            // InternalGenerador.g:1607:5: lv_seccion_7_0= RULE_INT
             {
             lv_seccion_7_0=(Token)match(input,RULE_INT,FOLLOW_8); 
 
@@ -3149,13 +3160,13 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getRegistroAccess().getColonKeyword_8());
             		
-            // InternalGenerador.g:1619:3: ( (lv_hoja_9_0= RULE_INT ) )
-            // InternalGenerador.g:1620:4: (lv_hoja_9_0= RULE_INT )
+            // InternalGenerador.g:1627:3: ( (lv_hoja_9_0= RULE_INT ) )
+            // InternalGenerador.g:1628:4: (lv_hoja_9_0= RULE_INT )
             {
-            // InternalGenerador.g:1620:4: (lv_hoja_9_0= RULE_INT )
-            // InternalGenerador.g:1621:5: lv_hoja_9_0= RULE_INT
+            // InternalGenerador.g:1628:4: (lv_hoja_9_0= RULE_INT )
+            // InternalGenerador.g:1629:5: lv_hoja_9_0= RULE_INT
             {
-            lv_hoja_9_0=(Token)match(input,RULE_INT,FOLLOW_34); 
+            lv_hoja_9_0=(Token)match(input,RULE_INT,FOLLOW_35); 
 
             					newLeafNode(lv_hoja_9_0, grammarAccess.getRegistroAccess().getHojaINTTerminalRuleCall_9_0());
             				
@@ -3175,7 +3186,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,36,FOLLOW_2); 
+            otherlv_10=(Token)match(input,37,FOLLOW_2); 
 
             			newLeafNode(otherlv_10, grammarAccess.getRegistroAccess().getRightSquareBracketKeyword_10());
             		
@@ -3202,7 +3213,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDireccion"
-    // InternalGenerador.g:1645:1: entryRuleDireccion returns [EObject current=null] : iv_ruleDireccion= ruleDireccion EOF ;
+    // InternalGenerador.g:1653:1: entryRuleDireccion returns [EObject current=null] : iv_ruleDireccion= ruleDireccion EOF ;
     public final EObject entryRuleDireccion() throws RecognitionException {
         EObject current = null;
 
@@ -3210,8 +3221,8 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGenerador.g:1645:50: (iv_ruleDireccion= ruleDireccion EOF )
-            // InternalGenerador.g:1646:2: iv_ruleDireccion= ruleDireccion EOF
+            // InternalGenerador.g:1653:50: (iv_ruleDireccion= ruleDireccion EOF )
+            // InternalGenerador.g:1654:2: iv_ruleDireccion= ruleDireccion EOF
             {
              newCompositeNode(grammarAccess.getDireccionRule()); 
             pushFollow(FOLLOW_1);
@@ -3238,7 +3249,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDireccion"
-    // InternalGenerador.g:1652:1: ruleDireccion returns [EObject current=null] : (otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']' ) ;
+    // InternalGenerador.g:1660:1: ruleDireccion returns [EObject current=null] : (otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']' ) ;
     public final EObject ruleDireccion() throws RecognitionException {
         EObject current = null;
 
@@ -3256,17 +3267,17 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGenerador.g:1658:2: ( (otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']' ) )
-            // InternalGenerador.g:1659:2: (otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']' )
+            // InternalGenerador.g:1666:2: ( (otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']' ) )
+            // InternalGenerador.g:1667:2: (otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']' )
             {
-            // InternalGenerador.g:1659:2: (otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']' )
-            // InternalGenerador.g:1660:3: otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']'
+            // InternalGenerador.g:1667:2: (otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']' )
+            // InternalGenerador.g:1668:3: otherlv_0= '[' otherlv_1= 'Direccion' otherlv_2= '=' ( (lv_calle_3_0= RULE_STRING ) ) otherlv_4= ':' ( (lv_ciudad_5_0= RULE_STRING ) ) otherlv_6= ':' ( (lv_pais_7_0= RULE_STRING ) ) otherlv_8= ']'
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_48); 
+            otherlv_0=(Token)match(input,27,FOLLOW_49); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDireccionAccess().getLeftSquareBracketKeyword_0());
             		
-            otherlv_1=(Token)match(input,55,FOLLOW_6); 
+            otherlv_1=(Token)match(input,56,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getDireccionAccess().getDireccionKeyword_1());
             		
@@ -3274,11 +3285,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getDireccionAccess().getEqualsSignKeyword_2());
             		
-            // InternalGenerador.g:1672:3: ( (lv_calle_3_0= RULE_STRING ) )
-            // InternalGenerador.g:1673:4: (lv_calle_3_0= RULE_STRING )
+            // InternalGenerador.g:1680:3: ( (lv_calle_3_0= RULE_STRING ) )
+            // InternalGenerador.g:1681:4: (lv_calle_3_0= RULE_STRING )
             {
-            // InternalGenerador.g:1673:4: (lv_calle_3_0= RULE_STRING )
-            // InternalGenerador.g:1674:5: lv_calle_3_0= RULE_STRING
+            // InternalGenerador.g:1681:4: (lv_calle_3_0= RULE_STRING )
+            // InternalGenerador.g:1682:5: lv_calle_3_0= RULE_STRING
             {
             lv_calle_3_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
 
@@ -3304,11 +3315,11 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getDireccionAccess().getColonKeyword_4());
             		
-            // InternalGenerador.g:1694:3: ( (lv_ciudad_5_0= RULE_STRING ) )
-            // InternalGenerador.g:1695:4: (lv_ciudad_5_0= RULE_STRING )
+            // InternalGenerador.g:1702:3: ( (lv_ciudad_5_0= RULE_STRING ) )
+            // InternalGenerador.g:1703:4: (lv_ciudad_5_0= RULE_STRING )
             {
-            // InternalGenerador.g:1695:4: (lv_ciudad_5_0= RULE_STRING )
-            // InternalGenerador.g:1696:5: lv_ciudad_5_0= RULE_STRING
+            // InternalGenerador.g:1703:4: (lv_ciudad_5_0= RULE_STRING )
+            // InternalGenerador.g:1704:5: lv_ciudad_5_0= RULE_STRING
             {
             lv_ciudad_5_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
 
@@ -3334,13 +3345,13 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_6, grammarAccess.getDireccionAccess().getColonKeyword_6());
             		
-            // InternalGenerador.g:1716:3: ( (lv_pais_7_0= RULE_STRING ) )
-            // InternalGenerador.g:1717:4: (lv_pais_7_0= RULE_STRING )
+            // InternalGenerador.g:1724:3: ( (lv_pais_7_0= RULE_STRING ) )
+            // InternalGenerador.g:1725:4: (lv_pais_7_0= RULE_STRING )
             {
-            // InternalGenerador.g:1717:4: (lv_pais_7_0= RULE_STRING )
-            // InternalGenerador.g:1718:5: lv_pais_7_0= RULE_STRING
+            // InternalGenerador.g:1725:4: (lv_pais_7_0= RULE_STRING )
+            // InternalGenerador.g:1726:5: lv_pais_7_0= RULE_STRING
             {
-            lv_pais_7_0=(Token)match(input,RULE_STRING,FOLLOW_34); 
+            lv_pais_7_0=(Token)match(input,RULE_STRING,FOLLOW_35); 
 
             					newLeafNode(lv_pais_7_0, grammarAccess.getDireccionAccess().getPaisSTRINGTerminalRuleCall_7_0());
             				
@@ -3360,7 +3371,7 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,36,FOLLOW_2); 
+            otherlv_8=(Token)match(input,37,FOLLOW_2); 
 
             			newLeafNode(otherlv_8, grammarAccess.getDireccionAccess().getRightSquareBracketKeyword_8());
             		
@@ -3400,23 +3411,23 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0006000000000000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000F80000020000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0001F00000020000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002020000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000008020000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000040000000L});
     public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000080000000L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000100000000L});
@@ -3430,13 +3441,14 @@ public class InternalGeneradorParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000010000000000L});
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000020000000000L});
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000F80000000000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000062L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0001F00000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000062L});
     public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0010000000000000L});
     public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0020000000000000L});
     public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0040000000000000L});
     public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0100000000000000L});
 
 }

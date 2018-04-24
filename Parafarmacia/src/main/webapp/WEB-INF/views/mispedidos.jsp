@@ -39,7 +39,7 @@
 						<div class='infopedido'>
 							<div>
 								<p>Pedido realizado</p>
-								<p>${p.fecha}</p>
+								<p>${p[0].fecha}</p>
 							</div>
 							
 							<div>
@@ -47,33 +47,36 @@
 								<p><a href="cuenta">${sesion.nombre}</a></p>
 							</div>
 							<div class="todo">
-								<p>Pedido Nº ${p.id}${p.idUsuario}${p.idProducto}</p>
+								<p>Pedido Nº ${p[0].id}${p[0].idUsuario}${p[0].idProducto}</p>
+								<p>Estado: ${p[0].estado}</p>
 							</div>
 							
 						</div>
 						<div class="pedidoproducto">
-							<c:forEach items="${productos}" var="producto">
-								<c:choose>
-									<c:when test="${producto.id == p.idProducto}">
-										<div class='imgproducto'>
-											<img class="imageproducto"
-												src="<c:url value="/resources/product/${fn:replace(producto.nombre,' ', '')}.JPG"/>"
-												alt="<c:out value="${producto.nombre}"></c:out>">
-											<p class='nombreproducto'>
-												<c:out value="${fn:substring(producto.nombre, 0, 1)}"></c:out>
-												<c:out
-													value="${fn:toLowerCase(fn:substring(producto.nombre, 1, 1000))}"></c:out>
-											</p>
-											<p>Total: 
-											EUR ${p.unidades * producto.precio}</p>
-										</div>
-									</c:when>
-									<c:otherwise>
-
-									</c:otherwise>
-								</c:choose>
+							<c:forEach items="${p}" var="pedidoproducto">
+								<c:forEach items="${productos}" var="producto">
+									<c:choose>
+										<c:when test="${producto.id == pedidoproducto.idProducto}">
+											<div class='imgproducto'>
+												<p><c:out value="${pedidoproducto.unidades}"></c:out> X</p>
+												<img class="imageproducto"
+													src="<c:url value="/resources/product/${fn:toUpperCase(fn:replace(producto.nombre,' ', ''))}.JPG"/>"
+													alt="<c:out value="${producto.nombre}"></c:out>">
+												<p class='nombreproducto'>
+													<c:out value="${fn:substring(producto.nombre, 0, 1)}"></c:out>
+													<c:out
+														value="${fn:toLowerCase(fn:substring(producto.nombre, 1, 1000))}"></c:out>
+												</p>
+												<p class="total">Subtotal: 
+												EUR ${pedidoproducto.unidades * producto.precio}</p>
+											</div>
+										</c:when>
+										<c:otherwise>
+	
+										</c:otherwise>
+									</c:choose>
+								</c:forEach>
 							</c:forEach>
-							<p>Estado: ${p.estado}</p>
 						</div>	
 						
 						

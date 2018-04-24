@@ -404,11 +404,19 @@ ruleParafarmacia returns [EObject current=null]
 		{
 			newLeafNode(otherlv_41, grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_41());
 		}
+		otherlv_42='productosPorFila'
+		{
+			newLeafNode(otherlv_42, grammarAccess.getParafarmaciaAccess().getProductosPorFilaKeyword_42());
+		}
+		otherlv_43='.'
+		{
+			newLeafNode(otherlv_43, grammarAccess.getParafarmaciaAccess().getFullStopKeyword_43());
+		}
 		(
 			(
-				lv_numProductosPorFila_42_0=RULE_INT
+				lv_numProductosPorFila_44_0=RULE_INT
 				{
-					newLeafNode(lv_numProductosPorFila_42_0, grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaINTTerminalRuleCall_42_0());
+					newLeafNode(lv_numProductosPorFila_44_0, grammarAccess.getParafarmaciaAccess().getNumProductosPorFilaINTTerminalRuleCall_44_0());
 				}
 				{
 					if ($current==null) {
@@ -417,7 +425,7 @@ ruleParafarmacia returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"numProductosPorFila",
-						lv_numProductosPorFila_42_0,
+						lv_numProductosPorFila_44_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
@@ -425,9 +433,9 @@ ruleParafarmacia returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getParafarmaciaAccess().getProductosProductoParserRuleCall_43_0());
+					newCompositeNode(grammarAccess.getParafarmaciaAccess().getProductosProductoParserRuleCall_45_0());
 				}
-				lv_productos_43_0=ruleProducto
+				lv_productos_45_0=ruleProducto
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getParafarmaciaRule());
@@ -435,33 +443,33 @@ ruleParafarmacia returns [EObject current=null]
 					add(
 						$current,
 						"productos",
-						lv_productos_43_0,
+						lv_productos_45_0,
 						"org.xtext.dsl.generador.Generador.Producto");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_44='>'
+		otherlv_46='>'
 		{
-			newLeafNode(otherlv_44, grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_44());
+			newLeafNode(otherlv_46, grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_46());
 		}
-		otherlv_45='<'
+		otherlv_47='<'
 		{
-			newLeafNode(otherlv_45, grammarAccess.getParafarmaciaAccess().getLessThanSignKeyword_45());
+			newLeafNode(otherlv_47, grammarAccess.getParafarmaciaAccess().getLessThanSignKeyword_47());
 		}
-		otherlv_46='Usuario'
+		otherlv_48='Usuario'
 		{
-			newLeafNode(otherlv_46, grammarAccess.getParafarmaciaAccess().getUsuarioKeyword_46());
+			newLeafNode(otherlv_48, grammarAccess.getParafarmaciaAccess().getUsuarioKeyword_48());
 		}
-		otherlv_47='='
+		otherlv_49='='
 		{
-			newLeafNode(otherlv_47, grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_47());
+			newLeafNode(otherlv_49, grammarAccess.getParafarmaciaAccess().getEqualsSignKeyword_49());
 		}
 		(
 			(
-				lv_nombreUsuario_48_0=RULE_STRING
+				lv_nombreUsuario_50_0=RULE_STRING
 				{
-					newLeafNode(lv_nombreUsuario_48_0, grammarAccess.getParafarmaciaAccess().getNombreUsuarioSTRINGTerminalRuleCall_48_0());
+					newLeafNode(lv_nombreUsuario_50_0, grammarAccess.getParafarmaciaAccess().getNombreUsuarioSTRINGTerminalRuleCall_50_0());
 				}
 				{
 					if ($current==null) {
@@ -470,31 +478,8 @@ ruleParafarmacia returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"nombreUsuario",
-						lv_nombreUsuario_48_0,
+						lv_nombreUsuario_50_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
-		)
-		otherlv_49=':'
-		{
-			newLeafNode(otherlv_49, grammarAccess.getParafarmaciaAccess().getColonKeyword_49());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getParafarmaciaAccess().getEmailCorreoParserRuleCall_50_0());
-				}
-				lv_email_50_0=ruleCorreo
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getParafarmaciaRule());
-					}
-					set(
-						$current,
-						"email",
-						lv_email_50_0,
-						"org.xtext.dsl.generador.Generador.Correo");
-					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -504,9 +489,32 @@ ruleParafarmacia returns [EObject current=null]
 		}
 		(
 			(
-				lv_password_52_0=RULE_STRING
 				{
-					newLeafNode(lv_password_52_0, grammarAccess.getParafarmaciaAccess().getPasswordSTRINGTerminalRuleCall_52_0());
+					newCompositeNode(grammarAccess.getParafarmaciaAccess().getEmailCorreoParserRuleCall_52_0());
+				}
+				lv_email_52_0=ruleCorreo
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getParafarmaciaRule());
+					}
+					set(
+						$current,
+						"email",
+						lv_email_52_0,
+						"org.xtext.dsl.generador.Generador.Correo");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_53=':'
+		{
+			newLeafNode(otherlv_53, grammarAccess.getParafarmaciaAccess().getColonKeyword_53());
+		}
+		(
+			(
+				lv_password_54_0=RULE_STRING
+				{
+					newLeafNode(lv_password_54_0, grammarAccess.getParafarmaciaAccess().getPasswordSTRINGTerminalRuleCall_54_0());
 				}
 				{
 					if ($current==null) {
@@ -515,18 +523,18 @@ ruleParafarmacia returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"password",
-						lv_password_52_0,
+						lv_password_54_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_53='>'
+		otherlv_55='>'
 		{
-			newLeafNode(otherlv_53, grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_53());
+			newLeafNode(otherlv_55, grammarAccess.getParafarmaciaAccess().getGreaterThanSignKeyword_55());
 		}
-		otherlv_54='}'
+		otherlv_56='}'
 		{
-			newLeafNode(otherlv_54, grammarAccess.getParafarmaciaAccess().getRightCurlyBracketKeyword_54());
+			newLeafNode(otherlv_56, grammarAccess.getParafarmaciaAccess().getRightCurlyBracketKeyword_56());
 		}
 	)
 ;

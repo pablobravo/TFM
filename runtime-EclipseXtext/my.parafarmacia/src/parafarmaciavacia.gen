@@ -1,0 +1,15 @@
+Parafarmacia {
+	< Nombre = "Nombre" : "Arial" >
+	< Titular = "Nombre" : [Direccion = "calle" : "ciudad" : "pais"] : 
+		"345632" : [Registro = 19 : 2 : 5 : 28] : prueba@gmail.com : 345345345 
+	>
+	< Menu = Permanente : #000 : 240px >
+	< Apariencia = 
+		[Color = principal.#fff : principalClaro.#CEF6CE : secundario.#89c441 : fondo.#e7e8ea : fondoProductos.#fff : precios.#FE642E : texto.#2E2E2E : titulo.#585858]
+		[Texto = normal.14px : grande.16px : titulo.26px : menu.20px]
+		[Margen = 0px]
+	>
+	< Categorias = >
+	< Productos = productosPorFila.0 > 
+	< Usuario = "pablo" : pablo@gmail.com : "pablo" >     
+}        

@@ -10,7 +10,7 @@ Parafarmacia:
 		'<' 'Menu' '=' tipo=Tipo '>'
 		'<' 'Apariencia' '=' apariencia=Apariencia '>'
 		'<' 'Categorias' '=' categorias+=Categoria* '>'
-		'<' 'Productos' '=' numProductosPorFila=INT productos+=Producto* '>'
+		'<' 'Productos' '=' 'productosPorFila' '.' numProductosPorFila=INT productos+=Producto* '>'
 		'<' 'Usuario' '=' nombreUsuario=STRING ':' email=Correo ':' password=STRING '>'
 	'}'
 ;
